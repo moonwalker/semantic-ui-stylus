@@ -1,0 +1,30 @@
+{
+  "name": "@moonwalker/semantic-ui-stylus",
+  "version": "0.0.0",
+  "description": "Stylus fork of Semantic-UI",
+  "private": false,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync": "./scripts/sync.sh"
+  },
+  "keywords": [
+    "stylus",
+    "less",
+    "semantic-ui"
+  ],
+  "author": "Vio <vio@moonwalker.tech>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonwalker/semantic-ui-stylus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moonwalker/semantic-ui-stylus/issues"
+  },
+  "homepage": "https://github.com/moonwalker/semantic-ui-stylus#readme",
+  "dependencies": {
+    "@moonwalker/less-to-stylus": "^0.1.1",
+    "stylus": "^0.54.5"
+  }
+}
