@@ -1,0 +1,138 @@
+/*******************************
+             Popup
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_zIndex= 1900;
+$ui_background= $ui_white;
+
+$ui_maxWidth= 250px;
+$ui_borderColor= $ui_solidBorderColor;
+$ui_borderWidth= 1px;
+$ui_boxShadow= $ui_floatingShadow;
+$ui_color= $ui_textColor;
+
+$ui_verticalPadding= 0.833em;
+$ui_horizontalPadding= 1em;
+$ui_fontWeight= normal;
+$ui_fontStyle= normal;
+$ui_borderRadius= $ui_defaultBorderRadius;
+
+/*-------------------
+       Parts
+--------------------*/
+
+/* Placement */
+$ui_arrowSize= $ui_relative10px;
+$ui_arrowWidth= 1em;
+$ui_arrowDistanceFromEdge= 1em;
+$ui_boxArrowOffset= 0em;
+$ui_popupDistanceAway= $ui_arrowSize;
+
+
+/* Header */
+$ui_headerFontFamily= $ui_headerFont;
+$ui_headerFontSize= $ui_relativeLarge;
+$ui_headerDistance= $ui_relative7px;
+$ui_headerLineHeight= 1.2;
+
+/* Content Border */
+$ui_border= $ui_borderWidth solid $ui_borderColor;
+
+/* Arrow */
+$ui_arrowBackground= $ui_white;
+$ui_arrowZIndex= 2;
+$ui_arrowJitter= 0.05em;
+$ui_arrowOffset= -($ui_arrowSize / 2) + $ui_arrowJitter;
+
+$ui_arrowStroke= $ui_borderWidth;
+$ui_arrowColor= darken($ui_borderColor, 10);
+
+/* Arrow color by position */
+$ui_arrowTopBackground= $ui_arrowBackground;
+$ui_arrowCenterBackground= $ui_arrowBackground;
+$ui_arrowBottomBackground= $ui_arrowBackground;
+
+$ui_arrowBoxShadow= $ui_arrowStroke $ui_arrowStroke 0px 0px $ui_arrowColor;
+$ui_leftArrowBoxShadow= $ui_arrowStroke (- $ui_arrowStroke) 0px 0px $ui_arrowColor;
+$ui_rightArrowBoxShadow= (- $ui_arrowStroke) $ui_arrowStroke 0px 0px $ui_arrowColor;
+$ui_bottomArrowBoxShadow= - $ui_arrowStroke - $ui_arrowStroke 0px 0px $ui_arrowColor;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Tooltip */
+$ui_tooltipBackground= $ui_background;
+$ui_tooltipBorderRadius= $ui_borderRadius;
+$ui_tooltipPadding= $ui_verticalPadding $ui_horizontalPadding;
+$ui_tooltipFontWeight= $ui_fontWeight;
+$ui_tooltipFontStyle= $ui_fontStyle;
+$ui_tooltipColor= $ui_color;
+$ui_tooltipBorder= $ui_border;
+$ui_tooltipBoxShadow= $ui_boxShadow;
+$ui_tooltipMaxWidth= none;
+$ui_tooltipFontSize= $ui_medium;
+$ui_tooltipLineHeight= $ui_lineHeight;
+$ui_tooltipDistanceAway= $ui_relative7px;
+$ui_tooltipZIndex= 1;
+$ui_tooltipDuration= $ui_defaultDuration;
+$ui_tooltipEasing= $ui_defaultEasing;
+
+/* Inverted */
+$ui_tooltipInvertedBackground= $ui_invertedBackground;
+$ui_tooltipInvertedColor= $ui_invertedColor;
+$ui_tooltipInvertedBorder= $ui_invertedBorder;
+$ui_tooltipInvertedBoxShadow= $ui_invertedBoxShadow;
+$ui_tooltipInvertedHeaderBackground= $ui_invertedHeaderBackground;
+$ui_tooltipInvertedHeaderColor= $ui_invertedHeaderColor;
+
+/* Arrow */
+$ui_tooltipArrowVerticalOffset= (- $ui_2px);
+$ui_tooltipArrowHorizontalOffset= (- $ui_1px);
+$ui_tooltipArrowBoxShadow= $ui_arrowBoxShadow;
+$ui_tooltipArrowBackground= $ui_arrowBackground;
+$ui_tooltipArrowTopBackground= $ui_arrowTopBackground;
+$ui_tooltipArrowCenterBackground= $ui_arrowCenterBackground;
+$ui_tooltipArrowBottomBackground= $ui_arrowBottomBackground;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+/* Grid Inside Popup */
+$ui_nestedGridMargin= -0.7rem -0.875rem; /* (padding * $ui_medium) */
+$ui_nestedGridWidth= ~"calc(100% + 1.75rem)";
+
+/*-------------------
+       States
+--------------------*/
+
+$ui_loadingZIndex= -1;
+
+/*-------------------
+       Variations
+--------------------*/
+
+/* Wide */
+$ui_wideWidth= 350px;
+$ui_veryWideWidth= 550px;
+
+/* Inverted */
+$ui_invertedBackground= $ui_black;
+$ui_invertedColor= $ui_white;
+$ui_invertedBorder= none;
+$ui_invertedBoxShadow= none;
+
+$ui_invertedHeaderBackground= none;
+$ui_invertedHeaderColor= $ui_white;
+$ui_invertedArrowColor= $ui_invertedBackground;
+
+/* Arrow color by position */
+$ui_invertedArrowTopBackground= $ui_invertedBackground;
+$ui_invertedArrowCenterBackground= $ui_invertedBackground;
+$ui_invertedArrowBottomBackground= $ui_invertedBackground;
+

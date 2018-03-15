@@ -1,0 +1,279 @@
+/*!
+ * # Semantic UI - Feed
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'view';
+$ui_element = 'feed';
+
+@import '../../theme.config';
+
+/*******************************
+         Activity Feed
+*******************************/
+
+.ui.feed {
+  margin: $ui_margin;
+}
+.ui.feed:first-child {
+  margin-top: 0em;
+}
+.ui.feed:last-child {
+  margin-bottom: 0em;
+}
+
+
+/*******************************
+            Content
+*******************************/
+
+/* Event */
+.ui.feed > .event {
+  display: flex;
+  flex-direction: row;
+  width: $ui_eventWidth;
+  padding: $ui_eventPadding;
+  margin: $ui_eventMargin;
+  background: $ui_eventBackground;
+  border-top: $ui_eventDivider;
+}
+.ui.feed > .event:first-child {
+  border-top: 0px;
+  padding-top: 0em;
+}
+.ui.feed > .event:last-child {
+  padding-bottom: 0em;
+}
+
+/* Event Label */
+.ui.feed > .event > .label {
+  display: block;
+  flex: 0 0 auto;
+  width: $ui_labelWidth;
+  height: $ui_labelHeight;
+  align-self: $ui_labelAlignSelf;
+  text-align: $ui_labelTextAlign;
+}
+.ui.feed > .event > .label .icon {
+  opacity: $ui_iconLabelOpacity;
+  font-size: $ui_iconLabelSize;
+  width: $ui_iconLabelWidth;
+  padding: $ui_iconLabelPadding;
+  background: $ui_iconLabelBackground;
+  border: $ui_iconLabelBorder;
+  border-radius: $ui_iconLabelBorderRadius;
+  color: $ui_iconLabelColor;
+}
+.ui.feed > .event > .label img {
+  width: $ui_imageLabelWidth;
+  height: $ui_imageLabelHeight;
+  border-radius: $ui_imageLabelBorderRadius;
+}
+.ui.feed > .event > .label + .content {
+  margin: $ui_labeledContentMargin;
+}
+
+/*--------------
+     Content
+---------------*/
+
+/* Content */
+.ui.feed > .event > .content {
+  display: block;
+  flex: 1 1 auto;
+  align-self: $ui_contentAlignSelf;
+  text-align: $ui_contentTextAlign;
+  word-wrap: $ui_contentWordWrap;
+}
+.ui.feed > .event:last-child > .content {
+  padding-bottom: $ui_lastLabeledContentPadding;
+}
+
+/* Link */
+.ui.feed > .event > .content a {
+  cursor: pointer;
+}
+
+/*--------------
+      Date
+---------------*/
+
+.ui.feed > .event > .content .date {
+  margin: $ui_dateMargin;
+  padding: $ui_datePadding;
+  color: $ui_dateColor;
+  font-weight: $ui_dateFontWeight;
+  font-size: $ui_dateFontSize;
+  font-style: $ui_dateFontStyle;
+  color: $ui_dateColor;
+}
+
+/*--------------
+     Summary
+---------------*/
+
+.ui.feed > .event > .content .summary {
+  margin: $ui_summaryMargin;
+  font-size: $ui_summaryFontSize;
+  font-weight: $ui_summaryFontWeight;
+  color: $ui_summaryColor;
+}
+
+/* Summary Image */
+.ui.feed > .event > .content .summary img {
+  display: inline-block;
+  width: $ui_summaryImageWidth;
+  height: $ui_summaryImageHeight;
+  margin: $ui_summaryImageMargin;
+  border-radius: $ui_summaryImageBorderRadius;
+  vertical-align: $ui_summaryImageVerticalAlign;
+}
+/*--------------
+      User
+---------------*/
+
+.ui.feed > .event > .content .user {
+  display: inline-block;
+  font-weight: $ui_userFontWeight;
+  margin-right: $ui_userDistance;
+  vertical-align: baseline;
+}
+.ui.feed > .event > .content .user img {
+  margin: $ui_userImageMargin;
+  width: $ui_userImageWidth;
+  height: $ui_userImageHeight;
+  vertical-align: $ui_userImageVerticalAlign;
+}
+/*--------------
+   Inline Date
+---------------*/
+
+/* Date inside Summary */
+.ui.feed > .event > .content .summary > .date {
+  display: $ui_summaryDateDisplay;
+  float: $ui_summaryDateFloat;
+  font-weight: $ui_summaryDateFontWeight;
+  font-size: $ui_summaryDateFontSize;
+  font-style: $ui_summaryDateFontStyle;
+  margin: $ui_summaryDateMargin;
+  padding: $ui_summaryDatePadding;
+  color: $ui_summaryDateColor;
+}
+
+/*--------------
+  Extra Summary
+---------------*/
+
+.ui.feed > .event > .content .extra {
+  margin: $ui_extraMargin;
+  background: $ui_extraBackground;
+  padding: $ui_extraPadding;
+  color: $ui_extraColor;
+}
+
+/* Images */
+.ui.feed > .event > .content .extra.images img {
+  display: inline-block;
+  margin: $ui_extraImageMargin;
+  width: $ui_extraImageWidth;
+}
+
+/* Text */
+.ui.feed > .event > .content .extra.text {
+  padding: $ui_extraTextPadding;
+  border-left: $ui_extraTextPointer;
+  font-size: $ui_extraTextFontSize;
+  max-width: $ui_extraTextMaxWidth;
+  line-height: $ui_extraTextLineHeight;
+}
+
+/*--------------
+      Meta
+---------------*/
+
+.ui.feed > .event > .content .meta {
+  display: $ui_metadataDisplay;
+  font-size: $ui_metadataFontSize;
+  margin: $ui_metadataMargin;
+  background: $ui_metadataBackground;
+  border: $ui_metadataBorder;
+  border-radius: $ui_metadataBorderRadius;
+  box-shadow: $ui_metadataBoxShadow;
+  padding: $ui_metadataPadding;
+  color: $ui_metadataColor;
+}
+
+.ui.feed > .event > .content .meta > * {
+  position: relative;
+  margin-left: $ui_metadataElementSpacing;
+}
+.ui.feed > .event > .content .meta > *:after {
+  content: $ui_metadataDivider;
+  color: $ui_metadataDividerColor;
+  top: 0em;
+  left: $ui_metadataDividerOffset;
+  opacity: 1;
+  position: absolute;
+  vertical-align: top;
+}
+
+.ui.feed > .event > .content .meta .like {
+  color: $ui_likeColor;
+  transition: $ui_likeTransition;
+}
+.ui.feed > .event > .content .meta .like:hover .icon {
+  color: $ui_likeHoverColor;
+}
+.ui.feed > .event > .content .meta .active.like .icon {
+  color: $ui_likeActiveColor;
+}
+
+/* First element */
+.ui.feed > .event > .content .meta > :first-child {
+  margin-left: 0em;
+}
+.ui.feed > .event > .content .meta > :first-child::after {
+  display: none;
+}
+
+/* Action */
+.ui.feed > .event > .content .meta a,
+.ui.feed > .event > .content .meta > .icon {
+  cursor: $ui_metadataActionCursor;
+  opacity: $ui_metadataActionOpacity;
+  color: $ui_metadataActionColor;
+  transition: $ui_metadataActionTransition;
+}
+.ui.feed > .event > .content .meta a:hover,
+.ui.feed > .event > .content .meta a:hover .icon,
+.ui.feed > .event > .content .meta > .icon:hover {
+  color: $ui_metadataActionHoverColor;
+}
+
+
+
+/*******************************
+            Variations
+*******************************/
+
+.ui.small.feed {
+  font-size: $ui_small;
+}
+.ui.feed {
+  font-size: $ui_medium;
+}
+.ui.large.feed {
+  font-size: $ui_large;
+}
+
+loadUIOverrides();
+

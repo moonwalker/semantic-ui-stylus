@@ -1,0 +1,103 @@
+/*******************************
+             Grid
+*******************************/
+
+/* Inherited From Site */
+
+// $ui_mobileBreakpoint
+// $ui_tabletBreakpoint
+// $ui_computerBreakpoint
+// $ui_largeMonitorBreakpoint
+// $ui_widescreenMonitorBreakpoint
+
+/*******************************
+            Grid
+*******************************/
+
+$ui_minWidth= 320px;
+
+$ui_gutterWidth= 2rem;
+$ui_rowSpacing= 2rem;
+
+$ui_tableWidth= unquote("calc(100% + " + $ui_gutterWidth + ")");
+$ui_columnMaxImageWidth= 100%;
+
+$ui_consecutiveGridDistance= ($ui_rowSpacing / 2);
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------
+     Relaxed
+---------------*/
+
+$ui_relaxedGutterWidth= 3rem;
+$ui_veryRelaxedGutterWidth= 5rem;
+
+/*--------------
+     Divided
+---------------*/
+
+$ui_dividedBorder= -1px 0px 0px 0px $ui_borderColor;
+$ui_verticallyDividedBorder= 0px -1px 0px 0px $ui_borderColor;
+
+$ui_dividedInvertedBorder= -1px 0px 0px 0px $ui_whiteBorderColor;
+$ui_verticallyDividedInvertedBorder= 0px -1px 0px 0px $ui_whiteBorderColor;
+
+/*--------------
+    Celled
+---------------*/
+
+$ui_celledMargin= 1em 0em;
+$ui_celledWidth= 1px;
+$ui_celledBorderColor= $ui_solidBorderColor;
+
+$ui_celledPadding= 1em;
+$ui_celledRelaxedPadding= 1.5em;
+$ui_celledVeryRelaxedPadding= 2em;
+
+$ui_celledGridDivider= 0px 0px 0px $ui_celledWidth $ui_celledBorderColor;
+$ui_celledRowDivider= 0px (- $ui_celledWidth) 0px 0px $ui_celledBorderColor;
+$ui_celledColumnDivider= (- $ui_celledWidth) 0px 0px 0px $ui_celledBorderColor;
+
+
+/*--------------
+    Stackable
+---------------*/
+
+$ui_stackableRowSpacing= $ui_rowSpacing;
+$ui_stackableGutter= $ui_gutterWidth;
+$ui_stackableMobileBorder= 1px solid $ui_borderColor;
+$ui_stackableInvertedMobileBorder= 1px solid $ui_whiteBorderColor;
+
+
+/*******************************
+             Legacy
+*******************************/
+
+/*--------------
+     Page
+---------------*/
+
+/* Legacy (DO NOT USE)
+ */
+$ui_mobileWidth= auto;
+$ui_mobileMargin= 0em;
+$ui_mobileGutter= 0em;
+
+$ui_tabletWidth= auto;
+$ui_tabletMargin= 0em;
+$ui_tabletGutter= 2em;
+
+$ui_computerWidth= auto;
+$ui_computerMargin= 0em;
+$ui_computerGutter= 3%;
+
+$ui_largeMonitorWidth= auto;
+$ui_largeMonitorMargin= 0em;
+$ui_largeMonitorGutter= 15%;
+
+$ui_widescreenMonitorWidth= auto;
+$ui_widescreenMargin= 0em;
+$ui_widescreenMonitorGutter= 23%;

@@ -1,0 +1,255 @@
+/*******************************
+             Label
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_verticalAlign= baseline;
+$ui_verticalMargin= 0em;
+$ui_horizontalMargin= $ui_relative2px;
+$ui_backgroundColor= #E8E8E8;
+$ui_color= $ui_mutedTextColor;
+$ui_backgroundImage= none;
+$ui_verticalPadding= 0.5833em; /* medium is not $ui_emSize custom value required */
+$ui_horizontalPadding= 0.833em;
+$ui_borderRadius= $ui_absoluteBorderRadius;
+$ui_textTransform= none;
+$ui_fontWeight= bold;
+$ui_borderWidth= 1px;
+$ui_border= 0px solid transparent;
+
+$ui_lineHeightOffset= -($ui_verticalPadding / 2);
+
+$ui_labelTransitionDuration= $ui_defaultDuration;
+$ui_labelTransitionEasing= $ui_defaultEasing;
+$ui_transition= background $ui_labelTransitionDuration $ui_labelTransitionEasing;
+
+/* Group */
+$ui_groupVerticalMargin= 0.5em;
+$ui_groupHorizontalMargin= 0.5em;
+
+/*-------------------
+        Parts
+--------------------*/
+
+/* Link */
+$ui_linkOpacity= 0.5;
+$ui_linkTransition= $ui_labelTransitionDuration opacity $ui_labelTransitionEasing;
+
+/* Icon */
+$ui_iconDistance= 0.75em;
+
+/* Image */
+$ui_imageHeight= (1em + $ui_verticalPadding * 2);
+
+/* Detail */
+$ui_detailFontWeight= bold;
+$ui_detailOpacity= 0.8;
+$ui_detailIconDistance= 0.25em;
+$ui_detailMargin= 1em;
+
+/* Delete */
+$ui_deleteOpacity= $ui_linkOpacity;
+$ui_deleteSize= $ui_relativeSmall;
+$ui_deleteMargin= 0.5em;
+$ui_deleteTransition= background $ui_labelTransitionDuration $ui_labelTransitionEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Image Label */
+$ui_imageLabelBackground= $ui_backgroundColor;
+$ui_imageLabelVerticalPadding= $ui_verticalPadding;
+$ui_imageLabelHorizontalPadding= $ui_horizontalPadding;
+$ui_imageLabelTextDistance= 0.5em;
+$ui_imageLabelDetailDistance= $ui_imageLabelTextDistance;
+$ui_imageLabelBorderRadius= $ui_borderRadius;
+$ui_imageLabelBoxShadow= none;
+$ui_imageLabelPadding= $ui_imageLabelVerticalPadding $ui_imageLabelHorizontalPadding $ui_imageLabelVerticalPadding $ui_imageLabelTextDistance;
+
+$ui_imageLabelImageMargin= - $ui_verticalPadding $ui_imageLabelTextDistance - $ui_verticalPadding - $ui_imageLabelTextDistance;
+$ui_imageLabelImageBorderRadius= $ui_imageLabelBorderRadius 0em 0em $ui_imageLabelBorderRadius;
+$ui_imageLabelImageHeight= $ui_imageHeight;
+
+$ui_imageLabelDetailBackground= $ui_strongTransparentBlack;
+$ui_imageLabelDetailPadding= $ui_imageLabelVerticalPadding $ui_imageLabelHorizontalPadding;
+$ui_imageLabelDetailMargin= - $ui_imageLabelVerticalPadding - $ui_imageLabelHorizontalPadding - $ui_imageLabelVerticalPadding $ui_imageLabelDetailDistance;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hover */
+$ui_labelHoverBackgroundColor= #E0E0E0;
+$ui_labelHoverBackgroundImage= none;
+$ui_labelHoverTextColor= $ui_hoveredTextColor;
+
+/* Active */
+$ui_labelActiveBackgroundColor= #D0D0D0;
+$ui_labelActiveBackgroundImage= none;
+$ui_labelActiveTextColor= $ui_selectedTextColor;
+
+/* Active Hover */
+$ui_labelActiveHoverBackgroundColor= #C8C8C8;
+$ui_labelActiveHoverBackgroundImage= none;
+$ui_labelActiveHoverTextColor= $ui_selectedTextColor;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Basic */
+$ui_basicBackground= none $ui_white;
+$ui_basicBorderWidth= 1px;
+$ui_basicBorder= $ui_basicBorderWidth solid $ui_borderColor;
+$ui_basicColor= $ui_textColor;
+$ui_basicBoxShadow= none;
+
+$ui_basicHoverBackground= $ui_basicBackground;
+$ui_basicHoverColor= $ui_linkHoverColor;
+$ui_basicHoverBorder= $ui_basicBorder;
+$ui_basicHoverBoxShadow= $ui_basicBoxShadow;
+
+/* Tag */
+$ui_tagCircleColor= $ui_white;
+$ui_tagCircleSize= 0.5em;
+$ui_tagHorizontalPadding= 1.5em;
+$ui_tagCircleBoxShadow= 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+$ui_tagTriangleRightOffset= 100%;
+$ui_tagTriangleTopOffset= 50%;
+$ui_tagTriangleSize= 1.56em;
+$ui_tagTriangleBackgroundImage= none;
+$ui_tagTransition= none; /* Avoids error with background: inherit; on animation */
+
+/* Ribbon */
+$ui_ribbonTriangleSize= 1.2em;
+$ui_ribbonShadowColor= rgba(0, 0, 0, 0.15);
+
+$ui_ribbonMargin= 1rem;
+$ui_ribbonOffset= unquote("calc(- " + $ui_ribbonMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
+$ui_ribbonDistance= unquote("calc(" + $ui_ribbonMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+$ui_rightRibbonOffset=  unquote("calc(100% + " + $ui_ribbonMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+
+$ui_ribbonImageTopDistance= 1rem;
+$ui_ribbonImageMargin= -0.05rem; /* Rounding Offset on Triangle */
+$ui_ribbonImageOffset= unquote("calc(- " + $ui_ribbonImageMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
+$ui_rightRibbonImageOffset=  unquote("calc(100% + " + $ui_ribbonImageMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+
+$ui_ribbonTableMargin= $ui_relativeMini; /* Rounding Offset on Triangle */
+$ui_ribbonTableOffset= unquote("calc(- " + $ui_ribbonTableMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
+$ui_rightRibbonTableOffset=  unquote("calc(100% + " + $ui_ribbonTableMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+
+
+/* Colors */
+$ui_redTextColor= $ui_white;
+$ui_orangeTextColor= $ui_white;
+$ui_yellowTextColor= $ui_white;
+$ui_oliveTextColor= $ui_white;
+$ui_greenTextColor= $ui_white;
+$ui_tealTextColor= $ui_white;
+$ui_blueTextColor= $ui_white;
+$ui_violetTextColor= $ui_white;
+$ui_purpleTextColor= $ui_white;
+$ui_pinkTextColor= $ui_white;
+$ui_brownTextColor= $ui_white;
+$ui_greyTextColor= $ui_white;
+$ui_blackTextColor= $ui_white;
+
+$ui_redHoverTextColor= $ui_white;
+$ui_orangeHoverTextColor= $ui_white;
+$ui_yellowHoverTextColor= $ui_white;
+$ui_oliveHoverTextColor= $ui_white;
+$ui_greenHoverTextColor= $ui_white;
+$ui_tealHoverTextColor= $ui_white;
+$ui_blueHoverTextColor= $ui_white;
+$ui_violetHoverTextColor= $ui_white;
+$ui_purpleHoverTextColor= $ui_white;
+$ui_pinkHoverTextColor= $ui_white;
+$ui_brownHoverTextColor= $ui_white;
+$ui_greyHoverTextColor= $ui_white;
+$ui_blackHoverTextColor= $ui_white;
+
+$ui_redRibbonShadow= darken($ui_red, 10);
+$ui_orangeRibbonShadow= darken($ui_orange, 10);
+$ui_yellowRibbonShadow= darken($ui_yellow, 10);
+$ui_oliveRibbonShadow= darken($ui_olive, 10);
+$ui_greenRibbonShadow= darken($ui_green, 10);
+$ui_tealRibbonShadow= darken($ui_teal, 10);
+$ui_blueRibbonShadow= darken($ui_blue, 10);
+$ui_violetRibbonShadow= darken($ui_violet, 10);
+$ui_purpleRibbonShadow= darken($ui_purple, 10);
+$ui_pinkRibbonShadow= darken($ui_pink, 10);
+$ui_brownRibbonShadow= darken($ui_brown, 10);
+$ui_greyRibbonShadow= darken($ui_grey, 10);
+$ui_blackRibbonShadow= darken($ui_black, 10);
+
+/* Attached */
+$ui_attachedSegmentPadding= 2rem;
+$ui_attachedVerticalPadding= 0.75em;
+$ui_attachedHorizontalPadding= 1em;
+
+$ui_attachedCornerBorderRadius= $ui_3px;
+$ui_attachedBorderRadius= $ui_borderRadius;
+
+/* Corner */
+$ui_cornerSizeRatio= 1;
+$ui_cornerTransition= color $ui_labelTransitionDuration $ui_labelTransitionEasing;
+$ui_cornerTriangleSize= 4em;
+$ui_cornerTriangleTransition= border-color $ui_labelTransitionDuration $ui_labelTransitionEasing;
+$ui_cornerTriangleZIndex= 1;
+
+$ui_cornerIconSize= $ui_relativeLarge;
+$ui_cornerIconTopOffset= $ui_relative9px;
+$ui_cornerIconLeftOffset= $ui_relative11px;
+
+/* Corner Text */
+$ui_cornerTextWidth= 3em;
+$ui_cornerTextWeight= bold;
+$ui_cornerTextSize= 1em;
+
+/* Horizontal */
+$ui_horizontalLabelMinWidth= 3em;
+$ui_horizontalLabelMargin= 0.5em;
+$ui_horizontalLabelVerticalPadding= 0.4em;
+
+/* Circular Padding */
+$ui_circularPadding= 0.5em;
+$ui_circularMinSize= 2em;
+$ui_emptyCircleSize= 0.5em;
+
+/* Pointing */
+$ui_pointingBorderColor= inherit;
+$ui_pointingBorderWidth= $ui_borderWidth;
+$ui_pointingVerticalDistance= 1em;
+$ui_pointingTriangleSize= 0.6666em;
+$ui_pointingHorizontalDistance= $ui_pointingTriangleSize;
+
+$ui_pointingTriangleTransition= background $ui_labelTransitionDuration $ui_labelTransitionEasing;
+$ui_pointingTriangleZIndex= 2;
+
+/* Basic Pointing */
+$ui_basicPointingTriangleOffset= (- $ui_pointingBorderWidth);
+
+/* Floating */
+$ui_floatingTopOffset= -1em;
+$ui_floatingLeftOffset= -1.5em;
+$ui_floatingZIndex= 100;
+
+/*-------------------
+        Group
+--------------------*/
+
+/* Sizing */
+$ui_mini    = $ui_9px;
+$ui_tiny    = $ui_10px;
+$ui_small   = $ui_11px;
+$ui_medium  = $ui_12px;
+$ui_large   = $ui_absoluteMedium;
+$ui_big     = $ui_absoluteBig;
+$ui_huge    = $ui_absoluteHuge;
+$ui_massive = $ui_absoluteMassive;
+

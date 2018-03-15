@@ -1,0 +1,112 @@
+/*******************************
+            Progress
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_verticalSpacing= 1em;
+$ui_margin= $ui_verticalSpacing 0em ($ui_labelHeight + $ui_verticalSpacing);
+$ui_firstMargin= 0em 0em ($ui_labelHeight + $ui_verticalSpacing);
+$ui_lastMargin= 0em 0em ($ui_labelHeight);
+
+$ui_background= $ui_strongTransparentBlack;
+$ui_border= none;
+$ui_boxShadow= none;
+$ui_padding= 0em;
+$ui_borderRadius= $ui_defaultBorderRadius;
+
+/* Bar */
+$ui_barPosition= relative;
+$ui_barHeight= 1.75em;
+$ui_barBackground= #888888;
+$ui_barBorderRadius= $ui_borderRadius;
+$ui_barTransitionEasing= $ui_defaultEasing;
+$ui_barTransitionDuration= $ui_defaultDuration;
+$ui_barTransition=width $ui_barTransitionDuration $ui_barTransitionEasing,
+  background-color $ui_barTransitionDuration $ui_barTransitionEasing;
+$ui_barInitialWidth= 0%;
+$ui_barMinWidth= 2em;
+
+/* Progress Bar Label */
+$ui_progressWidth= auto;
+$ui_progressSize= $ui_relativeSmall;
+$ui_progressPosition= absolute;
+$ui_progressTop= 50%;
+$ui_progressRight= 0.5em;
+$ui_progressLeft= auto;
+$ui_progressBottom= auto;
+$ui_progressOffset= -0.5em;
+$ui_progressColor= $ui_invertedLightTextColor;
+$ui_progressTextShadow= none;
+$ui_progressFontWeight= bold;
+$ui_progressTextAlign= left;
+
+/* Label */
+$ui_labelWidth= 100%;
+$ui_labelHeight= 1.5em;
+$ui_labelSize= 1em;
+$ui_labelPosition= absolute;
+$ui_labelTop= 100%;
+$ui_labelLeft= 0%;
+$ui_labelRight= auto;
+$ui_labelBottom= auto;
+$ui_labelOffset= ($ui_labelHeight - 1.3em);
+$ui_labelColor= $ui_textColor;
+$ui_labelTextShadow= none;
+$ui_labelFontWeight= bold;
+$ui_labelTextAlign= center;
+$ui_labelTransition= color 0.4s $ui_defaultEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+$ui_indicatingFirstColor= #D95C5C;
+$ui_indicatingSecondColor= #EFBC72;
+$ui_indicatingThirdColor= #E6BB48;
+$ui_indicatingFourthColor= #DDC928;
+$ui_indicatingFifthColor= #B4D95C;
+$ui_indicatingSixthColor= #66DA81;
+
+$ui_indicatingFirstLabelColor= $ui_textColor;
+$ui_indicatingSecondLabelColor= $ui_textColor;
+$ui_indicatingThirdLabelColor= $ui_textColor;
+$ui_indicatingFourthLabelColor= $ui_textColor;
+$ui_indicatingFifthLabelColor= $ui_textColor;
+$ui_indicatingSixthLabelColor= $ui_textColor;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Active */
+$ui_activePulseColor= $ui_white;
+$ui_activePulseMaxOpacity= 0.3;
+$ui_activePulseDuration= 2s;
+$ui_activeMinWidth= $ui_barMinWidth;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Attached */
+$ui_attachedBackground= transparent;
+$ui_attachedHeight= 0.2rem;
+$ui_attachedBorderRadius= $ui_borderRadius;
+
+/* Inverted */
+$ui_invertedBackground= $ui_transparentWhite;
+$ui_invertedBorder= none;
+$ui_invertedBarBackground= $ui_barBackground;
+$ui_invertedProgressColor= $ui_offWhite;
+$ui_invertedLabelColor= $ui_white;
+
+/* Sizing */
+$ui_tinyBarHeight= 0.5em;
+$ui_smallBarHeight= 1em;
+$ui_largeBarHeight= 2.5em;
+$ui_bigBarHeight= 3.5em;
+

@@ -1,0 +1,347 @@
+/*******************************
+            Button
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Button */
+$ui_verticalMargin= 0em;
+$ui_horizontalMargin= 0.25em;
+$ui_backgroundColor= #E0E1E2;
+$ui_backgroundImage= none;
+$ui_background= $ui_backgroundColor $ui_backgroundImage;
+$ui_lineHeight= 1em;
+
+/* Button defaults to using same height as input globally */
+$ui_verticalPadding= $ui_inputVerticalPadding;
+$ui_horizontalPadding= 1.5em;
+
+/* Text */
+$ui_textTransform= none;
+$ui_tapColor= transparent;
+$ui_fontFamily= $ui_pageFont;
+$ui_fontWeight= bold;
+$ui_textColor= rgba(0, 0, 0, 0.6);
+$ui_textShadow= none;
+$ui_invertedTextShadow= $ui_textShadow;
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_verticalAlign= baseline;
+
+/* Internal Shadow */
+$ui_shadowDistance= 0em;
+$ui_shadowOffset= ($ui_shadowDistance / 2);
+$ui_shadowBoxShadow= 0px (- $ui_shadowDistance) 0px 0px $ui_borderColor inset;
+
+/* Box Shadow */
+$ui_borderBoxShadowColor= transparent;
+$ui_borderBoxShadowWidth= 1px;
+$ui_borderBoxShadow= 0px 0px 0px $ui_borderBoxShadowWidth $ui_borderBoxShadowColor inset;
+$ui_boxShadow=$ui_borderBoxShadow,
+  $ui_shadowBoxShadow;
+
+/* Icon */
+$ui_iconHeight= $ui_relativeTiny;
+$ui_iconOpacity= 0.8;
+$ui_iconDistance= $ui_relative6px;
+$ui_iconColor= '';
+$ui_iconTransition= opacity $ui_defaultDuration $ui_defaultEasing;
+$ui_iconVerticalAlign= '';
+
+$ui_iconMargin= 0em $ui_iconDistance 0em -($ui_iconDistance / 2);
+$ui_rightIconMargin= 0em -($ui_iconDistance / 2) 0em $ui_iconDistance;
+
+/* Loader */
+$ui_invertedLoaderFillColor= rgba(0, 0, 0, 0.15);
+
+$ui_transition=opacity $ui_defaultDuration $ui_defaultEasing,
+  background-color $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing,
+  box-shadow $ui_defaultDuration $ui_defaultEasing,
+  background $ui_defaultDuration $ui_defaultEasing;
+/*
+$ui_willChange= box-shadow, transform, opacity, color, background;
+*/
+$ui_willChange= '';
+
+/*-------------------
+        Group
+--------------------*/
+
+$ui_groupBoxShadow= none;
+$ui_groupButtonBoxShadow= $ui_boxShadow;
+$ui_verticalBoxShadow= none;
+$ui_groupButtonOffset= 0px 0px 0px 0px;
+$ui_verticalGroupOffset= 0px 0px 0px 0px;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hovered */
+$ui_hoverBackgroundColor= #CACBCD;
+$ui_hoverBackgroundImage= $ui_backgroundImage;
+$ui_hoverBoxShadow= $ui_boxShadow;
+$ui_hoverColor= $ui_hoveredTextColor;
+$ui_iconHoverOpacity= 0.85;
+
+/* Focused */
+$ui_focusBackgroundColor= $ui_hoverBackgroundColor;
+$ui_focusBackgroundImage= '';
+$ui_focusBoxShadow= '';
+$ui_focusColor= $ui_hoveredTextColor;
+$ui_iconFocusOpacity= 0.85;
+
+/* Disabled */
+$ui_disabledBackgroundImage= none;
+$ui_disabledBoxShadow= none;
+
+/* Pressed Down */
+$ui_downBackgroundColor= #BABBBC;
+$ui_downBackgroundImage= '';
+$ui_downPressedShadow= none;
+$ui_downBoxShadow=$ui_borderBoxShadow,
+  $ui_downPressedShadow;
+$ui_downColor= $ui_pressedTextColor;
+
+/* Active */
+$ui_activeBackgroundColor= #C0C1C2;
+$ui_activeBackgroundImage= none;
+$ui_activeColor= $ui_selectedTextColor;
+$ui_activeBoxShadow= $ui_borderBoxShadow;
+
+/* Active + Hovered */
+$ui_activeHoverBackgroundColor= $ui_activeBackgroundColor;
+$ui_activeHoverBackgroundImage= none;
+$ui_activeHoverColor= $ui_activeColor;
+$ui_activeHoverBoxShadow= $ui_activeBoxShadow;
+
+/* Loading */
+$ui_loadingOpacity= 1;
+$ui_loadingPointerEvents= auto;
+$ui_loadingTransition=all 0s linear,
+  opacity $ui_defaultDuration $ui_defaultEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Or */
+$ui_orText= 'or';
+
+$ui_orGap= 0.3em;
+$ui_orHeight= ($ui_verticalPadding * 2) + 1em;
+$ui_orZIndex= 3;
+
+$ui_orCircleDistanceToEdge= ($ui_verticalPadding);
+$ui_orCircleSize= $ui_orHeight - $ui_orCircleDistanceToEdge;
+$ui_orLineHeight= ($ui_orCircleSize);
+$ui_orBoxShadow= $ui_borderBoxShadow;
+
+$ui_orVerticalOffset= -($ui_orCircleSize / 2);
+$ui_orHorizontalOffset= -($ui_orCircleSize / 2);
+
+$ui_orBackgroundColor= $ui_white;
+$ui_orTextShadow= $ui_invertedTextShadow;
+$ui_orTextStyle= normal;
+$ui_orTextWeight= bold;
+$ui_orTextColor= $ui_lightTextColor;
+
+
+$ui_orSpacerHeight= $ui_verticalPadding;
+$ui_orSpacerColor= transparent;
+
+/* Icon */
+$ui_iconButtonOpacity= 0.9;
+
+/* Labeled */
+$ui_labeledLabelFontSize= $ui_medium;
+$ui_labeledLabelAlign= center;
+$ui_labeledLabelPadding= '';
+$ui_labeledLabelFontSize= $ui_relativeMedium;
+$ui_labeledLabelBorderColor= $ui_borderColor;
+$ui_labeledLabelBorderOffset= (- $ui_borderBoxShadowWidth);
+$ui_labeledTagLabelSize= 1.85em; /* hypotenuse of triangle */
+$ui_labeledIconMargin= 0em;
+
+/* Labeled Icon */
+$ui_labeledIconWidth= 1em + ($ui_verticalPadding * 2);
+$ui_labeledIconBackgroundColor= rgba(0, 0, 0, 0.05);
+$ui_labeledIconPadding= ($ui_horizontalPadding + $ui_labeledIconWidth);
+$ui_labeledIconBorder= transparent;
+$ui_labeledIconColor= '';
+
+$ui_labeledIconLeftShadow= -1px 0px 0px 0px $ui_labeledIconBorder inset;
+$ui_labeledIconRightShadow= 1px 0px 0px 0px $ui_labeledIconBorder inset;
+
+
+/* Inverted */
+$ui_invertedBorderSize= 2px;
+$ui_invertedTextColor= $ui_white;
+$ui_invertedTextHoverColor= $ui_hoverColor;
+$ui_invertedGroupButtonOffset= 0px 0px 0px -($ui_invertedBorderSize);
+$ui_invertedVerticalGroupButtonOffset= 0px 0px -($ui_invertedBorderSize) 0px;
+
+/* Basic */
+$ui_basicBorderRadius= $ui_borderRadius;
+$ui_basicBorderSize= 1px;
+$ui_basicTextColor= $ui_textColor;
+$ui_basicColoredBorderSize= 1px;
+
+$ui_basicBackground= transparent none;
+$ui_basicFontWeight= normal;
+$ui_basicBorder= 1px solid $ui_borderColor;
+$ui_basicBoxShadow= 0px 0px 0px $ui_basicBorderSize $ui_borderColor inset;
+$ui_basicLoadingColor= $ui_offWhite;
+$ui_basicTextTransform= none;
+
+/* Basic Hover */
+$ui_basicHoverBackground= #FFFFFF;
+$ui_basicHoverTextColor= $ui_hoveredTextColor;
+$ui_basicHoverBoxShadow=0px 0px 0px $ui_basicBorderSize $ui_selectedBorderColor inset,
+  0px 0px 0px 0px $ui_borderColor inset;
+/* Basic Focus */
+$ui_basicFocusBackground= $ui_basicHoverBackground;
+$ui_basicFocusTextColor= $ui_basicHoverTextColor;
+$ui_basicFocusBoxShadow= $ui_basicHoverBoxShadow;
+
+/* Basic Down */
+$ui_basicDownBackground= #F8F8F8;
+$ui_basicDownTextColor= $ui_pressedTextColor;
+$ui_basicDownBoxShadow=0px 0px 0px $ui_basicBorderSize rgba(0, 0, 0, 0.15) inset,
+  0px 1px 4px 0px $ui_borderColor inset;
+/* Basic Active */
+$ui_basicActiveBackground= $ui_transparentBlack;
+$ui_basicActiveBoxShadow= '';
+$ui_basicActiveTextColor= $ui_selectedTextColor;
+
+/* Basic Inverted */
+$ui_basicInvertedBackground= transparent;
+$ui_basicInvertedFocusBackground= transparent;
+$ui_basicInvertedDownBackground= $ui_transparentWhite;
+$ui_basicInvertedActiveBackground= $ui_transparentWhite;
+
+$ui_basicInvertedBoxShadow= 0px 0px 0px $ui_invertedBorderSize rgba(255, 255, 255, 0.5) inset;
+$ui_basicInvertedHoverBoxShadow= 0px 0px 0px $ui_invertedBorderSize rgba(255, 255, 255, 1) inset;
+$ui_basicInvertedFocusBoxShadow= 0px 0px 0px $ui_invertedBorderSize rgba(255, 255, 255, 1) inset;
+$ui_basicInvertedDownBoxShadow= 0px 0px 0px $ui_invertedBorderSize rgba(255, 255, 255, 0.9) inset;
+$ui_basicInvertedActiveBoxShadow= 0px 0px 0px $ui_invertedBorderSize rgba(255, 255, 255, 0.7) inset;
+
+$ui_basicInvertedColor= $ui_darkWhite;
+$ui_basicInvertedHoverColor= $ui_darkWhiteHover;
+$ui_basicInvertedDownColor= $ui_darkWhiteActive;
+$ui_basicInvertedActiveColor= $ui_invertedTextColor;
+
+
+/* Basic Group */
+$ui_basicGroupBorder= $ui_basicBorderSize solid $ui_borderColor;
+$ui_basicGroupBoxShadow= none;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Colors */
+$ui_coloredBackgroundImage= none;
+$ui_coloredBoxShadow= $ui_shadowBoxShadow;
+
+/* Colored */
+$ui_brownTextColor= $ui_invertedTextColor;
+$ui_brownTextShadow= $ui_invertedTextShadow;
+$ui_redTextColor= $ui_invertedTextColor;
+$ui_redTextShadow= $ui_invertedTextShadow;
+$ui_orangeTextColor= $ui_invertedTextColor;
+$ui_orangeTextShadow= $ui_invertedTextShadow;
+$ui_greenTextColor= $ui_invertedTextColor;
+$ui_greenTextShadow= $ui_invertedTextShadow;
+$ui_blueTextColor= $ui_invertedTextColor;
+$ui_blueTextShadow= $ui_invertedTextShadow;
+$ui_violetTextColor= $ui_invertedTextColor;
+$ui_violetTextShadow= $ui_invertedTextShadow;
+$ui_purpleTextColor= $ui_invertedTextColor;
+$ui_purpleTextShadow= $ui_invertedTextShadow;
+$ui_pinkTextColor= $ui_invertedTextColor;
+$ui_pinkTextShadow= $ui_invertedTextShadow;
+$ui_blackTextColor= $ui_invertedTextColor;
+$ui_blackTextShadow= $ui_invertedTextShadow;
+$ui_oliveTextColor= $ui_invertedTextColor;
+$ui_oliveTextShadow= $ui_invertedTextShadow;
+$ui_yellowTextColor= $ui_invertedTextColor;
+$ui_yellowTextShadow= $ui_invertedTextShadow;
+$ui_tealTextColor= $ui_invertedTextColor;
+$ui_tealTextShadow= $ui_invertedTextShadow;
+$ui_greyTextColor= $ui_invertedTextColor;
+$ui_greyTextShadow= $ui_invertedTextShadow;
+
+/* Inverted */
+$ui_lightBrownTextColor= $ui_invertedTextColor;
+$ui_lightBrownTextShadow= $ui_invertedTextShadow;
+$ui_lightRedTextColor= $ui_invertedTextColor;
+$ui_lightRedTextShadow= $ui_invertedTextShadow;
+$ui_lightOrangeTextColor= $ui_invertedTextColor;
+$ui_lightOrangeTextShadow= $ui_invertedTextShadow;
+$ui_lightGreenTextColor= $ui_invertedTextColor;
+$ui_lightGreenTextShadow= $ui_invertedTextShadow;
+$ui_lightBlueTextColor= $ui_invertedTextColor;
+$ui_lightBlueTextShadow= $ui_invertedTextShadow;
+$ui_lightVioletTextColor= $ui_invertedTextColor;
+$ui_lightVioletTextShadow= $ui_invertedTextShadow;
+$ui_lightPurpleTextColor= $ui_invertedTextColor;
+$ui_lightPurpleTextShadow= $ui_invertedTextShadow;
+$ui_lightPinkTextColor= $ui_invertedTextColor;
+$ui_lightPinkTextShadow= $ui_invertedTextShadow;
+$ui_lightBlackTextColor= $ui_invertedTextColor;
+$ui_lightBlackTextShadow= $ui_invertedTextShadow;
+$ui_lightOliveTextColor= $ui_textColor;
+$ui_lightOliveTextShadow= $ui_textShadow;
+$ui_lightYellowTextColor= $ui_textColor;
+$ui_lightYellowTextShadow= $ui_textShadow;
+$ui_lightTealTextColor= $ui_textColor;
+$ui_lightTealTextShadow= $ui_textShadow;
+$ui_lightGreyTextColor= $ui_textColor;
+$ui_lightGreyTextShadow= $ui_textShadow;
+
+
+/* Ordinality */
+$ui_primaryBackgroundImage= $ui_coloredBackgroundImage;
+$ui_primaryTextColor= $ui_invertedTextColor;
+$ui_primaryTextShadow= $ui_invertedTextShadow;
+$ui_primaryBoxShadow= $ui_coloredBoxShadow;
+
+$ui_secondaryBackgroundImage= $ui_coloredBackgroundImage;
+$ui_secondaryTextColor= $ui_invertedTextColor;
+$ui_secondaryTextShadow= $ui_invertedTextShadow;
+$ui_secondaryBoxShadow= $ui_coloredBoxShadow;
+
+$ui_positiveBackgroundImage= $ui_coloredBackgroundImage;
+$ui_positiveTextColor= $ui_invertedTextColor;
+$ui_positiveTextShadow= $ui_invertedTextShadow;
+$ui_positiveBoxShadow= $ui_coloredBoxShadow;
+
+$ui_negativeBackgroundImage= $ui_coloredBackgroundImage;
+$ui_negativeTextColor= $ui_invertedTextColor;
+$ui_negativeTextShadow= $ui_invertedTextShadow;
+$ui_negativeBoxShadow= $ui_coloredBoxShadow;
+
+/* Compact */
+$ui_compactVerticalPadding= ($ui_verticalPadding * 0.75);
+$ui_compactHorizontalPadding= ($ui_horizontalPadding * 0.75);
+
+/* Attached */
+$ui_attachedOffset= -1px;
+$ui_attachedBoxShadow= 0px 0px 0px 1px $ui_borderColor;
+$ui_attachedHorizontalPadding= 0.75em;
+$ui_attachedZIndex= 2;
+
+/* Floated */
+$ui_floatedMargin= 0.25em;
+
+/* Animated */
+$ui_animatedVerticalAlign= middle;
+$ui_animatedZIndex= 1;
+$ui_animationDuration= 0.3s;
+$ui_animationEasing= ease;
+$ui_fadeScaleHigh= 1.5;
+$ui_fadeScaleLow= 0.75;
+

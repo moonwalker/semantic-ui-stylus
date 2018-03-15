@@ -1,0 +1,57 @@
+/*******************************
+             Icon
+*******************************/
+
+/*-------------------
+   Icon Variables
+--------------------*/
+
+$ui_fontName= 'icons';
+$ui_fallbackSRC= url("" + $ui_fontPath + "/" + $ui_fontName + ".eot");
+$ui_src=url("" + $ui_fontPath + "/" + $ui_fontName + ".eot?#iefix") format('embedded-opentype'),
+  url("" + $ui_fontPath + "/" + $ui_fontName + ".woff2") format('woff2'),
+  url("" + $ui_fontPath + "/" + $ui_fontName + ".woff") format('woff'),
+  url("" + $ui_fontPath + "/" + $ui_fontName + ".ttf") format('truetype'),
+  url("" + $ui_fontPath + "/" + $ui_fontName + ".svg#icons") format('svg');
+
+$ui_opacity= 1;
+$ui_width= $ui_iconWidth;
+$ui_height= 1em;
+$ui_distanceFromText= 0.25rem;
+
+
+/* Variations */
+
+$ui_linkOpacity= 0.8;
+$ui_linkDuration= 0.3s;
+$ui_loadingDuration= 2s;
+
+$ui_circularSize= 2em;
+$ui_circularPadding= 0.5em 0.5em;
+$ui_circularShadow= 0em 0em 0em 0.1em rgba(0, 0, 0, 0.1) inset;
+
+$ui_borderedSize= 2em;
+$ui_borderedVerticalPadding= (($ui_borderedSize - $ui_height) / 2);
+$ui_borderedHorizontalPadding= (($ui_borderedSize - $ui_width) / 2);
+$ui_borderedShadow= 0em 0em 0em 0.1em rgba(0, 0, 0, 0.1) inset;
+
+$ui_cornerIconSize= 0.45em;
+$ui_cornerIconStroke= 1px;
+$ui_cornerIconShadow=- $ui_cornerIconStroke - $ui_cornerIconStroke 0 $ui_white,
+   $ui_cornerIconStroke (- $ui_cornerIconStroke) 0 $ui_white,
+  (- $ui_cornerIconStroke)  $ui_cornerIconStroke 0 $ui_white,
+   $ui_cornerIconStroke  $ui_cornerIconStroke 0 $ui_white;
+$ui_cornerIconInvertedShadow=- $ui_cornerIconStroke - $ui_cornerIconStroke 0 $ui_black,
+   $ui_cornerIconStroke (- $ui_cornerIconStroke) 0 $ui_black,
+  (- $ui_cornerIconStroke)  $ui_cornerIconStroke 0 $ui_black,
+   $ui_cornerIconStroke  $ui_cornerIconStroke 0 $ui_black;
+
+$ui_mini= 0.4em;
+$ui_tiny= 0.5em;
+$ui_small= 0.75em;
+$ui_medium= 1em;
+$ui_large= 1.5em;
+$ui_big= 2em;
+$ui_huge= 4em;
+$ui_massive= 8em;
+

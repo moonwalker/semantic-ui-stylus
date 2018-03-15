@@ -1,0 +1,211 @@
+/*******************************
+             Card
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* Shadow */
+$ui_shadowDistance= 1px;
+$ui_shadowBoxShadow= 0px $ui_shadowDistance 3px 0px $ui_solidBorderColor;
+
+/* Card */
+$ui_fontFamily= $ui_pageFont;
+$ui_display= flex;
+$ui_background= $ui_white;
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_margin= 1em 0em;
+$ui_minHeight= 0px;
+$ui_padding= 0em;
+$ui_width= 290px;
+$ui_borderWidth= 1px;
+$ui_borderShadow= 0px 0px 0px $ui_borderWidth $ui_solidBorderColor;
+$ui_boxShadow=$ui_shadowBoxShadow,
+  $ui_borderShadow;
+$ui_border= none;
+$ui_zIndex= '';
+$ui_transition=box-shadow $ui_defaultDuration $ui_defaultEasing,
+  transform $ui_defaultDuration $ui_defaultEasing;
+
+/* Card Group */
+$ui_horizontalSpacing= 1em;
+$ui_rowSpacing= 1.75em;
+
+$ui_groupMargin= -($ui_rowSpacing / 2) -($ui_horizontalSpacing / 2);
+$ui_groupDisplay= flex;
+
+$ui_groupCardFloat= none;
+$ui_groupCardDisplay= flex;
+$ui_groupCardMargin= ($ui_rowSpacing / 2) ($ui_horizontalSpacing / 2);
+
+/* Consecutive Cards */
+$ui_consecutiveGroupDistance= ($ui_rowSpacing / 2);
+
+/*-------------------
+       Content
+--------------------*/
+
+
+/* Image */
+$ui_imageBackground= $ui_transparentBlack;
+$ui_imagePadding= 0em;
+$ui_imageBorder= none;
+$ui_imageBoxShadow= none;
+$ui_imageBorder= none;
+
+/* Content */
+$ui_contentDivider= $ui_borderWidth solid $ui_internalBorderColor;
+$ui_contentMargin= 0em;
+$ui_contentBackground= none;
+$ui_contentPadding= 1em 1em;
+$ui_contentFontSize= 1em;
+$ui_contentBorderRadius= 0em;
+$ui_contentBoxShadow= none;
+$ui_contentBorder= none;
+
+
+/* Header */
+$ui_headerMargin= '';
+$ui_headerFontWeight= bold;
+$ui_headerFontSize= $ui_relativeBig;
+$ui_headerLineHeightOffset= -($ui_lineHeight - 1em) / 2;
+$ui_headerColor= $ui_darkTextColor;
+
+/* Metadata */
+$ui_metaFontSize= $ui_relativeMedium;
+$ui_metaSpacing= 0.3em;
+$ui_metaColor= $ui_lightTextColor;
+
+/* Icons */
+$ui_actionOpacity= 0.75;
+$ui_actionHoverOpacity= 1;
+$ui_actionTransition= color $ui_defaultDuration $ui_defaultEasing;
+
+$ui_starColor= #FFB70A;
+$ui_starActiveColor= #FFE623;
+
+$ui_likeColor= #FF2733;
+$ui_likeActiveColor= #FF2733;
+
+/* Links */
+$ui_contentLinkColor= '';
+$ui_contentLinkHoverColor= '';
+$ui_contentLinkTransition= color $ui_defaultDuration $ui_defaultEasing;
+
+$ui_headerLinkColor= $ui_headerColor;
+$ui_headerLinkHoverColor= $ui_linkHoverColor;
+
+$ui_metaLinkColor= $ui_lightTextColor;
+$ui_metaLinkHoverColor= $ui_textColor;
+
+/* Description */
+$ui_descriptionDistance= 0.5em;
+$ui_descriptionColor= rgba(0, 0, 0, 0.68);
+
+/* Content Image */
+$ui_contentImageWidth= '';
+$ui_contentImageVerticalAlign= middle;
+
+/* Avatar Image */
+$ui_avatarSize= 2em;
+$ui_avatarBorderRadius= $ui_circularRadius;
+
+/* Paragraph */
+$ui_paragraphDistance= 0.5em;
+
+/* Dimmer */
+$ui_dimmerZIndex= 10;
+$ui_dimmerColor= '';
+
+/* Additional Content */
+$ui_extraDivider= 1px solid rgba(0, 0, 0, 0.05);
+$ui_extraBackground= none;
+$ui_extraPosition= static;
+$ui_extraWidth= auto;
+$ui_extraTop= 0em;
+$ui_extraLeft= 0em;
+$ui_extraMargin= 0em 0em;
+$ui_extraPadding= 0.75em 1em;
+$ui_extraBoxShadow= none;
+$ui_extraColor= $ui_lightTextColor;
+$ui_extraTransition= color $ui_defaultDuration $ui_defaultEasing;
+
+/* Extra Links */
+$ui_extraLinkColor= $ui_unselectedTextColor;
+$ui_extraLinkHoverColor= $ui_linkHoverColor;
+
+/* Buttons */
+$ui_buttonMargin= 0px (- $ui_borderWidth);
+$ui_buttonWidth= unquote("calc(100% + (" + $ui_borderWidth + " * 2))");
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Link */
+$ui_linkHoverBackground= $ui_white;
+$ui_linkHoverBorder= $ui_border;
+$ui_linkHoverZIndex= 5;
+$ui_linkHoverRaiseDistance= 3px;
+$ui_linkHoverTransform= translateY(- $ui_linkHoverRaiseDistance);
+
+$ui_shadowHoverBoxShadow= 0px $ui_shadowDistance $ui_linkHoverRaiseDistance 0px $ui_solidSelectedBorderColor;
+$ui_linkHoverBoxShadow=$ui_shadowHoverBoxShadow,
+  $ui_borderShadow;
+
+
+/* Raised */
+$ui_raisedShadow=$ui_borderShadow,
+  $ui_floatingShadow;
+$ui_raisedShadowHover=$ui_borderShadow,
+  $ui_floatingShadowHover;
+
+/* Card Count */
+$ui_wideCardSpacing= 1em;
+$ui_cardSpacing= 0.75em;
+$ui_smallCardSpacing= 0.5em;
+
+$ui_oneCardSpacing= 0em;
+$ui_twoCardSpacing= $ui_wideCardSpacing;
+$ui_threeCardSpacing= $ui_wideCardSpacing;
+$ui_fourCardSpacing= $ui_cardSpacing;
+$ui_fiveCardSpacing= $ui_cardSpacing;
+$ui_sixCardSpacing= $ui_cardSpacing;
+$ui_sevenCardSpacing= $ui_smallCardSpacing;
+$ui_eightCardSpacing= $ui_smallCardSpacing;
+$ui_nineCardSpacing= $ui_smallCardSpacing;
+$ui_tenCardSpacing= $ui_smallCardSpacing;
+
+$ui_oneCard= $ui_oneColumn;
+$ui_oneCardOffset= 0em;
+$ui_twoCard= unquote("calc(" + $ui_twoColumn + "~" - "(" + $ui_twoCardSpacing + " * 2))");
+$ui_twoCardOffset= (- $ui_twoCardSpacing);
+$ui_threeCard= unquote("calc(" + $ui_threeColumn + "~" - "(" + $ui_threeCardSpacing + " * 2))");
+$ui_threeCardOffset= (- $ui_threeCardSpacing);
+$ui_fourCard= unquote("calc(" + $ui_fourColumn + "~" - "(" + $ui_fourCardSpacing + " * 2))");
+$ui_fourCardOffset= (- $ui_fourCardSpacing);
+$ui_fiveCard= unquote("calc(" + $ui_fiveColumn + "~" - "(" + $ui_fiveCardSpacing + " * 2))");
+$ui_fiveCardOffset= (- $ui_fiveCardSpacing);
+$ui_sixCard= unquote("calc(" + $ui_sixColumn + "~" - "(" + $ui_sixCardSpacing + " * 2))");
+$ui_sixCardOffset= (- $ui_sixCardSpacing);
+$ui_sevenCard= unquote("calc(" + $ui_sevenColumn + "~" - "(" + $ui_sevenCardSpacing + " * 2))");
+$ui_sevenCardOffset= (- $ui_sevenCardSpacing);
+$ui_eightCard= unquote("calc(" + $ui_eightColumn + "~" - "(" + $ui_sevenCardSpacing + " * 2))");
+$ui_eightCardOffset= (- $ui_sevenCardSpacing);
+$ui_nineCard= unquote("calc(" + $ui_nineColumn + "~" - "(" + $ui_nineCardSpacing + " * 2))");
+$ui_nineCardOffset= (- $ui_nineCardSpacing);
+$ui_tenCard= unquote("calc(" + $ui_tenColumn + "~" - "(" + $ui_tenCardSpacing + " * 2))");
+$ui_tenCardOffset= (- $ui_tenCardSpacing);
+
+/* Stackable */
+$ui_stackableRowSpacing= 1em;
+$ui_stackableCardSpacing= 1em;
+$ui_stackableMargin= unquote("calc(" + $ui_oneColumn + "~" - "(" + $ui_stackableCardSpacing + " * 2))");
+
+/* Sizes */
+$ui_medium= 1em;
+
+/* Colored */
+$ui_coloredShadowDistance= 2px;
+

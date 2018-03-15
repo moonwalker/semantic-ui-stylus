@@ -1,0 +1,94 @@
+/*******************************
+            Button
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_googleFontName = 'Roboto';
+$ui_pageFont       = 'Roboto', Arial, sans-serif;
+
+$ui_medium= 13px;
+
+$ui_verticalPadding   = 0.8em;
+$ui_horizontalPadding = 0.8em;
+$ui_borderRadius      = $ui_relative3px;
+$ui_color             = #222222;
+$ui_fontWeight        = normal;
+$ui_textTransform     = none;
+
+$ui_backgroundColor      = $ui_white;
+$ui_backgroundImage      = linear-gradient(transparent, rgba(0, 0, 0, 0.02));
+
+$ui_solidBorderColor= #DDDDDD;
+
+$ui_borderBoxShadowColor= $ui_solidBorderColor;
+$ui_borderBoxShadow= 0px 0px 0px 1px $ui_solidBorderColor inset;
+$ui_shadowBoxShadow= 0px 0px 0px 0px transparent;
+
+$ui_transition=opacity 0.3s $ui_defaultEasing,
+  background-color 0.3s $ui_defaultEasing,
+  color 0.3s $ui_defaultEasing,
+  box-shadow 0.3s $ui_defaultEasing,
+  background 0.3s $ui_defaultEasing;
+/*-------------------
+        State
+--------------------*/
+
+$ui_hoverBackgroundColor= $ui_white;
+$ui_hoverBoxShadow=$ui_borderBoxShadow,
+  0px 2px 3px 0px rgba(0, 0, 0, 0.2) !important;
+
+$ui_downBackgroundColor= $ui_white;
+$ui_downBackgroundImage= linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+$ui_downTextColor= #222222;
+$ui_downBoxShadow= $ui_borderBoxShadow;
+
+$ui_activeBackgroundColor= #F0F0F0;
+$ui_activeBoxShadow= 0px 0px 0px 1px #DDDDDD;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Basic */
+$ui_basicBorderSize= 0px;
+$ui_basicBorderRadius= 4px;
+$ui_basicColoredBorderSize= 1px;
+$ui_basicHoverBackground= $ui_white;
+$ui_basicHoverBoxShadow= $ui_hoverBoxShadow;
+$ui_basicDownBackground= $ui_white;
+$ui_basicDownBoxShadow= $ui_downBoxShadow;
+
+$ui_basicActiveBackground= #FFFFFF;
+$ui_basicActiveBoxShadow= 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+/* Labeled */
+$ui_labeledIconBackgroundColor= transparent;
+$ui_labeledIconWidth= 2em;
+
+$ui_labeledLabelBorderOffset= 0px;
+
+/* Colored */
+$ui_coloredBackgroundImage = $ui_subtleGradient;
+$ui_coloredBoxShadow       = 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+
+/* Primary */
+$ui_primaryColor       = #4184F3;
+$ui_primaryBoxShadow   = 0px 0px 0px 1px #0157E4 inset;
+
+/* Secondary */
+$ui_secondaryColor           = #EEEEEE;
+$ui_secondaryBackgroundImage = $ui_backgroundImage;
+$ui_secondaryTextColor       = $ui_textColor;
+$ui_secondaryBoxShadow       = $ui_borderBoxShadow;
+
+/* Emotive */
+$ui_positiveColor= #3D9400;
+$ui_negativeColor= #D34836;
+
+/* Inverted */
+$ui_invertedBorderSize= 1px;
+
+

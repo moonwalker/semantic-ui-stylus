@@ -1,0 +1,144 @@
+/*!
+ * # Semantic UI - Container
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'element';
+$ui_element = 'container';
+
+@import '../../theme.config';
+
+/*******************************
+            Container
+*******************************/
+
+/* All Sizes */
+.ui.container {
+  display: block;
+  max-width: $ui_maxWidth !important;
+}
+
+/* Mobile */
+@media only screen and (max-width: $ui_largestMobileScreen) {
+  .ui.container {
+    width: $ui_mobileWidth !important;
+    margin-left: $ui_mobileGutter !important;
+    margin-right: $ui_mobileGutter !important;
+  }
+  .ui.grid.container {
+    width: $ui_mobileGridWidth !important;
+  }
+  .ui.relaxed.grid.container {
+    width: $ui_mobileRelaxedGridWidth !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: $ui_mobileVeryRelaxedGridWidth !important;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: $ui_tabletBreakpoint) and (max-width: $ui_largestTabletScreen) {
+  .ui.container {
+    width: $ui_tabletWidth;
+    margin-left: $ui_tabletGutter !important;
+    margin-right: $ui_tabletGutter !important;
+  }
+  .ui.grid.container {
+    width: $ui_tabletGridWidth !important;
+  }
+  .ui.relaxed.grid.container {
+    width: $ui_tabletRelaxedGridWidth !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: $ui_tabletVeryRelaxedGridWidth !important;
+  }
+}
+
+/* Small Monitor */
+@media only screen and (min-width: $ui_computerBreakpoint) and (max-width: $ui_largestSmallMonitor) {
+  .ui.container {
+    width: $ui_computerWidth;
+    margin-left: $ui_computerGutter !important;
+    margin-right: $ui_computerGutter !important;
+  }
+  .ui.grid.container {
+    width: $ui_computerGridWidth !important;
+  }
+  .ui.relaxed.grid.container {
+    width: $ui_computerRelaxedGridWidth !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: $ui_computerVeryRelaxedGridWidth !important;
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: $ui_largeMonitorBreakpoint) {
+  .ui.container {
+    width: $ui_largeMonitorWidth;
+    margin-left: $ui_largeMonitorGutter !important;
+    margin-right: $ui_largeMonitorGutter !important;
+  }
+  .ui.grid.container {
+    width: $ui_largeMonitorGridWidth !important;
+  }
+  .ui.relaxed.grid.container {
+    width: $ui_largeMonitorRelaxedGridWidth !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: $ui_largeMonitorVeryRelaxedGridWidth !important;
+  }
+}
+
+/*******************************
+             Types
+*******************************/
+
+
+/* Text Container */
+.ui.text.container {
+  font-family: $ui_textFontFamily;
+  max-width: $ui_textWidth !important;
+  line-height: $ui_textLineHeight;
+}
+
+.ui.text.container {
+  font-size: $ui_textSize;
+}
+
+/* Fluid */
+.ui.fluid.container {
+  width: 100%;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+.ui[class*="left aligned"].container {
+  text-align: left;
+}
+.ui[class*="center aligned"].container {
+  text-align: center;
+}
+.ui[class*="right aligned"].container {
+  text-align: right;
+}
+.ui.justified.container {
+  text-align: justify;
+  hyphens: auto;
+}
+
+
+loadUIOverrides();
+

@@ -1,0 +1,192 @@
+/*!
+ * # Semantic UI - Rating
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'module';
+$ui_element = 'rating';
+
+@import '../../theme.config';
+
+/*******************************
+           Rating
+*******************************/
+
+.ui.rating {
+  display: inline-flex;
+  white-space: $ui_whiteSpace;
+  vertical-align: $ui_verticalAlign;
+}
+.ui.rating:last-child {
+  margin-right: 0em;
+}
+
+/* Icon */
+.ui.rating .icon {
+  padding: 0em;
+  margin: 0em;
+  text-align: center;
+  font-weight: normal;
+  font-style: normal;
+  flex: 1 0 auto;
+  cursor: $ui_iconCursor;
+  width: $ui_iconWidth;
+  height: $ui_iconHeight;
+  transition: $ui_iconTransition;
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+
+/*-------------------
+      Standard
+--------------------*/
+
+/* Inactive Icon */
+.ui.rating .icon {
+  background: $ui_inactiveBackground;
+  color: $ui_inactiveColor;
+}
+
+/* Active Icon */
+.ui.rating .active.icon {
+  background: $ui_activeBackground;
+  color: $ui_activeColor;
+}
+
+/* Selected Icon */
+.ui.rating .icon.selected,
+.ui.rating .icon.selected.active {
+  background: $ui_selectedBackground;
+  color: $ui_selectedColor;
+}
+
+
+/*-------------------
+        Star
+--------------------*/
+
+/* Inactive */
+.ui.star.rating .icon {
+  width: $ui_starIconWidth;
+  height: $ui_starIconHeight;
+  background: $ui_starInactiveBackground;
+  color: $ui_starInactiveColor;
+  text-shadow: $ui_starInactiveTextShadow;
+}
+
+/* Active Star */
+.ui.star.rating .active.icon {
+  background: $ui_starActiveBackground !important;
+  color: $ui_starActiveColor !important;
+  text-shadow: $ui_starActiveTextShadow !important;
+}
+
+/* Selected Star */
+.ui.star.rating .icon.selected,
+.ui.star.rating .icon.selected.active {
+  background: $ui_starSelectedBackground !important;
+  color: $ui_starSelectedColor !important;
+  text-shadow: $ui_starSelectedTextShadow !important;
+}
+
+
+/*-------------------
+        Heart
+--------------------*/
+
+.ui.heart.rating .icon {
+  width: $ui_heartIconWidth;
+  height: $ui_heartIconHeight;
+  background: $ui_heartInactiveBackground;
+  color: $ui_heartInactiveColor;
+  text-shadow: $ui_heartInactiveTextShadow !important;
+}
+
+/* Active Heart */
+.ui.heart.rating .active.icon {
+  background: $ui_heartActiveBackground !important;
+  color: $ui_heartActiveColor !important;
+  text-shadow: $ui_heartActiveTextShadow !important;
+}
+
+/* Selected Heart */
+.ui.heart.rating .icon.selected,
+.ui.heart.rating .icon.selected.active {
+  background: $ui_heartSelectedBackground !important;
+  color: $ui_heartSelectedColor !important;
+  text-shadow: $ui_heartSelectedTextShadow !important;
+}
+
+
+/*******************************
+             States
+*******************************/
+
+/*-------------------
+       Disabled
+--------------------*/
+
+/* disabled rating */
+.ui.disabled.rating .icon {
+  cursor: default;
+}
+
+
+/*-------------------
+   User Interactive
+--------------------*/
+
+/* Selected Rating */
+.ui.rating.selected .active.icon {
+  opacity: $ui_interactiveActiveIconOpacity;
+}
+.ui.rating.selected .icon.selected,
+.ui.rating .icon.selected {
+  opacity: $ui_interactiveSelectedIconOpacity;
+}
+
+
+
+/*******************************
+          Variations
+*******************************/
+
+.ui.mini.rating {
+  font-size: $ui_mini;
+}
+.ui.tiny.rating {
+  font-size: $ui_tiny;
+}
+.ui.small.rating {
+  font-size: $ui_small;
+}
+.ui.rating {
+  font-size: $ui_medium;
+}
+.ui.large.rating {
+  font-size: $ui_large;
+}
+.ui.huge.rating {
+  font-size: $ui_huge;
+}
+.ui.massive.rating {
+  font-size: $ui_massive;
+}
+
+
+loadUIOverrides();
+

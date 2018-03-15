@@ -1,0 +1,1060 @@
+/*!
+ * # Semantic UI - Item
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'view';
+$ui_element = 'card';
+
+@import '../../theme.config';
+
+/*******************************
+            Standard
+*******************************/
+
+/*--------------
+      Card
+---------------*/
+
+.ui.cards > .card,
+.ui.card {
+  max-width: 100%;
+  position: relative;
+  display: $ui_display;
+  flex-direction: column;
+
+  width: $ui_width;
+  min-height: $ui_minHeight;
+  background: $ui_background;
+  padding: $ui_padding;
+
+  border: $ui_border;
+  border-radius: $ui_borderRadius;
+  box-shadow: $ui_boxShadow;
+  transition: $ui_transition;
+  z-index: $ui_zIndex;
+}
+.ui.card {
+  margin: $ui_margin;
+}
+
+.ui.cards > .card a,
+.ui.card a {
+  cursor: pointer;
+}
+
+.ui.card:first-child {
+  margin-top: 0em;
+}
+.ui.card:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+      Cards
+---------------*/
+
+.ui.cards {
+  display: $ui_groupDisplay;
+  margin: $ui_groupMargin;
+  flex-wrap: wrap;
+}
+
+.ui.cards > .card {
+  display: $ui_groupCardDisplay;
+  margin: $ui_groupCardMargin;
+  float: $ui_groupCardFloat;
+}
+
+/* Clearing */
+.ui.cards:after,
+.ui.card:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+
+/* Consecutive Card Groups Preserve Row Spacing */
+.ui.cards ~ .ui.cards {
+  margin-top: $ui_consecutiveGroupDistance;
+}
+
+
+/*--------------
+  Rounded Edges
+---------------*/
+
+.ui.cards > .card > :first-child,
+.ui.card > :first-child {
+  border-radius: $ui_borderRadius $ui_borderRadius 0em 0em !important;
+  border-top: none !important;
+}
+
+.ui.cards > .card > :last-child,
+.ui.card > :last-child {
+  border-radius: 0em 0em $ui_borderRadius $ui_borderRadius !important;
+}
+
+.ui.cards > .card > :only-child,
+.ui.card > :only-child {
+  border-radius: $ui_borderRadius !important;
+}
+
+/*--------------
+     Images
+---------------*/
+
+.ui.cards > .card > .image,
+.ui.card > .image {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  padding: $ui_imagePadding;
+  background: $ui_imageBackground;
+}
+.ui.cards > .card > .image > img,
+.ui.card > .image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+.ui.cards > .card > .image:not(.ui) > img,
+.ui.card > .image:not(.ui) > img {
+  border: $ui_imageBorder;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.cards > .card > .content,
+.ui.card > .content {
+  flex-grow: 1;
+  border: $ui_contentBorder;
+  border-top: $ui_contentDivider;
+  background: $ui_contentBackground;
+  margin: $ui_contentMargin;
+  padding: $ui_contentPadding;
+  box-shadow: $ui_contentBoxShadow;
+  font-size: $ui_contentFontSize;
+  border-radius: $ui_contentBorderRadius;
+}
+
+.ui.cards > .card > .content:after,
+.ui.card > .content:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.ui.cards > .card > .content > .header,
+.ui.card > .content > .header {
+  display: block;
+  margin: $ui_headerMargin;
+  font-family: $ui_headerFont;
+  color: $ui_headerColor;
+}
+
+/* Default Header Size */
+.ui.cards > .card > .content > .header:not(.ui),
+.ui.card > .content > .header:not(.ui) {
+  font-weight: $ui_headerFontWeight;
+  font-size: $ui_headerFontSize;
+  margin-top: $ui_headerLineHeightOffset;
+  line-height: $ui_headerLineHeight;
+}
+
+.ui.cards > .card > .content > .meta + .description,
+.ui.cards > .card > .content > .header + .description,
+.ui.card > .content > .meta + .description,
+.ui.card > .content > .header + .description  {
+  margin-top: $ui_descriptionDistance;
+}
+
+/*----------------
+ Floated Content
+-----------------*/
+
+.ui.cards > .card  [class*="left floated"],
+.ui.card [class*="left floated"] {
+  float: left;
+}
+.ui.cards > .card [class*="right floated"],
+.ui.card [class*="right floated"] {
+  float: right;
+}
+
+/*--------------
+     Aligned
+---------------*/
+
+.ui.cards > .card  [class*="left aligned"],
+.ui.card [class*="left aligned"] {
+  text-align: left;
+}
+.ui.cards > .card [class*="center aligned"],
+.ui.card [class*="center aligned"] {
+  text-align: center;
+}
+.ui.cards > .card [class*="right aligned"],
+.ui.card [class*="right aligned"] {
+  text-align: right;
+}
+
+
+/*--------------
+  Content Image
+---------------*/
+
+.ui.cards > .card .content img,
+.ui.card .content img {
+  display: inline-block;
+  vertical-align: $ui_contentImageVerticalAlign;
+  width: $ui_contentImageWidth;
+}
+.ui.cards > .card img.avatar,
+.ui.cards > .card .avatar img,
+.ui.card img.avatar,
+.ui.card .avatar img {
+  width: $ui_avatarSize;
+  height: $ui_avatarSize;
+  border-radius: $ui_avatarBorderRadius;
+}
+
+
+/*--------------
+   Description
+---------------*/
+
+.ui.cards > .card > .content > .description,
+.ui.card > .content > .description {
+  clear: both;
+  color: $ui_descriptionColor;
+}
+
+/*--------------
+    Paragraph
+---------------*/
+
+.ui.cards > .card > .content p,
+.ui.card > .content p {
+  margin: 0em 0em $ui_paragraphDistance;
+}
+.ui.cards > .card > .content p:last-child,
+.ui.card > .content p:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+      Meta
+---------------*/
+
+.ui.cards > .card .meta,
+.ui.card .meta {
+  font-size: $ui_metaFontSize;
+  color: $ui_metaColor;
+}
+.ui.cards > .card .meta *,
+.ui.card .meta * {
+  margin-right: $ui_metaSpacing;
+}
+.ui.cards > .card .meta :last-child,
+.ui.card .meta :last-child {
+  margin-right: 0em;
+}
+
+.ui.cards > .card .meta [class*="right floated"],
+.ui.card .meta [class*="right floated"] {
+  margin-right: 0em;
+  margin-left: $ui_metaSpacing;
+}
+
+/*--------------
+      Links
+---------------*/
+
+/* Generic */
+.ui.cards > .card > .content a:not(.ui),
+.ui.card > .content a:not(.ui) {
+  color: $ui_contentLinkColor;
+  transition: $ui_contentLinkTransition;
+}
+.ui.cards > .card > .content a:not(.ui):hover,
+.ui.card > .content a:not(.ui):hover {
+  color: $ui_contentLinkHoverColor;
+}
+
+/* Header */
+.ui.cards > .card > .content > a.header,
+.ui.card > .content > a.header {
+  color: $ui_headerLinkColor;
+}
+.ui.cards > .card > .content > a.header:hover,
+.ui.card > .content > a.header:hover {
+  color: $ui_headerLinkHoverColor;
+}
+
+/* Meta */
+.ui.cards > .card .meta > a:not(.ui),
+.ui.card .meta > a:not(.ui) {
+  color: $ui_metaLinkColor;
+}
+.ui.cards > .card .meta > a:not(.ui):hover,
+.ui.card .meta > a:not(.ui):hover {
+  color: $ui_metaLinkHoverColor;
+}
+
+/*--------------
+     Buttons
+---------------*/
+
+.ui.cards > .card > .buttons,
+.ui.card > .buttons,
+.ui.cards > .card > .button,
+.ui.card > .button {
+  margin: $ui_buttonMargin;
+  width: $ui_buttonWidth;
+}
+
+/*--------------
+      Dimmer
+---------------*/
+
+.ui.cards > .card .dimmer,
+.ui.card .dimmer {
+  background-color: $ui_dimmerColor;
+  z-index: $ui_dimmerZIndex;
+}
+
+/*--------------
+     Labels
+---------------*/
+
+/*-----Star----- */
+
+/* Icon */
+.ui.cards > .card > .content .star.icon,
+.ui.card > .content .star.icon {
+  cursor: pointer;
+  opacity: $ui_actionOpacity;
+  transition: $ui_actionTransition;
+}
+.ui.cards > .card > .content .star.icon:hover,
+.ui.card > .content .star.icon:hover {
+  opacity: $ui_actionHoverOpacity;
+  color: $ui_starColor;
+}
+.ui.cards > .card > .content .active.star.icon,
+.ui.card > .content .active.star.icon {
+  color: $ui_starActiveColor;
+}
+
+/*-----Like----- */
+
+/* Icon */
+.ui.cards > .card > .content .like.icon,
+.ui.card > .content .like.icon {
+  cursor: pointer;
+  opacity: $ui_actionOpacity;
+  transition: $ui_actionTransition;
+}
+.ui.cards > .card > .content .like.icon:hover,
+.ui.card > .content .like.icon:hover {
+  opacity: $ui_actionHoverOpacity;
+  color: $ui_likeColor;
+}
+.ui.cards > .card > .content .active.like.icon,
+.ui.card > .content .active.like.icon {
+  color: $ui_likeActiveColor;
+}
+
+/*----------------
+  Extra Content
+-----------------*/
+
+.ui.cards > .card > .extra,
+.ui.card > .extra {
+  max-width: 100%;
+  min-height: 0em !important;
+  flex-grow: 0;
+  border-top: $ui_extraDivider !important;
+  position: $ui_extraPosition;
+  background: $ui_extraBackground;
+  width: $ui_extraWidth;
+  margin: $ui_extraMargin;
+  padding: $ui_extraPadding;
+  top: $ui_extraTop;
+  left: $ui_extraLeft;
+  color: $ui_extraColor;
+  box-shadow: $ui_extraBoxShadow;
+  transition: $ui_extraTransition;
+}
+.ui.cards > .card > .extra a:not(.ui),
+.ui.card > .extra a:not(.ui) {
+  color: $ui_extraLinkColor;
+}
+.ui.cards > .card > .extra a:not(.ui):hover,
+.ui.card > .extra a:not(.ui):hover {
+  color: $ui_extraLinkHoverColor;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+/*-------------------
+       Raised
+--------------------*/
+
+.ui.raised.cards > .card,
+.ui.raised.card {
+  box-shadow: $ui_raisedShadow;
+}
+.ui.raised.cards a.card:hover,
+.ui.link.cards .raised.card:hover,
+a.ui.raised.card:hover,
+.ui.link.raised.card:hover {
+  box-shadow: $ui_raisedShadowHover;
+}
+
+.ui.raised.cards > .card,
+.ui.raised.card {
+  box-shadow: $ui_raisedShadow;
+}
+/*-------------------
+       Centered
+--------------------*/
+
+.ui.centered.cards {
+  justify-content: center;
+}
+.ui.centered.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-------------------
+        Fluid
+--------------------*/
+
+.ui.fluid.card {
+  width: 100%;
+  max-width: 9999px;
+}
+
+/*-------------------
+        Link
+--------------------*/
+
+.ui.cards a.card,
+.ui.link.cards .card,
+a.ui.card,
+.ui.link.card {
+  transform: none;
+}
+
+
+.ui.cards a.card:hover,
+.ui.link.cards .card:hover,
+a.ui.card:hover,
+.ui.link.card:hover {
+  cursor: pointer;
+  z-index: $ui_linkHoverZIndex;
+  background: $ui_linkHoverBackground;
+  border: $ui_linkHoverBorder;
+  box-shadow: $ui_linkHoverBoxShadow;
+  transform: $ui_linkHoverTransform;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+
+/* Red */
+.ui.red.cards > .card,
+.ui.cards > .red.card,
+.ui.red.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_red,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.red.cards > .card:hover,
+.ui.cards > .red.card:hover,
+.ui.red.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_redHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Orange */
+.ui.orange.cards > .card,
+.ui.cards > .orange.card,
+.ui.orange.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_orange,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.orange.cards > .card:hover,
+.ui.cards > .orange.card:hover,
+.ui.orange.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_orangeHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Yellow */
+.ui.yellow.cards > .card,
+.ui.cards > .yellow.card,
+.ui.yellow.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_yellow,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.yellow.cards > .card:hover,
+.ui.cards > .yellow.card:hover,
+.ui.yellow.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_yellowHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Olive */
+.ui.olive.cards > .card,
+.ui.cards > .olive.card,
+.ui.olive.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_olive,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.olive.cards > .card:hover,
+.ui.cards > .olive.card:hover,
+.ui.olive.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_oliveHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Green */
+.ui.green.cards > .card,
+.ui.cards > .green.card,
+.ui.green.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_green,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.green.cards > .card:hover,
+.ui.cards > .green.card:hover,
+.ui.green.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_greenHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Teal */
+.ui.teal.cards > .card,
+.ui.cards > .teal.card,
+.ui.teal.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_teal,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.teal.cards > .card:hover,
+.ui.cards > .teal.card:hover,
+.ui.teal.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_tealHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Blue */
+.ui.blue.cards > .card,
+.ui.cards > .blue.card,
+.ui.blue.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_blue,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.blue.cards > .card:hover,
+.ui.cards > .blue.card:hover,
+.ui.blue.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_blueHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Violet */
+.ui.violet.cards > .card,
+.ui.cards > .violet.card,
+.ui.violet.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_violet,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.violet.cards > .card:hover,
+.ui.cards > .violet.card:hover,
+.ui.violet.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_violetHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Purple */
+.ui.purple.cards > .card,
+.ui.cards > .purple.card,
+.ui.purple.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_purple,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.purple.cards > .card:hover,
+.ui.cards > .purple.card:hover,
+.ui.purple.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_purpleHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Pink */
+.ui.pink.cards > .card,
+.ui.cards > .pink.card,
+.ui.pink.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_pink,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.pink.cards > .card:hover,
+.ui.cards > .pink.card:hover,
+.ui.pink.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_pinkHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Brown */
+.ui.brown.cards > .card,
+.ui.cards > .brown.card,
+.ui.brown.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_brown,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.brown.cards > .card:hover,
+.ui.cards > .brown.card:hover,
+.ui.brown.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_brownHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Grey */
+.ui.grey.cards > .card,
+.ui.cards > .grey.card,
+.ui.grey.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_grey,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.grey.cards > .card:hover,
+.ui.cards > .grey.card:hover,
+.ui.grey.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_greyHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/* Black */
+.ui.black.cards > .card,
+.ui.cards > .black.card,
+.ui.black.card {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_black,
+    $ui_shadowBoxShadow
+  ;
+}
+.ui.black.cards > .card:hover,
+.ui.cards > .black.card:hover,
+.ui.black.card:hover {
+  box-shadow:
+    $ui_borderShadow,
+    0px $ui_coloredShadowDistance 0px 0px $ui_blackHover,
+    $ui_shadowHoverBoxShadow
+  ;
+}
+
+/*--------------
+   Card Count
+---------------*/
+
+.ui.one.cards {
+  margin-left: $ui_oneCardOffset;
+  margin-right: $ui_oneCardOffset;
+}
+.ui.one.cards > .card {
+  width: $ui_oneCard;
+}
+
+.ui.two.cards {
+  margin-left: $ui_twoCardOffset;
+  margin-right: $ui_twoCardOffset;
+}
+.ui.two.cards > .card {
+  width: $ui_twoCard;
+  margin-left: $ui_twoCardSpacing;
+  margin-right: $ui_twoCardSpacing;
+}
+
+.ui.three.cards {
+  margin-left: $ui_threeCardOffset;
+  margin-right: $ui_threeCardOffset;
+}
+.ui.three.cards > .card {
+  width: $ui_threeCard;
+  margin-left: $ui_threeCardSpacing;
+  margin-right: $ui_threeCardSpacing;
+}
+
+.ui.four.cards {
+  margin-left: $ui_fourCardOffset;
+  margin-right: $ui_fourCardOffset;
+}
+.ui.four.cards > .card {
+  width: $ui_fourCard;
+  margin-left: $ui_fourCardSpacing;
+  margin-right: $ui_fourCardSpacing;
+}
+
+.ui.five.cards {
+  margin-left: $ui_fiveCardOffset;
+  margin-right: $ui_fiveCardOffset;
+}
+.ui.five.cards > .card {
+  width: $ui_fiveCard;
+  margin-left: $ui_fiveCardSpacing;
+  margin-right: $ui_fiveCardSpacing;
+}
+
+.ui.six.cards {
+  margin-left: $ui_sixCardOffset;
+  margin-right: $ui_sixCardOffset;
+}
+.ui.six.cards > .card {
+  width: $ui_sixCard;
+  margin-left: $ui_sixCardSpacing;
+  margin-right: $ui_sixCardSpacing;
+}
+
+.ui.seven.cards {
+  margin-left: $ui_sevenCardOffset;
+  margin-right: $ui_sevenCardOffset;
+}
+.ui.seven.cards > .card {
+  width: $ui_sevenCard;
+  margin-left: $ui_sevenCardSpacing;
+  margin-right: $ui_sevenCardSpacing;
+}
+
+.ui.eight.cards {
+  margin-left: $ui_eightCardOffset;
+  margin-right: $ui_eightCardOffset;
+}
+.ui.eight.cards > .card {
+  width: $ui_eightCard;
+  margin-left: $ui_eightCardSpacing;
+  margin-right: $ui_eightCardSpacing;
+  font-size: 11px;
+}
+
+.ui.nine.cards {
+  margin-left: $ui_nineCardOffset;
+  margin-right: $ui_nineCardOffset;
+}
+.ui.nine.cards > .card {
+  width: $ui_nineCard;
+  margin-left: $ui_nineCardSpacing;
+  margin-right: $ui_nineCardSpacing;
+  font-size: 10px;
+}
+
+.ui.ten.cards {
+  margin-left: $ui_tenCardOffset;
+  margin-right: $ui_tenCardOffset;
+}
+.ui.ten.cards > .card {
+  width: $ui_tenCard;
+  margin-left: $ui_tenCardSpacing;
+  margin-right: $ui_tenCardSpacing;
+}
+
+
+/*-------------------
+      Doubling
+--------------------*/
+
+/* Mobile Only */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.two.doubling.cards {
+    margin-left: $ui_oneCardOffset;
+    margin-right: $ui_oneCardOffset;
+  }
+  .ui.two.doubling.cards .card {
+    width: $ui_oneCard;
+    margin-left: $ui_oneCardSpacing;
+    margin-right: $ui_oneCardSpacing;
+  }
+  .ui.three.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.three.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.four.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.four.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.five.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.five.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.six.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.six.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.seven.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.seven.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.eight.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.eight.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.nine.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.nine.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.ten.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.ten.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+}
+
+/* Tablet Only */
+@media only screen and (min-width : $ui_tabletBreakpoint) and (max-width : $ui_largestTabletScreen) {
+  .ui.two.doubling.cards {
+    margin-left: $ui_oneCardOffset;
+    margin-right: $ui_oneCardOffset;
+  }
+  .ui.two.doubling.cards .card {
+    width: $ui_oneCard;
+    margin-left: $ui_oneCardSpacing;
+    margin-right: $ui_oneCardSpacing;
+  }
+  .ui.three.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.three.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.four.doubling.cards {
+    margin-left: $ui_twoCardOffset;
+    margin-right: $ui_twoCardOffset;
+  }
+  .ui.four.doubling.cards .card {
+    width: $ui_twoCard;
+    margin-left: $ui_twoCardSpacing;
+    margin-right: $ui_twoCardSpacing;
+  }
+  .ui.five.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.five.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.six.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.six.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.eight.doubling.cards {
+    margin-left: $ui_threeCardOffset;
+    margin-right: $ui_threeCardOffset;
+  }
+  .ui.eight.doubling.cards .card {
+    width: $ui_threeCard;
+    margin-left: $ui_threeCardSpacing;
+    margin-right: $ui_threeCardSpacing;
+  }
+  .ui.eight.doubling.cards {
+    margin-left: $ui_fourCardOffset;
+    margin-right: $ui_fourCardOffset;
+  }
+  .ui.eight.doubling.cards .card {
+    width: $ui_fourCard;
+    margin-left: $ui_fourCardSpacing;
+    margin-right: $ui_fourCardSpacing;
+  }
+  .ui.nine.doubling.cards {
+    margin-left: $ui_fourCardOffset;
+    margin-right: $ui_fourCardOffset;
+  }
+  .ui.nine.doubling.cards .card {
+    width: $ui_fourCard;
+    margin-left: $ui_fourCardSpacing;
+    margin-right: $ui_fourCardSpacing;
+  }
+  .ui.ten.doubling.cards {
+    margin-left: $ui_fiveCardOffset;
+    margin-right: $ui_fiveCardOffset;
+  }
+  .ui.ten.doubling.cards .card {
+    width: $ui_fiveCard;
+    margin-left: $ui_fiveCardSpacing;
+    margin-right: $ui_fiveCardSpacing;
+  }
+}
+
+/*-------------------
+      Stackable
+--------------------*/
+
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.stackable.cards {
+    display: block !important;
+  }
+  .ui.stackable.cards .card:first-child {
+    margin-top: 0em !important;
+  }
+  .ui.stackable.cards > .card {
+    display: block !important;
+    height: auto !important;
+    margin: $ui_stackableRowSpacing $ui_stackableCardSpacing;
+    padding: 0 !important;
+    width: $ui_stackableMargin !important;
+  }
+}
+
+
+/*--------------
+      Size
+---------------*/
+
+.ui.cards > .card {
+  font-size: $ui_medium;
+}
+
+loadUIOverrides();
+

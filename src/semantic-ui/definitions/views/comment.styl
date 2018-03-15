@@ -1,0 +1,256 @@
+/*!
+ * # Semantic UI - Comment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'view';
+$ui_element = 'comment';
+
+@import '../../theme.config';
+
+/*******************************
+            Standard
+*******************************/
+
+
+/*--------------
+    Comments
+---------------*/
+
+.ui.comments {
+  margin: $ui_margin;
+  max-width: $ui_maxWidth;
+}
+
+.ui.comments:first-child {
+  margin-top: 0em;
+}
+.ui.comments:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+     Comment
+---------------*/
+
+.ui.comments .comment {
+  position: relative;
+  background: $ui_commentBackground;
+  margin: $ui_commentMargin;
+  padding: $ui_commentPadding;
+  border: $ui_commentBorder;
+  border-top: $ui_commentDivider;
+  line-height: $ui_commentLineHeight;
+}
+.ui.comments .comment:first-child {
+  margin-top: $ui_firstCommentMargin;
+  padding-top: $ui_firstCommentPadding;
+}
+
+
+/*--------------------
+    Nested Comments
+---------------------*/
+
+.ui.comments .comment .comments {
+  margin: $ui_nestedCommentsMargin;
+  padding: $ui_nestedCommentsPadding;
+}
+.ui.comments .comment .comments:before{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.ui.comments .comment .comments .comment {
+  border: $ui_nestedCommentBorder;
+  border-top: $ui_nestedCommentDivider;
+  background: $ui_nestedCommentBackground;
+}
+
+/*--------------
+     Avatar
+---------------*/
+
+.ui.comments .comment .avatar {
+  display: $ui_avatarDisplay;
+  width: $ui_avatarWidth;
+  height: $ui_avatarHeight;
+  float: $ui_avatarFloat;
+  margin: $ui_avatarMargin;
+}
+.ui.comments .comment img.avatar,
+.ui.comments .comment .avatar img {
+  display: block;
+  margin: 0em auto;
+  width: 100%;
+  height: 100%;
+  border-radius: $ui_avatarBorderRadius;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.comments .comment > .content {
+  display: block;
+}
+/* If there is an avatar move content over */
+.ui.comments .comment > .avatar ~ .content {
+  margin-left: $ui_contentMargin;
+}
+
+/*--------------
+     Author
+---------------*/
+
+.ui.comments .comment .author {
+  font-size: $ui_authorFontSize;
+  color: $ui_authorColor;
+  font-weight: $ui_authorFontWeight;
+}
+.ui.comments .comment a.author {
+  cursor: pointer;
+}
+.ui.comments .comment a.author:hover {
+  color: $ui_authorHoverColor;
+}
+
+/*--------------
+     Metadata
+---------------*/
+
+.ui.comments .comment .metadata {
+  display: $ui_metadataDisplay;
+  margin-left: $ui_metadataSpacing;
+  color: $ui_metadataColor;
+  font-size: $ui_metadataFontSize;
+}
+.ui.comments .comment .metadata > * {
+  display: inline-block;
+  margin: 0em $ui_metadataContentSpacing 0em 0em;
+}
+.ui.comments .comment .metadata > :last-child {
+  margin-right: 0em;
+}
+
+/*--------------------
+     Comment Text
+---------------------*/
+
+.ui.comments .comment .text {
+  margin: $ui_textMargin;
+  font-size: $ui_textFontSize;
+  word-wrap: $ui_textWordWrap;
+  color: $ui_textColor;
+  line-height: $ui_textLineHeight;
+}
+
+
+/*--------------------
+     User Actions
+---------------------*/
+
+.ui.comments .comment .actions {
+  font-size: $ui_actionFontSize;
+}
+.ui.comments .comment .actions a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0em $ui_actionContentDistance 0em 0em;
+  color: $ui_actionLinkColor;
+}
+.ui.comments .comment .actions a:last-child {
+  margin-right: 0em;
+}
+.ui.comments .comment .actions a.active,
+.ui.comments .comment .actions a:hover {
+  color: $ui_actionLinkHoverColor;
+}
+
+/*--------------------
+      Reply Form
+---------------------*/
+
+.ui.comments > .reply.form {
+  margin-top: $ui_replyDistance;
+}
+.ui.comments .comment .reply.form {
+  width: 100%;
+  margin-top: $ui_commentReplyDistance;
+}
+.ui.comments .reply.form textarea {
+  font-size: $ui_replyFontSize;
+  height: $ui_replyHeight;
+}
+
+/*******************************
+            State
+*******************************/
+
+.ui.collapsed.comments,
+.ui.comments .collapsed.comments,
+.ui.comments .collapsed.comment {
+  display: none;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------------
+        Threaded
+---------------------*/
+
+.ui.threaded.comments .comment .comments {
+  margin: $ui_threadedCommentMargin;
+  padding: $ui_threadedCommentPadding;
+  box-shadow: $ui_threadedCommentBoxShadow;
+}
+
+/*--------------------
+        Minimal
+---------------------*/
+
+.ui.minimal.comments .comment .actions {
+  opacity: 0;
+  position: $ui_minimalActionPosition;
+  top: $ui_minimalActionTop;
+  right: $ui_minimalActionRight;
+  left: $ui_minimalActionLeft;
+  transition: $ui_minimalTransition;
+  transition-delay: $ui_minimalTransitionDelay;
+}
+.ui.minimal.comments .comment > .content:hover > .actions {
+  opacity: 1;
+}
+
+/*--------------------
+       Sizes
+---------------------*/
+
+.ui.small.comments {
+  font-size: $ui_small;
+}
+.ui.comments {
+  font-size: $ui_medium;
+}
+.ui.large.comments {
+  font-size: $ui_large;
+}
+.ui.huge.comments {
+  font-size: $ui_huge;
+}
+
+loadUIOverrides();
+

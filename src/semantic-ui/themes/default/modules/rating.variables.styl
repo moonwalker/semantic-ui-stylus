@@ -1,0 +1,93 @@
+/*******************************
+             Rating
+*******************************/
+
+$ui_margin= 0em $ui_relativeMini;
+$ui_whiteSpace= nowrap;
+$ui_verticalAlign= baseline;
+
+$ui_iconCursor= pointer;
+$ui_iconWidth= 1.25em;
+$ui_iconHeight= auto;
+$ui_iconTransition=opacity $ui_defaultDuration $ui_defaultEasing,
+  background $ui_defaultDuration $ui_defaultEasing,
+  text-shadow $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing;
+
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Standard */
+$ui_inactiveBackground= transparent;
+$ui_inactiveColor= rgba(0, 0, 0, 0.15);
+
+$ui_selectedBackground= $ui_inactiveBackground;
+$ui_selectedColor= $ui_textColor;
+
+$ui_activeBackground= $ui_inactiveBackground;
+$ui_activeColor= $ui_darkTextColor;
+
+/* Star */
+$ui_starIconWidth= $ui_iconWidth;
+$ui_starIconHeight= $ui_iconHeight;
+$ui_starShadowWidth= 1px;
+
+$ui_starInactiveBackground= $ui_inactiveBackground;
+$ui_starInactiveColor= $ui_inactiveColor;
+$ui_starInactiveTextShadow= none;
+
+$ui_starActiveBackground= $ui_activeBackground;
+$ui_starActiveColor= #FFE623;
+$ui_starActiveShadowColor= #DDC507;
+$ui_starActiveTextShadow=0px (- $ui_starShadowWidth) 0px $ui_starActiveShadowColor,
+  (- $ui_starShadowWidth) 0px 0px $ui_starActiveShadowColor,
+  0px $ui_starShadowWidth 0px $ui_starActiveShadowColor,
+  $ui_starShadowWidth 0px 0px $ui_starActiveShadowColor;
+
+$ui_starSelectedBackground= $ui_selectedBackground;
+$ui_starSelectedColor= #FFCC00;
+$ui_starSelectedShadowColor= #E6A200;
+$ui_starSelectedTextShadow=0px (- $ui_starShadowWidth) 0px $ui_starSelectedShadowColor,
+  (- $ui_starShadowWidth) 0px 0px $ui_starSelectedShadowColor,
+  0px $ui_starShadowWidth 0px $ui_starSelectedShadowColor,
+  $ui_starShadowWidth 0px 0px $ui_starSelectedShadowColor;
+
+/* Heart */
+$ui_heartIconWidth= 1.4em;
+$ui_heartIconHeight= $ui_iconHeight;
+$ui_heartShadowWidth= 1px;
+
+$ui_heartInactiveBackground= $ui_inactiveBackground;
+$ui_heartInactiveColor= $ui_inactiveColor;
+$ui_heartInactiveTextShadow= none;
+
+$ui_heartActiveBackground= $ui_activeBackground;
+$ui_heartActiveColor= #FF6D75;
+$ui_heartActiveShadowColor= #CD0707;
+$ui_heartActiveTextShadow=0px (- $ui_heartShadowWidth) 0px $ui_heartActiveShadowColor,
+  (- $ui_heartShadowWidth) 0px 0px $ui_heartActiveShadowColor,
+  0px $ui_heartShadowWidth 0px $ui_heartActiveShadowColor,
+  $ui_heartShadowWidth 0px 0px $ui_heartActiveShadowColor;
+
+$ui_heartSelectedBackground= $ui_selectedBackground;
+$ui_heartSelectedColor= #FF3000;
+$ui_heartSelectedShadowColor= #AA0101;
+$ui_heartSelectedTextShadow=0px (- $ui_heartShadowWidth) 0px $ui_heartSelectedShadowColor,
+  (- $ui_heartShadowWidth) 0px 0px $ui_heartSelectedShadowColor,
+  0px $ui_heartShadowWidth 0px $ui_heartSelectedShadowColor,
+  $ui_heartShadowWidth 0px 0px $ui_heartSelectedShadowColor;
+
+/*-------------------
+        States
+--------------------*/
+
+$ui_interactiveActiveIconOpacity= 1;
+$ui_interactiveSelectedIconOpacity= 1;
+
+/*-------------------
+      Variations
+--------------------*/
+
+$ui_massive= 2rem;

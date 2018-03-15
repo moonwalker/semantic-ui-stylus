@@ -1,0 +1,479 @@
+/*!
+ * # Semantic UI - Message
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'collection';
+$ui_element = 'message';
+
+@import '../../theme.config';
+
+/*******************************
+            Message
+*******************************/
+
+.ui.message {
+  position: relative;
+  min-height: 1em;
+  margin: $ui_verticalMargin 0em;
+  background: $ui_background;
+  padding: $ui_verticalPadding $ui_horizontalPadding;
+  line-height: $ui_lineHeight;
+  color: $ui_textColor;
+  transition: $ui_transition;
+  border-radius: $ui_borderRadius;
+  box-shadow: $ui_boxShadow;
+}
+
+.ui.message:first-child {
+  margin-top: 0em;
+}
+.ui.message:last-child {
+  margin-bottom: 0em;
+}
+
+
+/*--------------
+     Content
+---------------*/
+
+/* Header */
+.ui.message .header {
+  display: $ui_headerDisplay;
+  font-family: $ui_headerFont;
+  font-weight: $ui_headerFontWeight;
+  margin: $ui_headerMargin;
+}
+
+/* Default font size */
+.ui.message .header:not(.ui) {
+  font-size: $ui_headerFontSize;
+}
+
+/* Paragraph */
+.ui.message p {
+  opacity: $ui_messageTextOpacity;
+  margin: $ui_messageParagraphMargin 0em;
+}
+.ui.message p:first-child {
+  margin-top: 0em;
+}
+.ui.message p:last-child {
+  margin-bottom: 0em;
+}
+.ui.message .header + p {
+  margin-top: $ui_headerParagraphDistance;
+}
+
+/* List */
+.ui.message .list:not(.ui) {
+  text-align: left;
+  padding: 0em;
+  opacity: $ui_listOpacity;
+  list-style-position: $ui_listStylePosition;
+  margin: $ui_listMargin 0em 0em;
+}
+.ui.message .list:not(.ui):first-child {
+  margin-top: 0em;
+}
+.ui.message .list:not(.ui):last-child {
+  margin-bottom: 0em;
+}
+.ui.message .list:not(.ui) li {
+  position: relative;
+  list-style-type: none;
+  margin: 0em 0em $ui_listItemMargin $ui_listItemIndent;
+  padding: 0em;
+}
+.ui.message .list:not(.ui) li:before {
+  position: absolute;
+  content: '•';
+  left: -1em;
+  height: 100%;
+  vertical-align: baseline;
+}
+.ui.message .list:not(.ui) li:last-child {
+  margin-bottom: 0em;
+}
+
+
+/* Icon */
+.ui.message > .icon {
+  margin-right: $ui_iconDistance;
+}
+
+/* Close Icon */
+.ui.message > .close.icon {
+  cursor: pointer;
+  position: absolute;
+  margin: 0em;
+  top: $ui_closeTopDistance;
+  right: $ui_closeRightDistance;
+  opacity: $ui_closeOpacity;
+  transition: $ui_closeTransition;
+}
+.ui.message > .close.icon:hover {
+  opacity: 1;
+}
+
+/* First / Last Element */
+.ui.message > :first-child {
+  margin-top: 0em;
+}
+.ui.message > :last-child {
+  margin-bottom: 0em;
+}
+
+/*******************************
+            Coupling
+*******************************/
+
+.ui.dropdown .menu > .message {
+  margin: 0px (- $ui_borderWidth);
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------
+    Visible
+---------------*/
+
+.ui.visible.visible.visible.visible.message {
+  display: block;
+}
+
+.ui.icon.visible.visible.visible.visible.message {
+  display: flex;
+}
+
+/*--------------
+     Hidden
+---------------*/
+
+.ui.hidden.hidden.hidden.hidden.message {
+  display: none;
+}
+
+
+/*******************************
+            Variations
+*******************************/
+
+/*--------------
+    Compact
+---------------*/
+
+.ui.compact.message {
+  display: inline-block;
+}
+
+
+/*--------------
+    Attached
+---------------*/
+
+.ui.attached.message {
+  margin-bottom: $ui_attachedYOffset;
+  border-radius: $ui_borderRadius $ui_borderRadius 0em 0em;
+  box-shadow: $ui_attachedBoxShadow;
+  margin-left: $ui_attachedXOffset;
+  margin-right: $ui_attachedXOffset;
+}
+.ui.attached + .ui.attached.message:not(.top):not(.bottom) {
+  margin-top: $ui_attachedYOffset;
+  border-radius: 0em;
+}
+.ui.bottom.attached.message {
+  margin-top: $ui_attachedYOffset;
+  border-radius: 0em 0em $ui_borderRadius $ui_borderRadius;
+  box-shadow: $ui_attachedBottomBoxShadow;
+}
+.ui.bottom.attached.message:not(:last-child) {
+  margin-bottom: $ui_verticalMargin;
+}
+.ui.attached.icon.message {
+  width: auto;
+}
+
+
+/*--------------
+      Icon
+---------------*/
+
+.ui.icon.message {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.ui.icon.message > .icon:not(.close) {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  line-height: 1;
+  vertical-align: $ui_iconVerticalAlign;
+  font-size: $ui_iconSize;
+  opacity: $ui_iconOpacity;
+}
+.ui.icon.message > .content {
+  display: block;
+  flex: 1 1 auto;
+  vertical-align: $ui_iconVerticalAlign;
+}
+
+
+.ui.icon.message .icon:not(.close) + .content {
+  padding-left: $ui_iconContentDistance;
+}
+.ui.icon.message .circular.icon {
+  width: 1em;
+}
+
+/*--------------
+    Floating
+---------------*/
+
+.ui.floating.message {
+  box-shadow: $ui_floatingBoxShadow;
+}
+
+
+/*--------------
+     Colors
+---------------*/
+
+.ui.black.message {
+  background-color: $ui_black;
+  color: $ui_invertedTextColor;
+}
+
+/*--------------
+     Types
+---------------*/
+
+/* Positive */
+.ui.positive.message {
+  background-color: $ui_positiveBackgroundColor;
+  color: $ui_positiveTextColor;
+}
+.ui.positive.message,
+.ui.attached.positive.message {
+  box-shadow: $ui_positiveBoxShadow;
+}
+.ui.positive.message .header {
+  color: $ui_positiveHeaderColor;
+}
+
+/* Negative */
+.ui.negative.message {
+  background-color: $ui_negativeBackgroundColor;
+  color: $ui_negativeTextColor;
+}
+.ui.negative.message,
+.ui.attached.negative.message {
+  box-shadow: $ui_negativeBoxShadow;
+}
+.ui.negative.message .header {
+  color: $ui_negativeHeaderColor;
+}
+
+/* Info */
+.ui.info.message {
+  background-color: $ui_infoBackgroundColor;
+  color: $ui_infoTextColor;
+}
+.ui.info.message,
+.ui.attached.info.message {
+  box-shadow: $ui_infoBoxShadow;
+}
+.ui.info.message .header {
+  color: $ui_infoHeaderColor;
+}
+
+/* Warning */
+.ui.warning.message {
+  background-color: $ui_warningBackgroundColor;
+  color: $ui_warningTextColor;
+}
+.ui.warning.message,
+.ui.attached.warning.message {
+  box-shadow: $ui_warningBoxShadow;
+}
+.ui.warning.message .header {
+  color: $ui_warningHeaderColor;
+}
+
+/* Error */
+.ui.error.message {
+  background-color: $ui_errorBackgroundColor;
+  color: $ui_errorTextColor;
+}
+.ui.error.message,
+.ui.attached.error.message {
+  box-shadow: $ui_errorBoxShadow;
+}
+.ui.error.message .header {
+  color: $ui_errorHeaderColor;
+}
+
+/* Success */
+.ui.success.message {
+  background-color: $ui_successBackgroundColor;
+  color: $ui_successTextColor;
+}
+.ui.success.message,
+.ui.attached.success.message {
+  box-shadow: $ui_successBoxShadow;
+}
+.ui.success.message .header {
+  color: $ui_successHeaderColor;
+}
+
+
+/* Colors */
+.ui.inverted.message,
+.ui.black.message {
+  background-color: $ui_black;
+  color: $ui_invertedTextColor;
+}
+
+.ui.red.message {
+  background-color: $ui_redBackground;
+  color: $ui_redTextColor;
+  box-shadow: $ui_redBoxShadow;
+}
+.ui.red.message .header {
+  color: $ui_redHeaderColor;
+}
+
+.ui.orange.message {
+  background-color: $ui_orangeBackground;
+  color: $ui_orangeTextColor;
+  box-shadow: $ui_orangeBoxShadow;
+}
+.ui.orange.message .header {
+  color: $ui_orangeHeaderColor;
+}
+
+.ui.yellow.message {
+  background-color: $ui_yellowBackground;
+  color: $ui_yellowTextColor;
+  box-shadow: $ui_yellowBoxShadow;
+}
+.ui.yellow.message .header {
+  color: $ui_yellowHeaderColor;
+}
+
+.ui.olive.message {
+  background-color: $ui_oliveBackground;
+  color: $ui_oliveTextColor;
+  box-shadow: $ui_oliveBoxShadow;
+}
+.ui.olive.message .header {
+  color: $ui_oliveHeaderColor;
+}
+
+.ui.green.message {
+  background-color: $ui_greenBackground;
+  color: $ui_greenTextColor;
+  box-shadow: $ui_greenBoxShadow;
+}
+.ui.green.message .header {
+  color: $ui_greenHeaderColor;
+}
+
+.ui.teal.message {
+  background-color: $ui_tealBackground;
+  color: $ui_tealTextColor;
+  box-shadow: $ui_tealBoxShadow;
+}
+.ui.teal.message .header {
+  color: $ui_tealHeaderColor;
+}
+
+.ui.blue.message {
+  background-color: $ui_blueBackground;
+  color: $ui_blueTextColor;
+  box-shadow: $ui_blueBoxShadow;
+}
+.ui.blue.message .header {
+  color: $ui_blueHeaderColor;
+}
+
+.ui.violet.message {
+  background-color: $ui_violetBackground;
+  color: $ui_violetTextColor;
+  box-shadow: $ui_violetBoxShadow;
+}
+.ui.violet.message .header {
+  color: $ui_violetHeaderColor;
+}
+
+.ui.purple.message {
+  background-color: $ui_purpleBackground;
+  color: $ui_purpleTextColor;
+  box-shadow: $ui_purpleBoxShadow;
+}
+.ui.purple.message .header {
+  color: $ui_purpleHeaderColor;
+}
+
+.ui.pink.message {
+  background-color: $ui_pinkBackground;
+  color: $ui_pinkTextColor;
+  box-shadow: $ui_pinkBoxShadow;
+}
+.ui.pink.message .header {
+  color: $ui_pinkHeaderColor;
+}
+
+.ui.brown.message {
+  background-color: $ui_brownBackground;
+  color: $ui_brownTextColor;
+  box-shadow: $ui_brownBoxShadow;
+}
+.ui.brown.message .header {
+  color: $ui_brownHeaderColor;
+}
+
+/*--------------
+     Sizes
+---------------*/
+
+.ui.mini.message {
+  font-size: $ui_relativeMini;
+}
+.ui.tiny.message {
+  font-size: $ui_relativeTiny;
+}
+.ui.small.message {
+  font-size: $ui_relativeSmall;
+}
+.ui.message {
+  font-size: $ui_relativeMedium;
+}
+.ui.large.message {
+  font-size: $ui_relativeLarge;
+}
+.ui.big.message {
+  font-size: $ui_relativeBig;
+}
+.ui.huge.message {
+  font-size: $ui_relativeHuge;
+}
+.ui.massive.message {
+  font-size: $ui_relativeMassive;
+}
+
+loadUIOverrides();
+

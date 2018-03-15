@@ -1,0 +1,194 @@
+/*******************************
+             Form
+*******************************/
+
+/*-------------------
+       Elements
+--------------------*/
+
+/* Form */
+$ui_gutterWidth= 1em;
+$ui_rowDistance= 1em;
+
+/* Text */
+$ui_paragraphMargin= $ui_rowDistance 0em;
+
+/* Field */
+$ui_fieldMargin= 0em 0em $ui_rowDistance;
+
+/* Fields */
+$ui_fieldsMargin= 0em -($ui_gutterWidth / 2) $ui_rowDistance;
+
+/* Form Label */
+$ui_labelDistance= $ui_4px;
+$ui_labelMargin= 0em 0em $ui_labelDistance 0em;
+$ui_labelFontSize= $ui_relativeSmall;
+$ui_labelFontWeight= bold;
+$ui_labelTextTransform= none;
+$ui_labelColor= $ui_textColor;
+
+/* Input */
+$ui_inputFont= $ui_pageFont;
+$ui_inputWidth= 100%;
+$ui_inputFontSize= 1em;
+$ui_inputPadding= ($ui_inputVerticalPadding + ((1em - $ui_inputLineHeight) / 2)) $ui_inputHorizontalPadding;
+$ui_inputBorder= 1px solid $ui_borderColor;
+$ui_inputBorderRadius= $ui_absoluteBorderRadius;
+$ui_inputColor= $ui_textColor;
+$ui_inputTransition=color $ui_defaultDuration $ui_defaultEasing,
+  border-color $ui_defaultDuration $ui_defaultEasing;
+$ui_inputBoxShadow= 0em 0em 0em 0em transparent inset;
+
+/* Select */
+$ui_selectBackground= $ui_white;
+$ui_selectBorderRadius= $ui_inputBorderRadius;
+$ui_selectBorder= $ui_inputBorder;
+$ui_selectPadding= 0.62em $ui_inputHorizontalPadding;
+$ui_selectBoxShadow= $ui_inputBoxShadow;
+$ui_selectTransition= $ui_inputTransition;
+$ui_selectColor= $ui_inputColor;
+
+/* Text Area */
+$ui_textAreaPadding= $ui_inputVerticalPadding $ui_inputHorizontalPadding;
+$ui_textAreaHeight= 12em;
+$ui_textAreaResize= vertical;
+$ui_textAreaLineHeight= 1.2857;
+$ui_textAreaMinHeight= 8em;
+$ui_textAreaMaxHeight= 24em;
+$ui_textAreaBackground= $ui_inputBackground;
+$ui_textAreaBorder= $ui_inputBorder;
+$ui_textAreaFontSize= $ui_inputFontSize;
+$ui_textAreaTransition= $ui_inputTransition;
+
+/* Checkbox */
+$ui_checkboxVerticalAlign= top;
+$ui_checkboxLabelFontSize= 1em;
+$ui_checkboxLabelTextTransform= $ui_labelTextTransform;
+
+/* Inline Validation Prompt */
+$ui_promptBackground= $ui_white;
+$ui_promptBorderColor= $ui_formErrorBorder;
+$ui_promptBorder= 1px solid $ui_promptBorderColor;
+$ui_promptTextColor= $ui_formErrorColor;
+$ui_inlinePromptMargin= -0.25em 0em -0.5em 0.5em;
+$ui_inlinePromptBorderWidth= 1px;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Focus */
+$ui_inputFocusPointerSize= 0px;
+
+/* Input Focus */
+$ui_inputFocusBackground= $ui_inputBackground;
+$ui_inputFocusBorderColor= $ui_focusedFormBorderColor;
+$ui_inputFocusColor= $ui_selectedTextColor;
+$ui_inputFocusBoxShadow= $ui_inputFocusPointerSize 0em 0em 0em $ui_selectedBorderColor inset;
+$ui_inputFocusBorderRadius= $ui_inputBorderRadius;
+
+/* Text Area Focus */
+$ui_textAreaFocusBackground= $ui_inputFocusBackground;
+$ui_textAreaFocusBorderColor= $ui_inputFocusBorderColor;
+$ui_textAreaFocusColor= $ui_inputFocusColor;
+$ui_textAreaFocusBoxShadow= $ui_inputFocusBoxShadow;
+$ui_textAreaFocusBorderRadius= $ui_inputFocusBorderRadius;
+
+/* Disabled */
+$ui_disabledLabelOpacity= $ui_disabledOpacity;
+
+/* Errored Input */
+$ui_formErrorColor= $ui_negativeTextColor;
+$ui_formErrorBorder= $ui_negativeBorderColor;
+$ui_formErrorBackground= $ui_negativeBackgroundColor;
+
+/* AutoFill */
+$ui_inputAutoFillBackground= #FFFFF0;
+$ui_inputAutoFillBorder= #E5DFA1;
+$ui_inputAutoFillFocusBackground= $ui_inputAutoFillBackground;
+$ui_inputAutoFillFocusBorder= #D5C315;
+$ui_inputAutoFillErrorBackground= #FFFAF0;
+$ui_inputAutoFillErrorBorder= #E0B4B4;
+
+
+/* Input Error */
+$ui_inputErrorBorderRadius= '';
+$ui_inputErrorBoxShadow= none;
+
+/* Dropdown Error */
+$ui_dropdownErrorHoverBackground= #FBE7E7;
+$ui_dropdownErrorSelectedBackground= $ui_dropdownErrorHoverBackground;
+$ui_dropdownErrorActiveBackground= #FDCFCF;
+$ui_dropdownErrorLabelBackground= #EACBCB;
+$ui_dropdownErrorLabelColor= $ui_errorTextColor;
+
+/* Focused Error */
+$ui_inputErrorFocusBackground= $ui_negativeBackgroundColor;
+$ui_inputErrorFocusColor= $ui_negativeTextColor;
+$ui_inputErrorFocusBorder= $ui_negativeBorderColor;
+$ui_inputErrorFocusBoxShadow= none;
+
+/* Placeholder Error */
+$ui_inputErrorPlaceholderColor= lighten($ui_formErrorColor, 40);
+$ui_inputErrorPlaceholderFocusColor= lighten($ui_formErrorColor, 30);
+
+/* Loading Dimmer */
+$ui_loaderDimmerColor= rgba(255, 255, 255, 0.8);
+$ui_loaderDimmerZIndex= 100;
+
+/* Loading Spinner */
+$ui_loaderSize= 3em;
+$ui_loaderLineZIndex= 101;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Required */
+$ui_requiredContent= '*';
+$ui_requiredColor= $ui_negativeColor;
+$ui_requiredVerticalOffset= -0.2em;
+$ui_requiredDistance= 0.2em;
+$ui_requiredMargin= $ui_requiredVerticalOffset 0em 0em $ui_requiredDistance;
+
+/* Inverted */
+$ui_invertedInputBackground= $ui_inputBackground;
+$ui_invertedInputBorderColor= $ui_whiteBorderColor;
+$ui_invertedInputBoxShadow= $ui_inputBoxShadow;
+$ui_invertedInputColor= $ui_inputColor;
+$ui_invertedLabelColor= $ui_invertedTextColor;
+$ui_invertedInputBoxShadow= none;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Grouped Fields */
+$ui_groupedMargin= $ui_fieldMargin;
+$ui_groupedFieldMargin= 0.5em 0em;
+
+$ui_groupedLabelDistance= $ui_labelDistance;
+$ui_groupedLabelColor= $ui_labelColor;
+$ui_groupedLabelMargin= $ui_labelMargin;
+$ui_groupedLabelFontSize= $ui_labelFontSize;
+$ui_groupedLabelFontWeight= $ui_labelFontWeight;
+$ui_groupedLabelTextTransform= $ui_labelTextTransform;
+
+
+/* Inline */
+$ui_inlineInputSize= $ui_relativeMedium;
+
+$ui_inlineLabelDistance= $ui_relativeTiny;
+$ui_inlineLabelColor= $ui_labelColor;
+$ui_inlineLabelFontSize= $ui_labelFontSize;
+$ui_inlineLabelFontWeight= $ui_labelFontWeight;
+$ui_inlineLabelTextTransform= $ui_labelTextTransform;
+
+$ui_groupedInlineLabelMargin= 0.035714em 1em 0em 0em;
+
+/*-------------------
+       Groups
+--------------------*/
+
+$ui_inlineFieldsMargin= 0em 1em 0em 0em;
+

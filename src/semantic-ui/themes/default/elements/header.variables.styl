@@ -1,0 +1,152 @@
+/*******************************
+            Header
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_textTransform= none;
+$ui_fontFamily= $ui_headerFont;
+$ui_fontWeight= $ui_headerFontWeight;
+$ui_lineHeight= $ui_headerLineHeight;
+$ui_lineHeightOffset= $ui_headerLineHeightOffset;
+
+$ui_topMargin= $ui_headerTopMargin;
+$ui_bottomMargin= $ui_headerBottomMargin;
+$ui_margin= $ui_topMargin 0em $ui_bottomMargin;
+
+$ui_firstMargin= (- $ui_lineHeightOffset);
+$ui_lastMargin= 0em;
+$ui_horizontalPadding= 0em;
+$ui_verticalPadding= 0em;
+
+/* Sub Heading */
+$ui_subHeadingDistance= $ui_2px;
+$ui_subHeadingFontSize= $ui_relativeTiny;
+$ui_subHeadingFontWeight= bold;
+$ui_subHeadingTextTransform= uppercase;
+$ui_subHeadingColor= '';
+
+$ui_smallSubHeadingSize= $ui_relativeMini;
+$ui_largeSubHeadingSize= $ui_relativeSmall;
+$ui_hugeSubHeadingSize= $ui_relativeMedium;
+
+/* Sub Header */
+$ui_subHeaderMargin= 0em;
+$ui_subHeaderLineHeight= 1.2em;
+$ui_subHeaderColor= $ui_mutedTextColor;
+
+/* Icon */
+$ui_iconOpacity= 1;
+$ui_iconSize= 1.5em;
+$ui_iconOffset= $ui_lineHeightOffset;
+$ui_iconMargin= 0.75rem;
+$ui_iconAlignment= middle;
+
+/* Image */
+$ui_imageWidth= 2.5em;
+$ui_imageHeight= auto;
+$ui_imageOffset= $ui_lineHeightOffset;
+$ui_imageMargin= $ui_iconMargin;
+$ui_imageAlignment= middle;
+
+/* Label */
+$ui_labelSize= '';
+$ui_labelDistance= 0.5rem;
+$ui_labelVerticalAlign= middle;
+
+/* Content */
+$ui_contentAlignment= top;
+$ui_contentIconAlignment= middle;
+$ui_contentImageAlignment= middle;
+
+/* Paragraph after Header */
+$ui_nextParagraphDistance= 0em;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Sizing */
+$ui_hugeFontSize   = unit($ui_h1, em);
+$ui_largeFontSize  = unit($ui_h2, em);
+$ui_mediumFontSize = unit($ui_h3, em);
+$ui_smallFontSize  = unit($ui_h4, em);
+$ui_tinyFontSize   = unit($ui_h5, em);
+
+/* Sub Header */
+$ui_h1SubHeaderFontSize= $ui_large;
+$ui_h2SubHeaderFontSize= $ui_large;
+$ui_h3SubHeaderFontSize= $ui_medium;
+$ui_h4SubHeaderFontSize= $ui_medium;
+$ui_h5SubHeaderFontSize= $ui_small;
+
+$ui_hugeSubHeaderFontSize  = $ui_h1SubHeaderFontSize;
+$ui_largeSubHeaderFontSize = $ui_h2SubHeaderFontSize;
+$ui_subHeaderFontSize      = $ui_h3SubHeaderFontSize;
+$ui_smallSubHeaderFontSize = $ui_h4SubHeaderFontSize;
+$ui_tinySubHeaderFontSize  = $ui_h5SubHeaderFontSize;
+
+/* Icon Header */
+$ui_iconHeaderSize= 3em;
+$ui_iconHeaderOpacity= 1;
+$ui_iconHeaderMargin= 0.5rem;
+$ui_circularHeaderIconSize= 2em;
+$ui_squareHeaderIconSize= 2em;
+
+/* No Line Height Offset */
+$ui_iconHeaderTopMargin= 2rem;
+$ui_iconHeaderBottomMargin= $ui_bottomMargin;
+$ui_iconHeaderFirstMargin= 0em;
+
+/* Divided */
+$ui_dividedBorderWidth= 1px;
+$ui_dividedBorder= $ui_dividedBorderWidth solid $ui_borderColor;
+$ui_dividedColoredBorderWidth= 2px;
+
+$ui_dividedBorderPadding= $ui_3px;
+$ui_dividedSubHeaderPadding= $ui_3px;
+$ui_dividedIconPadding= 0em;
+
+/* Block */
+$ui_blockBackground= $ui_darkWhite;
+$ui_blockBoxShadow= none;
+$ui_blockBorderWidth= 1px;
+$ui_blockBorder= $ui_blockBorderWidth solid $ui_solidBorderColor;
+$ui_blockHorizontalPadding= $ui_medium;
+$ui_blockVerticalPadding= $ui_mini;
+$ui_blockBorderRadius= $ui_defaultBorderRadius;
+
+$ui_tinyBlock= $ui_tiny;
+$ui_smallBlock= $ui_small;
+$ui_mediumBlock= $ui_medium;
+$ui_largeBlock= $ui_large;
+$ui_hugeBlock= $ui_huge;
+
+/* Attached */
+$ui_attachedOffset= -1px;
+$ui_attachedBoxShadow= none;
+$ui_attachedBorder= 1px solid $ui_solidBorderColor;
+$ui_attachedVerticalPadding= $ui_blockVerticalPadding;
+$ui_attachedHorizontalPadding= $ui_blockHorizontalPadding;
+$ui_attachedBackground= $ui_white;
+$ui_attachedBorderRadius= $ui_blockBorderRadius;
+
+$ui_tinyAttachedSize= $ui_relativeTiny;
+$ui_smallAttachedSize= $ui_relativeSmall;
+$ui_mediumAttachedSize= $ui_relativeMedium;
+$ui_largeAttachedSize= $ui_relativeLarge;
+$ui_bigAttachedSize= $ui_relativeBig;
+$ui_hugeAttachedSize= $ui_relativeHuge;
+
+/* Inverted */
+$ui_invertedColor= $ui_white;
+$ui_invertedSubHeaderColor= $ui_invertedMutedTextColor;
+$ui_invertedDividedBorderColor= $ui_whiteBorderColor;
+$ui_invertedBlockBackground= $ui_lightBlack $ui_subtleGradient;
+$ui_invertedAttachedBackground= $ui_invertedBlockBackground;
+
+/* Floated */
+$ui_floatedMargin= 0.5em;
+

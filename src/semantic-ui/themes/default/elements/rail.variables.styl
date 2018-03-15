@@ -1,0 +1,35 @@
+/*******************************
+            Rail
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_width= 300px;
+$ui_height= 100%;
+
+$ui_distance= 4rem;
+$ui_splitDistance= ($ui_distance / 2);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Close */
+$ui_closeDistance= 2em;
+$ui_veryCloseDistance= 1em;
+
+$ui_splitCloseDistance= ($ui_closeDistance / 2);
+$ui_splitVeryCloseDistance= ($ui_veryCloseDistance / 2);
+
+$ui_closeWidth= unquote("calc(" + $ui_width + "~" + "" + $ui_splitCloseDistance + ")");
+$ui_veryCloseWidth= unquote("calc(" + $ui_width + "~" + "" + $ui_splitVeryCloseDistance + ")");
+
+/* Dividing */
+$ui_dividingBorder= 1px solid $ui_borderColor;
+$ui_dividingDistance= 5rem;
+$ui_splitDividingDistance= ($ui_dividingDistance / 2);
+$ui_dividingWidth= $ui_width + $ui_splitDividingDistance;
+
+

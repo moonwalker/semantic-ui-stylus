@@ -1,0 +1,167 @@
+/*!
+ * # Semantic UI - Site
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'global';
+$ui_element = 'site';
+
+@import '../../theme.config';
+
+/*******************************
+             Page
+*******************************/
+
+loadFonts();
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: $ui_emSize;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: $ui_pageOverflowX;
+  min-width: $ui_pageMinWidth;
+  background: $ui_pageBackground;
+  font-family: $ui_pageFont;
+  font-size: $ui_fontSize;
+  line-height: $ui_lineHeight;
+  color: $ui_textColor;
+  font-smoothing: $ui_fontSmoothing;
+}
+
+
+
+/*******************************
+             Headers
+*******************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $ui_headerFont;
+  line-height: $ui_headerLineHeight;
+  margin: $ui_headerMargin;
+  font-weight: $ui_headerFontWeight;
+  padding: 0em;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: $ui_h1;
+}
+h2 {
+  font-size: $ui_h2;
+}
+h3 {
+  font-size: $ui_h3;
+}
+h4 {
+  font-size: $ui_h4;
+}
+h5 {
+  font-size: $ui_h5;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0em;
+}
+
+
+/*******************************
+             Text
+*******************************/
+
+p {
+  margin: $ui_paragraphMargin;
+  line-height: $ui_paragraphLineHeight;
+}
+p:first-child {
+  margin-top: 0em;
+}
+p:last-child {
+  margin-bottom: 0em;
+}
+
+/*-------------------
+        Links
+--------------------*/
+
+a {
+  color: $ui_linkColor;
+  text-decoration: $ui_linkUnderline;
+}
+a:hover {
+  color: $ui_linkHoverColor;
+  text-decoration: $ui_linkHoverUnderline;
+}
+
+
+/*******************************
+          Highlighting
+*******************************/
+
+/* Site */
+::-webkit-selection {
+  background-color: $ui_highlightBackground;
+  color: $ui_highlightColor;
+}
+::-moz-selection {
+  background-color: $ui_highlightBackground;
+  color: $ui_highlightColor;
+}
+::selection {
+  background-color: $ui_highlightBackground;
+  color: $ui_highlightColor;
+}
+
+/* Form */
+textarea::-webkit-selection,
+input::-webkit-selection {
+  background-color: $ui_inputHighlightBackground;
+  color: $ui_inputHighlightColor;
+}
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: $ui_inputHighlightBackground;
+  color: $ui_inputHighlightColor;
+}
+textarea::selection,
+input::selection {
+  background-color: $ui_inputHighlightBackground;
+  color: $ui_inputHighlightColor;
+}
+
+
+loadUIOverrides();
+
