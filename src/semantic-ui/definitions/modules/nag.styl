@@ -1,0 +1,159 @@
+/*!
+ * # Semantic UI - Nag
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'module';
+$ui_element = 'nag';
+
+@import '../../theme.config';
+
+/*******************************
+             Nag
+*******************************/
+
+.ui.nag {
+  display: none;
+  opacity: $ui_opacity;
+  position: $ui_position;
+
+  top: $ui_top;
+  left: 0px;
+  z-index: $ui_zIndex;
+
+  min-height: $ui_minHeight;
+  width: $ui_width;
+
+  margin: $ui_margin;
+  padding: $ui_padding;
+
+  background: $ui_background;
+  box-shadow: $ui_boxShadow;
+
+  font-size: $ui_fontSize;
+  text-align: $ui_textAlign;
+  color: $ui_color;
+
+  border-radius: $ui_topBorderRadius;
+  transition: $ui_transition;
+}
+
+a.ui.nag {
+  cursor: pointer;
+}
+
+.ui.nag > .title {
+  display: inline-block;
+  margin: $ui_titleMargin;
+  color: $ui_titleColor;
+}
+
+
+.ui.nag > .close.icon {
+  cursor: pointer;
+  opacity: $ui_closeOpacity;
+
+  position: absolute;
+  top: $ui_closeTop;
+  right: $ui_closeRight;
+
+  font-size: $ui_closeSize;
+
+  margin: $ui_closeMargin;
+  color: $ui_closeColor;
+  transition: $ui_closeTransition;
+}
+
+
+
+/*******************************
+             States
+*******************************/
+
+/* Hover */
+.ui.nag:hover {
+  background: $ui_nagHoverBackground;
+  opacity: $ui_nagHoverOpacity;
+}
+
+.ui.nag .close:hover {
+  opacity: $ui_closeHoverOpacity;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*--------------
+     Static
+---------------*/
+
+.ui.overlay.nag {
+  position: absolute;
+  display: block;
+}
+
+/*--------------
+     Fixed
+---------------*/
+
+.ui.fixed.nag {
+  position: fixed;
+}
+
+/*--------------
+     Bottom
+---------------*/
+
+.ui.bottom.nags,
+.ui.bottom.nag {
+  border-radius: $ui_bottomBorderRadius;
+  top: auto;
+  bottom: $ui_bottom;
+}
+
+/*--------------
+     White
+---------------*/
+
+.ui.inverted.nags .nag,
+.ui.inverted.nag {
+  background-color: $ui_invertedBackground;
+  color: $ui_darkTextColor;
+}
+.ui.inverted.nags .nag .close,
+.ui.inverted.nags .nag .title,
+.ui.inverted.nag .close,
+.ui.inverted.nag .title {
+  color: $ui_lightTextColor;
+}
+
+
+/*******************************
+           Groups
+*******************************/
+
+.ui.nags .nag {
+  border-radius: $ui_groupedBorderRadius !important;
+}
+.ui.nags .nag:last-child {
+  border-radius: $ui_topBorderRadius;
+}
+.ui.bottom.nags .nag:last-child {
+  border-radius: $ui_bottomBorderRadius;
+}
+
+loadUIOverrides();
+

@@ -1,0 +1,95 @@
+/*******************************
+           Accordion
+*******************************/
+
+$ui_boxShadow= none;
+
+/* Title */
+$ui_titleFont= $ui_headerFont;
+$ui_titlePadding= 0.5em 0em;
+$ui_titleFontSize= 1em;
+$ui_titleColor= $ui_textColor;
+
+/* Icon */
+$ui_iconOpacity= 1;
+$ui_iconFontSize= 1em;
+$ui_iconFloat= none;
+$ui_iconWidth= 1.25em;
+$ui_iconHeight= 1em;
+$ui_iconDisplay= inline-block;
+$ui_iconMargin= 0em 0.25rem 0em 0rem;
+$ui_iconPadding= 0em;
+$ui_iconTransition=transform $ui_defaultDuration $ui_defaultEasing,
+  opacity $ui_defaultDuration $ui_defaultEasing;
+$ui_iconVerticalAlign= baseline;
+$ui_iconTransform= none;
+
+/* Child Accordion */
+$ui_childAccordionMargin= 1em 0em 0em;
+$ui_childAccordionPadding= 0em;
+
+/* Content */
+$ui_contentMargin= '';
+$ui_contentPadding= 0.5em 0em 1em;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+$ui_menuTitlePadding= 0em;
+$ui_menuIconFloat= right;
+$ui_menuIconMargin= $ui_lineHeightOffset 0em 0em 1em;
+$ui_menuIconTransform= rotate(180deg);
+
+
+/*-------------------
+       States
+--------------------*/
+
+$ui_activeIconTransform= rotate(90deg);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Styled */
+$ui_styledWidth= 600px;
+$ui_styledBackground= $ui_white;
+$ui_styledBorderRadius= $ui_defaultBorderRadius;
+$ui_styledBoxShadow=$ui_subtleShadow,
+  0px 0px 0px 1px $ui_borderColor;
+
+/* Content */
+$ui_styledContentMargin= 0em;
+$ui_styledContentPadding= 0.5em 1em 1.5em;
+
+/* Child Content */
+$ui_styledChildContentMargin= 0em;
+$ui_styledChildContentPadding= $ui_styledContentPadding;
+
+/* Styled Title */
+$ui_styledTitleMargin= 0em;
+$ui_styledTitlePadding= 0.75em 1em;
+$ui_styledTitleFontWeight= bold;
+$ui_styledTitleColor= $ui_unselectedTextColor;
+$ui_styledTitleTransition= background-color $ui_defaultDuration $ui_defaultEasing;
+$ui_styledTitleBorder= 1px solid $ui_borderColor;
+$ui_styledTitleTransition=background $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing;
+
+/* Styled Title States */
+$ui_styledTitleHoverBackground= transparent;
+$ui_styledTitleHoverColor= $ui_textColor;
+$ui_styledActiveTitleBackground= transparent;
+$ui_styledActiveTitleColor= $ui_selectedTextColor;
+
+/* Styled Child Title States */
+$ui_styledHoverChildTitleBackground= $ui_styledTitleHoverBackground;
+$ui_styledHoverChildTitleColor= $ui_styledTitleHoverColor;
+$ui_styledActiveChildTitleBackground= $ui_styledActiveTitleBackground;
+$ui_styledActiveChildTitleColor= $ui_styledActiveTitleColor;
+
+/* Inverted */
+$ui_invertedTitleColor= $ui_invertedTextColor;
+
+

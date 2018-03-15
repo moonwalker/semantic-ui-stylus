@@ -1,0 +1,149 @@
+/*******************************
+             Modal
+*******************************/
+
+$ui_background= $ui_white;
+$ui_border= none;
+$ui_zIndex= 1001;
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_transformOrigin= 50% 25%;
+$ui_boxShadow=1px 3px 3px 0px rgba(0, 0, 0, 0.2),
+  1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+
+/* Close Icon */
+$ui_closeOpacity= 0.8;
+$ui_closeSize= 1.25em;
+$ui_closeColor= $ui_white;
+
+$ui_closeHitbox= 2.25rem;
+$ui_closeDistance= 0.25rem;
+$ui_closeHitBoxOffset= ($ui_closeHitbox - 1rem) / 2;
+$ui_closePadding= $ui_closeHitBoxOffset 0rem 0rem 0rem;
+$ui_closeTop= -($ui_closeDistance + $ui_closeHitbox);
+$ui_closeRight= -($ui_closeDistance + $ui_closeHitbox);
+
+/* Header */
+$ui_headerMargin= 0em;
+$ui_headerVerticalPadding= 1.25rem;
+$ui_headerHorizontalPadding= 1.5rem;
+$ui_headerPadding= $ui_headerVerticalPadding $ui_headerHorizontalPadding;
+$ui_headerBackground= $ui_white;
+$ui_headerColor= $ui_darkTextColor;
+$ui_headerFontSize= $ui_huge;
+$ui_headerBoxShadow= none;
+$ui_headerFontWeight= bold;
+$ui_headerFontFamily= $ui_headerFont;
+$ui_headerBorder= 1px solid $ui_borderColor;
+
+/* Content */
+$ui_contentFontSize= 1em;
+$ui_contentPadding= 1.5rem;
+$ui_contentLineHeight= 1.4;
+$ui_contentBackground= #FFFFFF;
+
+/* Image / Description */
+$ui_imageWidth= '';
+$ui_imageIconSize= 8rem;
+$ui_imageVerticalAlign= top;
+
+$ui_descriptionDistance= 2em;
+$ui_descriptionMinWidth= '';
+$ui_descriptionWidth= auto;
+$ui_descriptionVerticalAlign= top;
+
+/* Modal Actions */
+$ui_actionBorder= 1px solid $ui_borderColor;
+$ui_actionBackground= $ui_offWhite;
+$ui_actionPadding= 1rem 1rem;
+$ui_actionAlign= right;
+
+$ui_buttonDistance= 0.75em;
+
+/* Inner Close Position (Tablet/Mobile) */
+$ui_innerCloseTop= ($ui_headerVerticalPadding - $ui_closeHitBoxOffset + ($ui_lineHeight - 1em));
+$ui_innerCloseRight= 1rem;
+$ui_innerCloseColor= $ui_textColor;
+
+/* Mobile Positions */
+$ui_mobileHeaderPadding= 0.75rem 1rem;
+$ui_mobileContentPadding= 1rem;
+$ui_mobileImagePadding= 0rem 0rem 1rem;
+$ui_mobileDescriptionPadding= 1rem 0rem ;
+$ui_mobileButtonDistance= 1rem;
+$ui_mobileActionPadding= 1rem 1rem (1rem - $ui_mobileButtonDistance);
+$ui_mobileImageIconSize= 5rem;
+$ui_mobileCloseTop= 0.5rem;
+$ui_mobileCloseRight= 0.5rem;
+
+/* Responsive Widths */
+$ui_mobileWidth= 95%;
+$ui_tabletWidth= 88%;
+$ui_computerWidth= 850px;
+$ui_largeMonitorWidth= 900px;
+$ui_widescreenMonitorWidth= 950px;
+
+$ui_mobileMargin= 0em 0em 0em -($ui_mobileWidth / 2);
+$ui_tabletMargin= 0em 0em 0em -($ui_tabletWidth / 2);
+$ui_computerMargin= 0em 0em 0em -($ui_computerWidth / 2);
+$ui_largeMonitorMargin= 0em 0em 0em -($ui_largeMonitorWidth / 2);
+$ui_widescreenMonitorMargin= 0em 0em 0em -($ui_widescreenMonitorWidth / 2);
+
+$ui_fullScreenWidth= 95%;
+$ui_fullScreenOffset= (100% - $ui_fullScreenWidth) / 2;
+$ui_fullScreenMargin= 1em auto;
+
+/* Coupling */
+$ui_invertedBoxShadow= 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Basic */
+$ui_basicModalHeaderColor= $ui_white;
+$ui_basicModalColor= $ui_white;
+$ui_basicModalCloseTop= 1rem;
+$ui_basicModalCloseRight= 1.5rem;
+$ui_basicInnerCloseColor= $ui_white;
+
+$ui_basicInvertedModalColor= $ui_textColor;
+$ui_basicInvertedModalHeaderColor= $ui_darkTextColor;
+
+/* Scrolling Margin */
+$ui_scrollingMargin= 3.5rem;
+$ui_mobileScrollingMargin= 1rem;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Size Widths */
+$ui_smallRatio= 0.8;
+$ui_largeRatio= 1.2;
+
+/* Derived Responsive Sizes */
+$ui_smallHeaderSize= 1.3em;
+$ui_smallMobileWidth= $ui_mobileWidth;
+$ui_smallTabletWidth= ($ui_tabletWidth * $ui_smallRatio);
+$ui_smallComputerWidth= ($ui_computerWidth * $ui_smallRatio);
+$ui_smallLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_smallRatio);
+$ui_smallWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_smallRatio);
+
+$ui_smallMobileMargin= 0em 0em 0em -($ui_smallMobileWidth / 2);
+$ui_smallTabletMargin= 0em 0em 0em -($ui_smallTabletWidth / 2);
+$ui_smallComputerMargin= 0em 0em 0em -($ui_smallComputerWidth / 2);
+$ui_smallLargeMonitorMargin= 0em 0em 0em -($ui_smallLargeMonitorWidth / 2);
+$ui_smallWidescreenMonitorMargin= 0em 0em 0em -($ui_smallWidescreenMonitorWidth / 2);
+
+$ui_largeHeaderSize= 1.6em;
+$ui_largeMobileWidth= $ui_mobileWidth;
+$ui_largeTabletWidth= $ui_tabletWidth;
+$ui_largeComputerWidth= ($ui_computerWidth * $ui_largeRatio);
+$ui_largeLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_largeRatio);
+$ui_largeWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_largeRatio);
+
+$ui_largeMobileMargin= 0em 0em 0em -($ui_largeMobileWidth / 2);
+$ui_largeTabletMargin= 0em 0em 0em -($ui_largeTabletWidth / 2);
+$ui_largeComputerMargin= 0em 0em 0em -($ui_largeComputerWidth / 2);
+$ui_largeLargeMonitorMargin= 0em 0em 0em -($ui_largeLargeMonitorWidth / 2);
+$ui_largeWidescreenMonitorMargin= 0em 0em 0em -($ui_largeWidescreenMonitorWidth / 2);

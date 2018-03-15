@@ -1,0 +1,138 @@
+/*******************************
+            Segment
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_background= $ui_white;
+$ui_borderWidth= 1px;
+$ui_border= $ui_borderWidth solid $ui_borderColor;
+
+$ui_boxShadow= $ui_subtleShadow;
+$ui_verticalPadding= 1em;
+$ui_horizontalPadding= 1em;
+$ui_padding= $ui_verticalPadding $ui_horizontalPadding;
+
+$ui_verticalMargin= 1rem;
+$ui_horizontalMargin= 0em;
+$ui_margin= $ui_verticalMargin $ui_horizontalMargin;
+$ui_borderRadius= $ui_defaultBorderRadius;
+
+/*-------------------
+       Group
+--------------------*/
+
+$ui_groupedMargin= $ui_margin;
+$ui_groupedBorder= $ui_border;
+$ui_groupedBoxShadow= $ui_boxShadow;
+$ui_groupedBorderRadius= $ui_borderRadius;
+
+$ui_nestedGroupMargin= $ui_verticalMargin $ui_verticalMargin;
+
+$ui_groupedSegmentBorder= none;
+$ui_groupedSegmentDivider= $ui_border;
+$ui_groupedSegmentMargin= 0em;
+$ui_groupedSegmentWidth= auto;
+$ui_groupedSegmentBoxShadow= none;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+/* Page Grid Segment */
+$ui_pageGridMargin= (2 * $ui_verticalPadding);
+
+/*******************************
+            States
+*******************************/
+
+/* Loading Dimmer */
+$ui_loaderDimmerColor= rgba(255, 255, 255, 0.8);
+$ui_loaderDimmerZIndex= 100;
+
+/* Loading Spinner */
+$ui_loaderSize= 3em;
+$ui_loaderLineZIndex= 101;
+
+
+/*******************************
+            Variations
+*******************************/
+
+/* Piled */
+$ui_piledZIndex= auto;
+$ui_piledMargin= 3em;
+$ui_piledBoxShadow= '';
+$ui_piledDegrees= 1.2deg;
+$ui_piledBorder= $ui_border;
+
+/* Circular */
+$ui_circularPadding= 2em;
+
+/* Stacked */
+$ui_stackedHeight= 6px;
+$ui_stackedPageBackground= $ui_subtleTransparentBlack;
+$ui_stackedPadding= $ui_verticalPadding + (0.4em);
+$ui_tallStackedPadding= $ui_verticalPadding + (0.8em);
+
+/* Raised */
+$ui_raisedBoxShadow= $ui_floatingShadow;
+
+/* Padded */
+$ui_paddedSegmentPadding= 1.5em;
+$ui_veryPaddedSegmentPadding= 3em;
+
+/* Attached */
+$ui_attachedTopOffset= 0px;
+$ui_attachedBottomOffset= 0px;
+$ui_attachedHorizontalOffset= (- $ui_borderWidth);
+$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+$ui_attachedBoxShadow= none;
+$ui_attachedBorder= $ui_borderWidth solid $ui_solidBorderColor;
+$ui_attachedBottomBoxShadow=$ui_boxShadow,
+  $ui_attachedBoxShadow;
+
+/* Inverted */
+$ui_invertedBackground= $ui_black;
+
+/* Floated */
+$ui_floatedDistance= 1em;
+
+/* Basic */
+$ui_basicBackground= none transparent;
+$ui_basicBorder= none;
+$ui_basicBoxShadow= none;
+$ui_basicBorderRadius= 0px;
+
+/* Colors */
+$ui_coloredBorderSize= 2px;
+
+/* Ordinality */
+$ui_secondaryBackground= $ui_darkWhite;
+$ui_secondaryColor= $ui_mutedTextColor;
+
+$ui_tertiaryBackground=  $ui_midWhite;
+$ui_tertiaryColor= $ui_mutedTextColor;
+
+$ui_secondaryInvertedLightness= 0.2;
+$ui_secondaryInvertedBackground=
+  lighten($ui_black, ($ui_secondaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $ui_secondaryInvertedLightness) 0%,
+    rgba(255, 255, 255, $ui_secondaryInvertedLightness) 100%
+  )
+;
+$ui_secondaryInvertedColor= $ui_invertedMutedTextColor;
+
+$ui_tertiaryInvertedLightness= 0.35;
+$ui_tertiaryInvertedBackground=
+  lighten($ui_black, ($ui_tertiaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $ui_tertiaryInvertedLightness) 0%,
+    rgba(255, 255, 255, $ui_tertiaryInvertedLightness) 100%
+  )
+;
+$ui_tertiaryInvertedColor= $ui_invertedMutedTextColor;
+

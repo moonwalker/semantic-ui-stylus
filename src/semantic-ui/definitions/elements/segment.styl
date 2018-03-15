@@ -1,0 +1,769 @@
+/*!
+ * # Semantic UI - Segment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'element';
+$ui_element = 'segment';
+
+@import '../../theme.config';
+
+/*******************************
+            Segment
+*******************************/
+
+.ui.segment {
+  position: relative;
+  background: $ui_background;
+  box-shadow: $ui_boxShadow;
+  margin: $ui_margin;
+  padding: $ui_padding;
+  border-radius: $ui_borderRadius;
+  border: $ui_border;
+}
+
+.ui.segment:first-child {
+  margin-top: 0em;
+}
+.ui.segment:last-child {
+  margin-bottom: 0em;
+}
+
+
+/* Vertical */
+.ui.vertical.segment {
+  margin: 0em;
+  padding-left: 0em;
+  padding-right: 0em;
+
+  background: none transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  border-bottom: $ui_borderWidth solid $ui_borderColor;
+}
+.ui.vertical.segment:last-child {
+  border-bottom: none;
+}
+
+
+/*-------------------
+    Loose Coupling
+--------------------*/
+
+/* Header */
+.ui.inverted.segment > .ui.header {
+  color: $ui_white;
+}
+
+/* Label */
+.ui[class*="bottom attached"].segment > [class*="top attached"].label {
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+}
+.ui[class*="top attached"].segment > [class*="bottom attached"].label {
+  border-bottom-left-radius: 0em;
+  border-bottom-right-radius: 0em;
+}
+.ui.attached.segment:not(.top):not(.bottom) > [class*="top attached"].label {
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+}
+.ui.attached.segment:not(.top):not(.bottom) > [class*="bottom attached"].label {
+  border-bottom-left-radius: 0em;
+  border-bottom-right-radius: 0em;
+}
+
+/* Grid */
+.ui.page.grid.segment,
+.ui.grid > .row > .ui.segment.column,
+.ui.grid > .ui.segment.column {
+  padding-top: $ui_pageGridMargin;
+  padding-bottom: $ui_pageGridMargin;
+}
+.ui.grid.segment {
+  margin: $ui_margin;
+  border-radius: $ui_borderRadius;
+}
+
+/* Table */
+.ui.basic.table.segment {
+  background: $ui_background;
+  border: $ui_border;
+  box-shadow: $ui_boxShadow;
+}
+.ui[class*="very basic"].table.segment {
+  padding: $ui_padding;
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+/*-------------------
+        Piled
+--------------------*/
+
+.ui.piled.segments,
+.ui.piled.segment {
+  margin: $ui_piledMargin 0em;
+  box-shadow: $ui_piledBoxShadow;
+  z-index: $ui_piledZIndex;
+}
+.ui.piled.segment:first-child {
+  margin-top: 0em;
+}
+.ui.piled.segment:last-child {
+  margin-bottom: 0em;
+}
+.ui.piled.segments:after,
+.ui.piled.segments:before,
+.ui.piled.segment:after,
+.ui.piled.segment:before {
+  background-color: $ui_white;
+  visibility: visible;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  border: $ui_piledBorder;
+  box-shadow: $ui_piledBoxShadow;
+}
+.ui.piled.segments:before,
+.ui.piled.segment:before {
+  transform: rotate(- $ui_piledDegrees);
+  top: 0;
+  z-index: -2;
+}
+.ui.piled.segments:after,
+.ui.piled.segment:after {
+  transform: rotate($ui_piledDegrees);
+  top: 0;
+  z-index: -1;
+}
+
+/* Piled Attached */
+.ui[class*="top attached"].piled.segment {
+  margin-top: $ui_piledMargin;
+  margin-bottom: 0em;
+}
+.ui.piled.segment[class*="top attached"]:first-child {
+  margin-top: 0em;
+}
+.ui.piled.segment[class*="bottom attached"] {
+  margin-top: 0em;
+  margin-bottom: $ui_piledMargin;
+}
+.ui.piled.segment[class*="bottom attached"]:last-child {
+  margin-bottom: 0em;
+}
+
+/*-------------------
+       Stacked
+--------------------*/
+
+.ui.stacked.segment {
+  padding-bottom: $ui_stackedPadding;
+}
+.ui.stacked.segments:before,
+.ui.stacked.segments:after,
+.ui.stacked.segment:before,
+.ui.stacked.segment:after {
+  content: '';
+  position: absolute;
+  bottom: -($ui_stackedHeight / 2);
+  left: 0%;
+
+  border-top: 1px solid $ui_borderColor;
+  background: $ui_stackedPageBackground;
+
+  width: 100%;
+  height: $ui_stackedHeight;
+  visibility: visible;
+}
+.ui.stacked.segments:before,
+.ui.stacked.segment:before {
+  display: none;
+}
+
+/* Add additional page */
+.ui.tall.stacked.segments:before,
+.ui.tall.stacked.segment:before {
+  display: block;
+  bottom: 0px;
+}
+
+/* Inverted */
+.ui.stacked.inverted.segments:before,
+.ui.stacked.inverted.segments:after,
+.ui.stacked.inverted.segment:before,
+.ui.stacked.inverted.segment:after {
+  background-color: $ui_subtleTransparentBlack;
+  border-top: 1px solid $ui_selectedBorderColor;
+}
+
+/*-------------------
+       Padded
+--------------------*/
+
+.ui.padded.segment {
+  padding: $ui_paddedSegmentPadding;
+}
+
+.ui[class*="very padded"].segment {
+  padding: $ui_veryPaddedSegmentPadding;
+}
+
+/*-------------------
+       Compact
+--------------------*/
+
+.ui.compact.segment {
+  display: table;
+}
+
+/* Compact Group */
+.ui.compact.segments {
+  display: inline-flex;
+}
+.ui.compact.segments .segment,
+.ui.segments .compact.segment {
+  display: block;
+  flex: 0 1 auto;
+}
+
+/*-------------------
+       Circular
+--------------------*/
+
+.ui.circular.segment {
+  display: table-cell;
+  padding: $ui_circularPadding;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 500em;
+}
+
+/*-------------------
+       Raised
+--------------------*/
+
+.ui.raised.segments,
+.ui.raised.segment {
+  box-shadow: $ui_raisedBoxShadow;
+}
+
+
+/*******************************
+            Groups
+*******************************/
+
+/* Group */
+.ui.segments {
+  flex-direction: column;
+  position: relative;
+  margin: $ui_groupedMargin;
+  border: $ui_groupedBorder;
+  box-shadow: $ui_groupedBoxShadow;
+  border-radius: $ui_groupedBorderRadius;
+}
+.ui.segments:first-child {
+  margin-top: 0em;
+}
+.ui.segments:last-child {
+  margin-bottom: 0em;
+}
+
+
+/* Nested Segment */
+.ui.segments > .segment {
+  top: 0px;
+  bottom: 0px;
+  border-radius: 0px;
+  margin: $ui_groupedSegmentMargin;
+  width: $ui_groupedSegmentWidth;
+  box-shadow: $ui_groupedSegmentBoxShadow;
+  border: $ui_groupedSegmentBorder;
+  border-top: $ui_groupedSegmentDivider;
+}
+
+.ui.segments:not(.horizontal) > .segment:first-child {
+  top: $ui_attachedTopOffset;
+  bottom: 0px;
+  border-top: none;
+  margin-top: 0em;
+  bottom: 0px;
+  margin-bottom: 0em;
+  top: $ui_attachedTopOffset;
+  border-radius: $ui_borderRadius $ui_borderRadius 0em 0em;
+}
+
+/* Bottom */
+.ui.segments:not(.horizontal) > .segment:last-child {
+  top: $ui_attachedBottomOffset;
+  bottom: 0px;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  box-shadow: $ui_attachedBottomBoxShadow;
+  border-radius: 0em 0em $ui_borderRadius $ui_borderRadius;
+}
+
+/* Only */
+.ui.segments:not(.horizontal) > .segment:only-child {
+  border-radius: $ui_borderRadius;
+}
+
+
+/* Nested Group */
+.ui.segments > .ui.segments {
+  border-top: $ui_groupedSegmentDivider;
+  margin: $ui_nestedGroupMargin;
+}
+.ui.segments > .segments:first-child {
+  border-top: none;
+}
+.ui.segments > .segment + .segments:not(.horizontal) {
+  margin-top: 0em;
+}
+
+/* Horizontal Group */
+.ui.horizontal.segments {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0em;
+  background-color: $ui_background;
+  box-shadow: $ui_boxShadow;
+  margin: $ui_margin;
+  border-radius: $ui_borderRadius;
+  border: $ui_border;
+}
+
+/* Nested Horizontal Group */
+.ui.segments > .horizontal.segments {
+  margin: 0em;
+  background-color: transparent;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  border-top: $ui_groupedSegmentDivider;
+}
+
+/* Horizontal Segment */
+.ui.horizontal.segments > .segment {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 0px; /* Solves #2550 MS Flex */
+  margin: 0em;
+  min-width: 0px;
+  background-color: transparent;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  border-left: $ui_borderWidth solid $ui_borderColor;
+}
+
+/* Border Fixes */
+.ui.segments > .horizontal.segments:first-child {
+  border-top: none;
+}
+.ui.horizontal.segments > .segment:first-child {
+  border-left: none;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+/*--------------
+    Disabled
+---------------*/
+
+.ui.disabled.segment {
+  opacity: $ui_disabledOpacity;
+  color: $ui_disabledTextColor;
+}
+
+/*--------------
+    Loading
+---------------*/
+
+.ui.loading.segment {
+  position: relative;
+  cursor: default;
+  point-events: none;
+  text-shadow: none !important;
+  color: transparent !important;
+  transition: all 0s linear;
+}
+.ui.loading.segment:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 0%;
+  background: $ui_loaderDimmerColor;
+  width: 100%;
+  height: 100%;
+  border-radius: $ui_borderRadius;
+  z-index: $ui_loaderDimmerZIndex;
+}
+.ui.loading.segment:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+
+  margin: $ui_loaderMargin;
+  width: $ui_loaderSize;
+  height: $ui_loaderSize;
+
+  animation: segment-spin $ui_loaderSpeed linear;
+  animation-iteration-count: infinite;
+
+  border-radius: $ui_circularRadius;
+
+  border-color: $ui_loaderLineColor $ui_loaderFillColor $ui_loaderFillColor $ui_loaderFillColor;
+  border-style: solid;
+  border-width: $ui_loaderLineWidth;
+
+  box-shadow: 0px 0px 0px 1px transparent;
+  visibility: visible;
+  z-index: $ui_loaderLineZIndex;
+}
+
+@keyframes segment-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Basic
+--------------------*/
+
+.ui.basic.segment {
+  background: $ui_basicBackground;
+  box-shadow: $ui_basicBoxShadow;
+  border: $ui_basicBorder;
+  border-radius: $ui_basicBorderRadius;
+}
+
+/*-------------------
+       Clearing
+--------------------*/
+
+.ui.clearing.segment:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+
+/* Red */
+.ui.red.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_red;
+}
+.ui.inverted.red.segment {
+  background-color: $ui_red !important;
+  color: $ui_white !important;
+}
+
+/* Orange */
+.ui.orange.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_orange;
+}
+.ui.inverted.orange.segment {
+  background-color: $ui_orange !important;
+  color: $ui_white !important;
+}
+
+/* Yellow */
+.ui.yellow.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_yellow;
+}
+.ui.inverted.yellow.segment {
+  background-color: $ui_yellow !important;
+  color: $ui_white !important;
+}
+
+/* Olive */
+.ui.olive.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_olive;
+}
+.ui.inverted.olive.segment {
+  background-color: $ui_olive !important;
+  color: $ui_white !important;
+}
+
+/* Green */
+.ui.green.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_green;
+}
+.ui.inverted.green.segment {
+  background-color: $ui_green !important;
+  color: $ui_white !important;
+}
+
+/* Teal */
+.ui.teal.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_teal;
+}
+.ui.inverted.teal.segment {
+  background-color: $ui_teal !important;
+  color: $ui_white !important;
+}
+
+/* Blue */
+.ui.blue.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_blue;
+}
+.ui.inverted.blue.segment {
+  background-color: $ui_blue !important;
+  color: $ui_white !important;
+}
+
+/* Violet */
+.ui.violet.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_violet;
+}
+.ui.inverted.violet.segment {
+  background-color: $ui_violet !important;
+  color: $ui_white !important;
+}
+
+/* Purple */
+.ui.purple.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_purple;
+}
+.ui.inverted.purple.segment {
+  background-color: $ui_purple !important;
+  color: $ui_white !important;
+}
+
+/* Pink */
+.ui.pink.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_pink;
+}
+.ui.inverted.pink.segment {
+  background-color: $ui_pink !important;
+  color: $ui_white !important;
+}
+
+/* Brown */
+.ui.brown.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_brown;
+}
+.ui.inverted.brown.segment {
+  background-color: $ui_brown !important;
+  color: $ui_white !important;
+}
+
+/* Grey */
+.ui.grey.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_grey;
+}
+.ui.inverted.grey.segment {
+  background-color: $ui_grey !important;
+  color: $ui_white !important;
+}
+
+/* Black */
+.ui.black.segment:not(.inverted) {
+  border-top: $ui_coloredBorderSize solid $ui_black;
+}
+.ui.inverted.black.segment {
+  background-color: $ui_black !important;
+  color: $ui_white !important;
+}
+
+/*-------------------
+       Aligned
+--------------------*/
+
+.ui[class*="left aligned"].segment {
+  text-align: left;
+}
+.ui[class*="right aligned"].segment {
+  text-align: right;
+}
+.ui[class*="center aligned"].segment {
+  text-align: center;
+}
+
+/*-------------------
+       Floated
+--------------------*/
+
+.ui.floated.segment,
+.ui[class*="left floated"].segment {
+  float: left;
+  margin-right: $ui_floatedDistance;
+}
+.ui[class*="right floated"].segment {
+  float: right;
+  margin-left: $ui_floatedDistance;
+}
+
+
+/*-------------------
+      Inverted
+--------------------*/
+
+.ui.inverted.segment {
+  border: none;
+  box-shadow: none;
+}
+.ui.inverted.segment,
+.ui.primary.inverted.segment {
+  background: $ui_invertedBackground;
+  color: $ui_invertedTextColor;
+}
+
+/* Nested */
+.ui.inverted.segment .segment {
+  color: $ui_textColor;
+}
+.ui.inverted.segment .inverted.segment {
+  color: $ui_invertedTextColor;
+}
+
+/* Attached */
+.ui.inverted.attached.segment {
+  border-color: $ui_solidWhiteBorderColor;
+}
+
+/*-------------------
+     Emphasis
+--------------------*/
+
+/* Secondary */
+.ui.secondary.segment {
+  background: $ui_secondaryBackground;
+  color: $ui_secondaryColor;
+}
+.ui.secondary.inverted.segment {
+  background: $ui_secondaryInvertedBackground;
+  color: $ui_secondaryInvertedColor;
+}
+
+/* Tertiary */
+.ui.tertiary.segment {
+  background: $ui_tertiaryBackground;
+  color: $ui_tertiaryColor;
+}
+.ui.tertiary.inverted.segment {
+  background: $ui_tertiaryInvertedBackground;
+  color: $ui_tertiaryInvertedColor;
+}
+
+
+/*-------------------
+      Attached
+--------------------*/
+
+/* Middle */
+.ui.attached.segment {
+  top: 0px;
+  bottom: 0px;
+  border-radius: 0px;
+  margin: 0em $ui_attachedHorizontalOffset;
+  width: $ui_attachedWidth;
+  max-width: $ui_attachedWidth;
+  box-shadow: $ui_attachedBoxShadow;
+  border: $ui_attachedBorder;
+}
+.ui.attached:not(.message) + .ui.attached.segment:not(.top) {
+  border-top: none;
+}
+
+/* Top */
+.ui[class*="top attached"].segment {
+  bottom: 0px;
+  margin-bottom: 0em;
+  top: $ui_attachedTopOffset;
+  margin-top: $ui_verticalMargin;
+  border-radius: $ui_borderRadius $ui_borderRadius 0em 0em;
+}
+.ui.segment[class*="top attached"]:first-child {
+  margin-top: 0em;
+}
+
+/* Bottom */
+.ui.segment[class*="bottom attached"] {
+  bottom: 0px;
+  margin-top: 0em;
+  top: $ui_attachedBottomOffset;
+  margin-bottom: $ui_verticalMargin;
+  box-shadow: $ui_attachedBottomBoxShadow;
+  border-radius: 0em 0em $ui_borderRadius $ui_borderRadius;
+}
+.ui.segment[class*="bottom attached"]:last-child {
+  margin-bottom: 0em;
+}
+
+/*-------------------
+        Size
+--------------------*/
+
+.ui.mini.segments .segment,
+.ui.mini.segment {
+  font-size: $ui_mini;
+}
+.ui.tiny.segments .segment,
+.ui.tiny.segment {
+  font-size: $ui_tiny;
+}
+.ui.small.segments .segment,
+.ui.small.segment {
+  font-size: $ui_small;
+}
+.ui.segments .segment,
+.ui.segment {
+  font-size: $ui_medium;
+}
+.ui.large.segments .segment,
+.ui.large.segment {
+  font-size: $ui_large;
+}
+.ui.big.segments .segment,
+.ui.big.segment {
+  font-size: $ui_big;
+}
+.ui.huge.segments .segment,
+.ui.huge.segment {
+  font-size: $ui_huge;
+}
+.ui.massive.segments .segment,
+.ui.massive.segment {
+  font-size: $ui_massive;
+}
+
+loadUIOverrides();
+

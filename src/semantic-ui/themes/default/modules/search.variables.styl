@@ -1,0 +1,153 @@
+/*******************************
+            Search
+*******************************/
+
+/* Search Prompt */
+$ui_promptBackground= $ui_inputBackground;
+$ui_promptVerticalPadding= $ui_inputVerticalPadding;
+$ui_promptHorizontalPadding= $ui_inputHorizontalPadding;
+$ui_promptLineHeight= $ui_inputLineHeight;
+$ui_promptFontSize= $ui_relativeMedium;
+$ui_promptPadding= ($ui_promptVerticalPadding + ((1em - $ui_promptLineHeight) / 2)) $ui_promptHorizontalPadding;
+$ui_promptBorder= 1px solid $ui_borderColor;
+$ui_promptBorderRadius= $ui_circularRadius;
+$ui_promptColor= $ui_textColor;
+$ui_promptTransition=background-color $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing,
+  box-shadow $ui_defaultDuration $ui_defaultEasing,
+  border-color $ui_defaultDuration $ui_defaultEasing;
+$ui_promptBoxShadow= 0em 0em 0em 0em transparent inset;
+
+/* Result Box */
+$ui_resultsWidth= 18em;
+$ui_resultsBackground= #FFFFFF;
+$ui_resultsDistance= 0.5em;
+$ui_resultsBorderRadius= $ui_defaultBorderRadius;
+$ui_resultsBorder= 1px solid $ui_solidBorderColor;
+$ui_resultsBoxShadow= $ui_floatingShadow;
+
+/* Result */
+$ui_resultFontSize= 1em;
+$ui_resultVerticalPadding= $ui_relativeTiny;
+$ui_resultHorizontalPadding= $ui_relativeLarge;
+$ui_resultPadding= $ui_resultVerticalPadding $ui_resultHorizontalPadding;
+$ui_resultTextColor= $ui_textColor;
+$ui_resultLineHeight= 1.33;
+$ui_resultDivider= 1px solid $ui_internalBorderColor;
+$ui_resultLastDivider= none;
+
+/* Result Image */
+$ui_resultImageFloat= right;
+$ui_resultImageBackground= none;
+$ui_resultImageWidth= 5em;
+$ui_resultImageHeight= 3em;
+$ui_resultImageBorderRadius= 0.25em;
+$ui_resultImageMargin= 0em 6em 0em 0em;
+
+/* Result Content */
+$ui_resultTitleFont= $ui_headerFont;
+$ui_resultTitleMargin= (- $ui_headerLineHeightOffset) 0em 0em;
+$ui_resultTitleFontWeight= bold;
+$ui_resultTitleFontSize= $ui_relativeMedium;
+$ui_resultTitleColor= $ui_darkTextColor;
+
+/* Description */
+$ui_resultDescriptionFontSize= $ui_relativeSmall;
+$ui_resultDescriptionDistance= 0;
+$ui_resultDescriptionColor= $ui_lightTextColor;
+
+/* Price */
+$ui_resultPriceFloat= right;
+$ui_resultPriceColor= $ui_green;
+
+/* Special Message */
+$ui_messageVerticalPadding= 1em;
+$ui_messageHorizontalPadding= 1em;
+$ui_messageHeaderFontSize= $ui_medium;
+$ui_messageHeaderFontWeight= bold;
+$ui_messageHeaderColor= $ui_textColor;
+$ui_messageDescriptionDistance= 0.25rem;
+$ui_messageDescriptionFontSize= 1em;
+$ui_messageDescriptionColor= $ui_textColor;
+
+/* All Results Link */
+$ui_actionBorder= none;
+$ui_actionBackground= $ui_darkWhite;
+$ui_actionPadding= $ui_relativeSmall $ui_relativeMedium;
+$ui_actionColor= $ui_textColor;
+$ui_actionFontWeight= bold;
+$ui_actionAlign= center;
+
+
+/*******************************
+            States
+*******************************/
+
+/* Focus */
+$ui_promptFocusBackground= $ui_promptBackground;
+$ui_promptFocusBorderColor= $ui_selectedBorderColor;
+$ui_promptFocusColor= $ui_selectedTextColor;
+
+/* Hover */
+$ui_resultHoverBackground= $ui_offWhite;
+$ui_actionHoverBackground= #E0E0E0;
+
+/* Loading */
+$ui_invertedLoaderFillColor= rgba(0, 0, 0, 0.15);
+
+/* Active Category */
+$ui_categoryActiveBackground= $ui_darkWhite;
+$ui_categoryNameActiveColor= $ui_textColor;
+
+/* Active Result */
+$ui_resultActiveBorderLeft= $ui_internalBorderColor;
+$ui_resultActiveBackground= $ui_darkWhite;
+$ui_resultActiveBoxShadow= none;
+$ui_resultActiveTitleColor= $ui_darkTextColor;
+$ui_resultActiveDescriptionColor= $ui_darkTextColor;
+$ui_resultsZIndex= 998;
+
+
+/*******************************
+            Types
+*******************************/
+
+/* Selection */
+$ui_selectionPromptBorderRadius= $ui_defaultBorderRadius;
+
+$ui_selectionCloseTop= 0em;
+$ui_selectionCloseTransition=color $ui_defaultDuration $ui_defaultEasing,
+  opacity $ui_defaultDuration $ui_defaultEasing;
+$ui_selectionCloseRight= 0em;
+$ui_selectionCloseIconOpacity= 0.8;
+$ui_selectionCloseIconColor= '';
+$ui_selectionCloseIconHoverOpacity= 1;
+$ui_selectionCloseIconHoverColor= $ui_red;
+
+$ui_selectionCloseIconInputRight= 1.85714em;
+
+/* Category */
+$ui_categoryBackground= $ui_darkWhite;
+$ui_categoryBoxShadow= none;
+$ui_categoryDivider= 1px solid $ui_internalBorderColor;
+$ui_categoryTransition=background $ui_defaultDuration $ui_defaultEasing,
+  border-color $ui_defaultDuration $ui_defaultEasing;
+
+$ui_categoryResultsWidth= 28em;
+
+$ui_categoryResultBackground= $ui_white;
+$ui_categoryResultLeftBorder= 1px solid $ui_borderColor;
+$ui_categoryResultDivider= $ui_resultDivider;
+$ui_categoryResultLastDivider= none;
+$ui_categoryResultPadding= $ui_resultPadding;
+$ui_categoryResultTransition= $ui_categoryTransition;
+
+$ui_categoryNameWidth= 100px;
+$ui_categoryNameBackground= transparent;
+$ui_categoryNameFont= $ui_pageFont;
+$ui_categoryNameFontSize= 1em;
+$ui_categoryNameFloat= left;
+$ui_categoryNamePadding= 0.4em 1em;
+$ui_categoryNameFontWeight= bold;
+$ui_categoryNameColor= $ui_lightTextColor;
+

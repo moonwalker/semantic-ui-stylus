@@ -1,0 +1,58 @@
+/*******************************
+            Container
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Minimum Gutter is used to determine  the maximum container width for a given device */
+
+$ui_maxWidth= 100%;
+
+/* Devices */
+$ui_mobileMinimumGutter= 0em;
+$ui_mobileWidth= auto;
+$ui_mobileGutter= 1em;
+
+$ui_tabletMinimumGutter= ($ui_emSize  * 1);
+$ui_tabletWidth= $ui_tabletBreakpoint - ($ui_tabletMinimumGutter * 2) - $ui_scrollbarWidth;
+$ui_tabletGutter= auto;
+
+$ui_computerMinimumGutter= ($ui_emSize  * 1.5);
+$ui_computerWidth= $ui_computerBreakpoint - ($ui_computerMinimumGutter * 2) - $ui_scrollbarWidth;
+$ui_computerGutter= auto;
+
+$ui_largeMonitorMinimumGutter= ($ui_emSize  * 2);
+$ui_largeMonitorWidth= $ui_largeMonitorBreakpoint - ($ui_largeMonitorMinimumGutter * 2) - $ui_scrollbarWidth;
+$ui_largeMonitorGutter= auto;
+
+/* Coupling (Add Negative Margin to container size) */
+$ui_gridGutterWidth= 2rem;
+$ui_relaxedGridGutterWidth= 3rem;
+$ui_veryRelaxedGridGutterWidth= 5rem;
+
+$ui_mobileGridWidth= $ui_mobileWidth;
+$ui_tabletGridWidth= unquote("calc(" + $ui_tabletWidth + "~" + "" + $ui_gridGutterWidth + ")");
+$ui_computerGridWidth= unquote("calc(" + $ui_computerWidth + "~" + "" + $ui_gridGutterWidth + ")");
+$ui_largeMonitorGridWidth= unquote("calc(" + $ui_largeMonitorWidth + "~" + "" + $ui_gridGutterWidth + ")");
+
+$ui_mobileRelaxedGridWidth= $ui_mobileWidth;
+$ui_tabletRelaxedGridWidth= unquote("calc(" + $ui_tabletWidth + "~" + "" + $ui_relaxedGridGutterWidth + ")");
+$ui_computerRelaxedGridWidth= unquote("calc(" + $ui_computerWidth + "~" + "" + $ui_relaxedGridGutterWidth + ")");
+$ui_largeMonitorRelaxedGridWidth= unquote("calc(" + $ui_largeMonitorWidth + "~" + "" + $ui_relaxedGridGutterWidth + ")");
+
+$ui_mobileVeryRelaxedGridWidth= $ui_mobileWidth;
+$ui_tabletVeryRelaxedGridWidth= unquote("calc(" + $ui_tabletWidth + "~" + "" + $ui_veryRelaxedGridGutterWidth + ")");
+$ui_computerVeryRelaxedGridWidth= unquote("calc(" + $ui_computerWidth + "~" + "" + $ui_veryRelaxedGridGutterWidth + ")");
+$ui_largeMonitorVeryRelaxedGridWidth= unquote("calc(" + $ui_largeMonitorWidth + "~" + "" + $ui_veryRelaxedGridGutterWidth + ")");
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Text */
+$ui_textWidth= 700px;
+$ui_textFontFamily= $ui_pageFont;
+$ui_textLineHeight= 1.5;
+$ui_textSize= $ui_large;

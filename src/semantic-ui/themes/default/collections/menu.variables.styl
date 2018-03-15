@@ -1,0 +1,455 @@
+/*******************************
+             Menu
+*******************************/
+
+/*-------------------
+      Collection
+--------------------*/
+
+/* Menu */
+$ui_verticalMargin= $ui_medium;
+$ui_horizontalMargin= 0em;
+$ui_margin= $ui_verticalMargin $ui_horizontalMargin;
+$ui_background= #FFFFFF;
+$ui_fontFamily= $ui_pageFont;
+$ui_itemBackground= none;
+$ui_fontWeight= normal;
+$ui_borderWidth= 1px;
+$ui_border= $ui_borderWidth solid $ui_borderColor;
+$ui_boxShadow= $ui_subtleShadow;
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_minHeight= ($ui_itemVerticalPadding * 2) + 1em;
+
+/* Menu Item */
+$ui_itemVerticalPadding= $ui_relativeSmall;
+$ui_itemHorizontalPadding= $ui_relativeLarge;
+$ui_itemTextTransform= none;
+$ui_itemTransition=background $ui_defaultDuration $ui_defaultEasing,
+  box-shadow $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing;
+$ui_itemFontWeight= normal;
+$ui_itemTextColor= $ui_textColor;
+
+/* Divider */
+$ui_dividerSize= 1px;
+$ui_dividerBackground= $ui_internalBorderColor;
+
+/* Sub Menu */
+$ui_subMenuDistance= 0.5em;
+$ui_subMenuMargin= $ui_subMenuDistance (- $ui_itemHorizontalPadding) 0em;
+$ui_subMenuFontSize= $ui_relativeTiny;
+$ui_subMenuTextColor= rgba(0, 0, 0, 0.5);
+
+$ui_subMenuIndent= 0em;
+$ui_subMenuHorizontalPadding= ($ui_itemHorizontalPadding / $ui_tinySize) + $ui_subMenuIndent;
+$ui_subMenuVerticalPadding= 0.5em;
+
+/* Text Item */
+$ui_textLineHeight= 1.3;
+
+/*--------------
+    Elements
+---------------*/
+
+/* Icon */
+$ui_iconFloat= none;
+$ui_iconMargin= 0em $ui_relative5px 0em 0em;
+$ui_iconOpacity= 0.9;
+
+/* Dropdown Icon */
+$ui_dropdownIconFloat= right;
+$ui_dropdownIconDistance= 1em;
+
+/* Header */
+$ui_headerBackground= '';
+$ui_headerWeight= bold;
+$ui_headerTextTransform= normal;
+
+/* Vertical Icon */
+$ui_verticalIconFloat= right;
+$ui_verticalIconMargin= 0em 0em 0em 0.5em;
+
+/* Vertical Header */
+$ui_verticalHeaderMargin= 0em 0em 0.5em;
+$ui_verticalHeaderFontSize= $ui_relativeMedium;
+$ui_verticalHeaderFontWeight= bold;
+
+/* Pointing Arrow */
+$ui_arrowSize= $ui_relative8px;
+$ui_arrowBorderWidth= 1px;
+$ui_arrowBorder= $ui_arrowBorderWidth solid $ui_solidBorderColor;
+$ui_arrowTransition= background $ui_defaultDuration $ui_defaultEasing;
+$ui_arrowZIndex= 2;
+
+$ui_arrowHoverColor= #F2F2F2;
+$ui_arrowActiveColor= $ui_arrowHoverColor;
+$ui_arrowActiveHoverColor= $ui_arrowActiveColor;
+
+$ui_arrowVerticalHoverColor= $ui_arrowHoverColor;
+$ui_arrowVerticalActiveColor= $ui_arrowActiveColor;
+$ui_arrowVerticalSubMenuColor= $ui_white;
+
+/*--------------
+    Couplings
+---------------*/
+
+/* Button */
+$ui_buttonSize= $ui_relativeMedium;
+$ui_buttonOffset= 0em;
+$ui_buttonMargin= -0.5em 0em;
+$ui_buttonVerticalPadding= $ui_relativeMini;
+
+/* Input */
+$ui_inputSize= $ui_relativeMedium;
+$ui_inputVerticalMargin= -0.5em;
+$ui_inputOffset= 0em;
+$ui_inputVerticalPadding= $ui_relative8px;
+
+/* Image */
+$ui_imageMargin= -0.3em 0em;
+$ui_imageWidth= 2.5em;
+$ui_verticalImageWidth= auto;
+
+/* Label */
+$ui_labelOffset= -0.15em;
+$ui_labelBackground= #999999;
+$ui_labelTextColor= $ui_white;
+
+$ui_labelTextMargin= 1em;
+$ui_labelVerticalPadding= 0.3em;
+$ui_labelHorizontalPadding= $ui_relativeMini;
+
+$ui_labelAndIconFloat= none;
+$ui_labelAndIconMargin= 0em 0.5em 0em 0em;
+
+/* Dropdown in Menu */
+$ui_dropdownMenuBoxShadow= 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+
+$ui_dropdownBackground= #FFFFFF;
+$ui_dropdownMenuDistance= 0em;
+$ui_dropdownMenuBorderRadius= $ui_borderRadius;
+
+$ui_dropdownItemFontSize= $ui_relativeMedium;
+$ui_dropdownItemPadding= $ui_relativeMini $ui_relativeLarge;
+$ui_dropdownItemBackground= transparent;
+$ui_dropdownItemColor= $ui_textColor;
+$ui_dropdownItemTextTransform= none;
+$ui_dropdownItemFontWeight= normal;
+$ui_dropdownItemBoxShadow= none;
+$ui_dropdownItemTransition= none;
+
+$ui_dropdownItemIconFloat= none;
+$ui_dropdownItemIconFontSize= $ui_relativeMedium;
+$ui_dropdownItemIconMargin= 0em 0.75em 0em 0em;
+
+$ui_dropdownHoveredItemBackground= $ui_transparentBlack;
+$ui_dropdownHoveredItemColor= $ui_selectedTextColor;
+
+/* Dropdown Variations */
+$ui_dropdownVerticalMenuBoxShadow= 0 1px 3px 0px rgba(0, 0, 0, 0.08);
+$ui_secondaryDropdownMenuDistance= $ui_relative5px;
+$ui_pointingDropdownMenuDistance= 0.75em;
+$ui_invertedSelectionDropdownColor= $ui_invertedTextColor;
+
+/*--------------
+     States
+---------------*/
+
+/* Hovered Item */
+$ui_hoverItemBackground= $ui_subtleTransparentBlack;
+$ui_hoverItemTextColor= $ui_selectedTextColor;
+
+/* Pressed Item */
+$ui_pressedItemBackground= $ui_subtleTransparentBlack;
+$ui_pressedItemTextColor= $ui_hoverItemTextColor;
+
+
+/* Active Item */
+$ui_activeItemBackground= $ui_transparentBlack;
+$ui_activeItemTextColor= $ui_selectedTextColor;
+$ui_activeItemFontWeight= normal;
+$ui_activeIconOpacity= 1;
+$ui_activeItemBoxShadow= none;
+
+/* Active Hovered Item */
+$ui_activeHoverItemBackground= $ui_transparentBlack;
+$ui_activeHoverItemColor= $ui_selectedTextColor;
+
+/* Selected Dropdown */
+$ui_dropdownSelectedItemBackground= $ui_transparentBlack;
+$ui_dropdownSelectedItemColor= $ui_selectedTextColor;
+
+/* Active Dropdown */
+$ui_dropdownActiveItemBackground= $ui_subtleTransparentBlack;
+$ui_dropdownActiveItemColor= $ui_selectedTextColor;
+$ui_dropdownActiveItemFontWeight= bold;
+
+/* Active Sub Menu */
+$ui_subMenuActiveBackground= transparent;
+$ui_subMenuActiveTextColor= $ui_activeItemTextColor;
+$ui_subMenuActiveFontWeight= bold;
+
+
+/*--------------
+     Types
+---------------*/
+
+/* Vertical */
+$ui_verticalBoxShadow= $ui_boxShadow;
+$ui_verticalPointerWidth= 2px;
+$ui_verticalBackground= #FFFFFF;
+$ui_verticalItemBackground= none;
+$ui_verticalDividerBackground= $ui_dividerBackground;
+
+$ui_verticalActiveBoxShadow= none;
+
+
+/* Secondary */
+$ui_secondaryBackground= none;
+$ui_secondaryMargin= 0em (- $ui_secondaryItemSpacing);
+$ui_secondaryItemBackground= none;
+$ui_secondaryItemSpacing= $ui_relative5px;
+$ui_secondaryItemMargin= 0em $ui_secondaryItemSpacing;
+$ui_secondaryItemVerticalPadding= $ui_relativeMini;
+$ui_secondaryItemHorizontalPadding= $ui_relativeSmall;
+$ui_secondaryItemPadding= $ui_relativeMini $ui_relativeSmall;
+$ui_secondaryItemBorderRadius= $ui_defaultBorderRadius;
+$ui_secondaryItemTransition= color $ui_defaultDuration $ui_defaultEasing;
+$ui_secondaryItemColor= $ui_unselectedTextColor;
+
+$ui_secondaryHoverItemBackground= $ui_transparentBlack;
+$ui_secondaryHoverItemColor= $ui_selectedTextColor;
+
+$ui_secondaryActiveItemBackground= $ui_transparentBlack;
+$ui_secondaryActiveItemColor= $ui_selectedTextColor;
+$ui_secondaryActiveHoverItemBackground= $ui_transparentBlack;
+$ui_secondaryActiveHoverItemColor= $ui_selectedTextColor;
+
+$ui_secondaryActiveHoveredItemBackground= $ui_transparentBlack;
+$ui_secondaryActiveHoveredItemColor= $ui_selectedTextColor;
+
+$ui_secondaryHeaderBackground= none transparent;
+$ui_secondaryHeaderBorder= none;
+
+$ui_secondaryItemVerticalSpacing= $ui_secondaryItemSpacing;
+$ui_secondaryVerticalItemMargin= 0em 0em $ui_secondaryItemVerticalSpacing;
+$ui_secondaryVerticalItemBorderRadius= $ui_defaultBorderRadius;
+
+$ui_secondaryMenuSubMenuMargin= 0em (- $ui_secondaryItemHorizontalPadding);
+$ui_secondaryMenuSubMenuItemMargin= 0em;
+$ui_secondarySubMenuHorizontalPadding= ($ui_itemHorizontalPadding / $ui_tinySize) + $ui_subMenuIndent;
+$ui_secondaryMenuSubMenuItemPadding= $ui_relative7px $ui_secondarySubMenuHorizontalPadding;
+
+/* Pointing */
+$ui_secondaryPointingBorderWidth= 2px;
+$ui_secondaryPointingBorderColor= $ui_borderColor;
+$ui_secondaryPointingItemVerticalPadding= $ui_relativeTiny;
+$ui_secondaryPointingItemHorizontalPadding= $ui_relativeLarge;
+
+$ui_secondaryPointingHoverTextColor= $ui_textColor;
+
+$ui_secondaryPointingActiveBorderColor= $ui_black;
+$ui_secondaryPointingActiveTextColor= $ui_selectedTextColor;
+$ui_secondaryPointingActiveFontWeight= bold;
+
+$ui_secondaryPointingActiveDropdownBorderColor= transparent;
+
+$ui_secondaryPointingActiveHoverBorderColor= $ui_secondaryPointingActiveBorderColor;
+$ui_secondaryPointingActiveHoverTextColor= $ui_secondaryPointingActiveTextColor;
+
+$ui_secondaryPointingHeaderColor= $ui_darkTextColor;
+$ui_secondaryVerticalPointingItemMargin= 0em (- $ui_secondaryPointingBorderWidth) 0em 0em;
+
+
+/* Inverted Secondary */
+$ui_secondaryInvertedColor= $ui_invertedLightTextColor;
+
+$ui_secondaryInvertedHoverBackground= $ui_transparentWhite;
+$ui_secondaryInvertedHoverColor= $ui_invertedSelectedTextColor;
+
+$ui_secondaryInvertedActiveBackground= $ui_strongTransparentWhite;
+$ui_secondaryInvertedActiveColor= $ui_invertedSelectedTextColor;
+
+/* Inverted Pointing */
+$ui_secondaryPointingInvertedBorderColor= $ui_whiteBorderColor;
+$ui_secondaryPointingInvertedItemTextColor= $ui_invertedTextColor;
+$ui_secondaryPointingInvertedItemHeaderColor= $ui_white;
+$ui_secondaryPointingInvertedItemHoverTextColor= $ui_selectedTextColor;
+$ui_secondaryPointingInvertedActiveBorderColor= $ui_white;
+$ui_secondaryPointingInvertedActiveColor= $ui_invertedSelectedTextColor;
+
+
+/* Tiered */
+$ui_tieredActiveItemBackground= #FCFCFC;
+$ui_tieredActiveMenuBackground= #FCFCFC;
+
+$ui_tieredSubMenuTextTransform= normal;
+$ui_tieredSubMenuFontWeight= normal;
+
+$ui_tieredSubMenuColor= $ui_lightTextColor;
+
+$ui_tieredSubMenuHoverBackground= none transparent;
+$ui_tieredSubMenuHoverColor= $ui_hoveredTextColor;
+
+$ui_tieredSubMenuActiveBackground= none transparent;
+$ui_tieredSubMenuActiveColor= $ui_selectedTextColor;
+
+$ui_tieredInvertedSubMenuBackground= rgba(0, 0, 0, 0.2);
+
+
+/* Icon */
+$ui_iconMenuTextAlign= center;
+$ui_iconMenuItemColor= $ui_black;
+$ui_iconMenuInvertedItemColor= $ui_white;
+
+
+/* Tabular */
+$ui_tabularBorderColor= $ui_solidBorderColor;
+$ui_tabularBackgroundColor= transparent;
+$ui_tabularBackground= none $ui_tabularBackgroundColor;
+$ui_tabularBorderWidth= 1px;
+$ui_tabularOppositeBorderWidth= $ui_tabularBorderWidth + 1px;
+$ui_tabularVerticalPadding= $ui_itemVerticalPadding;
+$ui_tabularHorizontalPadding= $ui_relativeHuge;
+$ui_tabularBorderRadius= $ui_defaultBorderRadius;
+$ui_tabularTextColor= $ui_itemTextColor;
+
+$ui_tabularHoveredTextColor= $ui_hoveredTextColor;
+
+$ui_tabularVerticalBackground= none $ui_tabularBackgroundColor;
+
+$ui_tabularFluidOffset= 1px;
+$ui_tabularFluidWidth= unquote("calc(100% + (" + $ui_tabularFluidOffset + " * 2))");
+
+$ui_tabularActiveBackground= none $ui_white;
+$ui_tabularActiveColor= $ui_selectedTextColor;
+$ui_tabularActiveBoxShadow= none;
+$ui_tabularActiveWeight= bold;
+
+
+
+/* Pagination */
+$ui_paginationMinWidth= 3em;
+$ui_paginationActiveBackground= $ui_transparentBlack;
+$ui_paginationActiveTextColor= $ui_selectedTextColor;
+
+/* Labeled Icon */
+$ui_labeledIconItemHorizontalPadding= $ui_relativeMassive;
+$ui_labeledIconSize= $ui_relativeMassive;
+$ui_labeledIconMinWidth= 6em;
+$ui_labeledIconTextMargin= 0.5rem;
+
+
+/* Text */
+$ui_textMenuItemSpacing= $ui_relative7px;
+$ui_textMenuMargin= $ui_relativeMedium -($ui_textMenuItemSpacing);
+$ui_textMenuItemColor= $ui_mutedTextColor;
+$ui_textMenuItemFontWeight= normal;
+$ui_textMenuItemMargin= 0em 0em;
+$ui_textMenuItemPadding= $ui_relative5px $ui_textMenuItemSpacing;
+$ui_textMenuItemTransition= opacity $ui_defaultDuration $ui_defaultEasing;
+
+$ui_textMenuSubMenuMargin= 0em;
+$ui_textMenuSubMenuItemMargin= 0em;
+$ui_textMenuSubMenuItemPadding= $ui_relative7px 0em;
+
+$ui_textMenuActiveItemFontWeight= normal;
+$ui_textMenuActiveItemColor= $ui_selectedTextColor;
+
+$ui_textMenuHeaderSize= $ui_relativeSmall;
+$ui_textMenuHeaderColor= $ui_darkTextColor;
+$ui_textMenuHeaderFontWeight= bold;
+$ui_textMenuHeaderTextTransform= uppercase;
+
+$ui_textVerticalMenuMargin= $ui_relativeMedium 0em;
+$ui_textVerticalMenuHeaderMargin= $ui_relative8px 0em $ui_relative10px;
+$ui_textVerticalMenuItemMargin= $ui_relative8px 0em;
+
+$ui_textVerticalMenuIconFloat= none;
+$ui_textVerticalMenuIconMargin= $ui_iconMargin;
+
+
+/*--------------
+   Variations
+---------------*/
+
+/* Inverted */
+$ui_invertedBackground= $ui_black;
+$ui_invertedBoxShadow= none;
+$ui_invertedBorder= 0px solid transparent;
+$ui_invertedHeaderBackground= transparent;
+
+$ui_invertedItemBackground= transparent;
+$ui_invertedItemTextColor= $ui_invertedTextColor;
+
+/* Inverted Sub Menu */
+$ui_invertedSubMenuBackground= transparent;
+$ui_invertedSubMenuColor= $ui_invertedUnselectedTextColor;
+
+/* Inverted Hover */
+$ui_invertedHoverBackground= $ui_transparentWhite;
+$ui_invertedHoverColor= $ui_invertedSelectedTextColor;
+
+$ui_invertedSubMenuHoverBackground= transparent;
+$ui_invertedSubMenuHoverColor= $ui_invertedSelectedTextColor;
+
+/* Pressed */
+$ui_invertedMenuPressedBackground= $ui_transparentWhite;
+$ui_invertedMenuPressedColor= $ui_invertedSelectedTextColor;
+
+/* Inverted Active */
+$ui_invertedActiveBackground= $ui_strongTransparentWhite;
+$ui_invertedActiveColor= $ui_invertedSelectedTextColor;
+$ui_invertedArrowActiveColor= #3D3E3F;
+
+/* Inverted Active Hover  */
+$ui_invertedActiveHoverBackground= $ui_invertedActiveBackground;
+$ui_invertedActiveHoverColor= $ui_white;
+$ui_invertedArrowActiveHoverColor= $ui_invertedArrowActiveColor;
+
+$ui_invertedSubMenuActiveBackground= transparent;
+$ui_invertedSubMenuActiveColor= $ui_white;
+
+/* Inverted Menu Divider */
+$ui_invertedDividerBackground= rgba(255, 255, 255, 0.08);
+$ui_invertedVerticalDividerBackground= $ui_invertedDividerBackground;
+
+/* Inverted Colored */
+$ui_invertedColoredDividerBackground= $ui_dividerBackground;
+$ui_invertedColoredActiveBackground= $ui_strongTransparentBlack;
+
+/* Fixed */
+$ui_fixedPrecedingGridMargin= 2.75rem;
+
+/* Floated */
+$ui_floatedDistance= 0.5rem;
+
+/* Attached */
+$ui_attachedTopOffset= 0px;
+$ui_attachedBottomOffset= 0px;
+$ui_attachedHorizontalOffset= (- $ui_borderWidth);
+$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+$ui_attachedBoxShadow= none;
+$ui_attachedBorder= $ui_borderWidth solid $ui_solidBorderColor;
+$ui_attachedBottomBoxShadow=$ui_boxShadow,
+  $ui_attachedBoxShadow;
+
+/* Resize large sizes */
+$ui_mini= $ui_11px;
+$ui_tiny= $ui_12px;
+$ui_small= $ui_13px;
+$ui_large= $ui_15px;
+$ui_huge= $ui_16px;
+$ui_big= $ui_17px;
+$ui_massive= $ui_18px;
+
+/* Sizes */
+$ui_miniWidth= 9rem;
+$ui_tinyWidth= 11rem;
+$ui_smallWidth= 13rem;
+$ui_mediumWidth= 15rem;
+$ui_largeWidth= 18rem;
+$ui_hugeWidth= 20rem;
+$ui_bigWidth= 22rem;
+$ui_massiveWidth= 25rem;
+

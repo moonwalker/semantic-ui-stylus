@@ -1,0 +1,485 @@
+/*!
+ * # Semantic UI - Modal
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'module';
+$ui_element = 'modal';
+
+@import '../../theme.config';
+
+/*******************************
+             Modal
+*******************************/
+
+.ui.modal {
+  display: none;
+  position: fixed;
+  z-index: $ui_zIndex;
+
+  top: 50%;
+  left: 50%;
+  text-align: left;
+
+  background: $ui_background;
+  border: $ui_border;
+  box-shadow: $ui_boxShadow;
+  transform-origin: $ui_transformOrigin;
+
+  border-radius: $ui_borderRadius;
+  user-select: text;
+  will-change: top, left, margin, transform, opacity;
+}
+
+.ui.modal > :first-child:not(.icon),
+.ui.modal > .icon:first-child + * {
+  border-top-left-radius: $ui_borderRadius;
+  border-top-right-radius: $ui_borderRadius;
+}
+
+.ui.modal > :last-child {
+  border-bottom-left-radius: $ui_borderRadius;
+  border-bottom-right-radius: $ui_borderRadius;
+}
+
+/*******************************
+            Content
+*******************************/
+
+/*--------------
+     Close
+---------------*/
+
+.ui.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  top: $ui_closeTop;
+  right: $ui_closeRight;
+  z-index: 1;
+
+  opacity: $ui_closeOpacity;
+  font-size: $ui_closeSize;
+  color: $ui_closeColor;
+
+  width: $ui_closeHitbox;
+  height: $ui_closeHitbox;
+  padding: $ui_closePadding;
+}
+.ui.modal > .close:hover {
+  opacity: 1;
+}
+
+/*--------------
+     Header
+---------------*/
+
+.ui.modal > .header {
+  display: block;
+  font-family: $ui_headerFontFamily;
+  background: $ui_headerBackground;
+  margin: $ui_headerMargin;
+  padding: $ui_headerPadding;
+  box-shadow: $ui_headerBoxShadow;
+
+  color: $ui_headerColor;
+  border-bottom: $ui_headerBorder;
+}
+.ui.modal > .header:not(.ui) {
+  font-size: $ui_headerFontSize;
+  line-height: $ui_headerLineHeight;
+  font-weight: $ui_headerFontWeight;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.modal > .content {
+  display: block;
+  width: 100%;
+  font-size: $ui_contentFontSize;
+  line-height: $ui_contentLineHeight;
+  padding: $ui_contentPadding;
+  background: $ui_contentBackground;
+}
+.ui.modal > .image.content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Image */
+.ui.modal > .content > .image {
+  display: block;
+  flex: 0 1 auto;
+  width: $ui_imageWidth;
+  align-self: $ui_imageVerticalAlign;
+}
+.ui.modal > [class*="top aligned"] {
+  align-self: top;
+}
+.ui.modal > [class*="middle aligned"] {
+  align-self: middle;
+}
+.ui.modal > [class*="stretched"] {
+  align-self: stretch;
+}
+
+/* Description */
+.ui.modal > .content > .description {
+  display: block;
+  flex: 1 0 auto;
+  min-width: 0px;
+  align-self: $ui_descriptionVerticalAlign;
+}
+
+.ui.modal > .content > .icon + .description,
+.ui.modal > .content > .image + .description {
+  flex: 0 1 auto;
+  min-width: $ui_descriptionMinWidth;
+  width: $ui_descriptionWidth;
+  padding-left: $ui_descriptionDistance;
+}
+
+/*rtl:ignore*/
+.ui.modal > .content > .image > i.icon {
+  margin: 0em;
+  opacity: 1;
+  width: auto;
+  line-height: 1;
+  font-size: $ui_imageIconSize;
+}
+
+/*--------------
+     Actions
+---------------*/
+
+.ui.modal > .actions {
+  background: $ui_actionBackground;
+  padding: $ui_actionPadding;
+  border-top: $ui_actionBorder;
+  text-align: $ui_actionAlign;
+}
+.ui.modal .actions > .button {
+  margin-left: $ui_buttonDistance;
+}
+
+/*-------------------
+       Responsive
+--------------------*/
+
+/* Modal Width */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.modal {
+    width: $ui_mobileWidth;
+    margin: $ui_mobileMargin;
+  }
+}
+@media only screen and (min-width : $ui_tabletBreakpoint) {
+  .ui.modal {
+    width: $ui_tabletWidth;
+    margin: $ui_tabletMargin;
+  }
+}
+@media only screen and (min-width : $ui_computerBreakpoint) {
+  .ui.modal {
+    width: $ui_computerWidth;
+    margin: $ui_computerMargin;
+  }
+}
+@media only screen and (min-width : $ui_largeMonitorBreakpoint) {
+  .ui.modal {
+    width: $ui_largeMonitorWidth;
+    margin: $ui_largeMonitorMargin;
+  }
+}
+@media only screen and (min-width : $ui_widescreenMonitorBreakpoint) {
+  .ui.modal {
+    width: $ui_widescreenMonitorWidth;
+    margin: $ui_widescreenMonitorMargin;
+  }
+}
+
+/* Tablet and Mobile */
+@media only screen and (max-width : $ui_largestTabletScreen) {
+  .ui.modal > .header {
+    padding-right: $ui_closeHitbox;
+  }
+  .ui.modal > .close {
+    top: $ui_innerCloseTop;
+    right: $ui_innerCloseRight;
+    color: $ui_innerCloseColor;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+
+  .ui.modal > .header {
+    padding: $ui_mobileHeaderPadding !important;
+    padding-right: $ui_closeHitbox !important;
+  }
+  .ui.modal > .content {
+    display: block;
+    padding: $ui_mobileContentPadding !important;
+  }
+  .ui.modal > .close {
+    top: $ui_mobileCloseTop !important;
+    right: $ui_mobileCloseRight !important;
+  }
+
+  /*rtl:ignore*/
+  .ui.modal .image.content {
+    flex-direction: column;
+  }
+  .ui.modal .content > .image {
+    display: block;
+    max-width: 100%;
+    margin: 0em auto !important;
+    text-align: center;
+    padding: $ui_mobileImagePadding !important;
+  }
+  .ui.modal > .content > .image > i.icon {
+    font-size: $ui_mobileImageIconSize;
+    text-align: center;
+  }
+
+  /*rtl:ignore*/
+  .ui.modal .content > .description {
+    display: block;
+    width: 100% !important;
+    margin: 0em !important;
+    padding: $ui_mobileDescriptionPadding !important;
+    box-shadow: none;
+  }
+
+  /* Let Buttons Stack */
+  .ui.modal > .actions {
+    padding: $ui_mobileActionPadding !important;
+  }
+  .ui.modal .actions > .buttons,
+  .ui.modal .actions > .button {
+    margin-bottom: $ui_mobileButtonDistance;
+  }
+}
+
+/*--------------
+    Coupling
+---------------*/
+
+.ui.inverted.dimmer > .ui.modal {
+  box-shadow: $ui_invertedBoxShadow;
+}
+
+/*******************************
+             Types
+*******************************/
+
+.ui.basic.modal {
+  background-color: transparent;
+  border: none;
+  border-radius: 0em;
+  box-shadow: none !important;
+  color: $ui_basicModalColor;
+}
+.ui.basic.modal > .header,
+.ui.basic.modal > .content,
+.ui.basic.modal > .actions {
+  background-color: transparent;
+}
+.ui.basic.modal > .header {
+  color: $ui_basicModalHeaderColor;
+}
+.ui.basic.modal > .close {
+  top: $ui_basicModalCloseTop;
+  right: $ui_basicModalCloseRight;
+}
+
+.ui.inverted.dimmer > .basic.modal {
+  color: $ui_basicInvertedModalColor;
+}
+.ui.inverted.dimmer > .ui.basic.modal > .header {
+  color: $ui_basicInvertedModalHeaderColor;
+}
+
+/* Tablet and Mobile */
+@media only screen and (max-width : $ui_largestTabletScreen) {
+  .ui.basic.modal > .close {
+    color: $ui_basicInnerCloseColor;
+  }
+}
+
+
+/*******************************
+             States
+*******************************/
+
+.ui.active.modal {
+  display: block;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------
+    Scrolling
+---------------*/
+
+/* A modal that cannot fit on the page */
+.scrolling.dimmable.dimmed {
+  overflow: hidden;
+}
+.scrolling.dimmable.dimmed > .dimmer {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.dimmable > .dimmer {
+  position: fixed;
+}
+.modals.dimmer .ui.scrolling.modal {
+  position: static !important;
+  margin: $ui_scrollingMargin auto !important;
+}
+
+/* undetached scrolling */
+.scrolling.undetached.dimmable.dimmed {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.undetached.dimmable.dimmed > .dimmer {
+  overflow: hidden;
+}
+.scrolling.undetached.dimmable .ui.scrolling.modal {
+  position: absolute;
+  left: 50%;
+  margin-top: $ui_scrollingMargin !important;
+}
+
+/* Coupling with Sidebar */
+.undetached.dimmable.dimmed > .pusher {
+  z-index: auto;
+}
+
+@media only screen and (max-width : $ui_largestTabletScreen) {
+  .modals.dimmer .ui.scrolling.modal {
+    margin-top: $ui_mobileScrollingMargin !important;
+    margin-bottom: $ui_mobileScrollingMargin !important;
+  }
+}
+
+
+/*--------------
+   Full Screen
+---------------*/
+
+.ui.fullscreen.modal {
+  width: $ui_fullScreenWidth !important;
+  left: $ui_fullScreenOffset !important;
+  margin: $ui_fullScreenMargin;
+}
+.ui.fullscreen.scrolling.modal {
+  left: 0em !important;
+}
+.ui.fullscreen.modal > .header {
+  padding-right: $ui_closeHitbox;
+}
+.ui.fullscreen.modal > .close {
+  top: $ui_innerCloseTop;
+  right: $ui_innerCloseRight;
+  color: $ui_innerCloseColor;
+}
+
+
+/*--------------
+      Size
+---------------*/
+
+.ui.modal {
+  font-size: $ui_medium;
+}
+
+/* Small */
+.ui.small.modal > .header:not(.ui) {
+  font-size: $ui_smallHeaderSize;
+}
+
+/* Small Modal Width */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.small.modal {
+    width: $ui_smallMobileWidth;
+    margin: $ui_smallMobileMargin;
+  }
+}
+@media only screen and (min-width : $ui_tabletBreakpoint) {
+  .ui.small.modal {
+    width: $ui_smallTabletWidth;
+    margin: $ui_smallTabletMargin;
+  }
+}
+@media only screen and (min-width : $ui_computerBreakpoint) {
+  .ui.small.modal {
+    width: $ui_smallComputerWidth;
+    margin: $ui_smallComputerMargin;
+  }
+}
+@media only screen and (min-width : $ui_largeMonitorBreakpoint) {
+  .ui.small.modal {
+    width: $ui_smallLargeMonitorWidth;
+    margin: $ui_smallLargeMonitorMargin;
+  }
+}
+@media only screen and (min-width : $ui_widescreenMonitorBreakpoint) {
+  .ui.small.modal {
+    width: $ui_smallWidescreenMonitorWidth;
+    margin: $ui_smallWidescreenMonitorMargin;
+  }
+}
+
+/* Large Modal Width */
+.ui.large.modal > .header {
+  font-size: $ui_largeHeaderSize;
+}
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.large.modal {
+    width: $ui_largeMobileWidth;
+    margin: $ui_largeMobileMargin;
+  }
+}
+@media only screen and (min-width : $ui_tabletBreakpoint) {
+  .ui.large.modal {
+    width: $ui_largeTabletWidth;
+    margin: $ui_largeTabletMargin;
+  }
+}
+@media only screen and (min-width : $ui_computerBreakpoint) {
+  .ui.large.modal {
+    width: $ui_largeComputerWidth;
+    margin: $ui_largeComputerMargin;
+  }
+}
+@media only screen and (min-width : $ui_largeMonitorBreakpoint) {
+  .ui.large.modal {
+    width: $ui_largeLargeMonitorWidth;
+    margin: $ui_largeLargeMonitorMargin;
+  }
+}
+@media only screen and (min-width : $ui_widescreenMonitorBreakpoint) {
+  .ui.large.modal {
+    width: $ui_largeWidescreenMonitorWidth;
+    margin: $ui_largeWidescreenMonitorMargin;
+  }
+}
+
+
+loadUIOverrides();
+

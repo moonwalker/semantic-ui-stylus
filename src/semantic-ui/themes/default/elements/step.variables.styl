@@ -1,0 +1,129 @@
+/*******************************
+             Step
+*******************************/
+
+/*-------------------
+       Group
+--------------------*/
+
+$ui_stepMargin= 1em 0em;
+$ui_stepsBorderRadius= $ui_defaultBorderRadius;
+$ui_stepsBackground= '';
+$ui_stepsBoxShadow= none;
+$ui_stepsBorder= 1px solid $ui_borderColor;
+
+/*-------------------
+      Element
+--------------------*/
+
+$ui_verticalMargin= 0em;
+$ui_horizontalMargin= 0em;
+
+$ui_arrowSize= $ui_relativeLarge;
+$ui_verticalPadding= $ui_relativeLarge;
+$ui_horizontalPadding= 2em;
+
+$ui_transition=background-color $ui_defaultDuration $ui_defaultEasing,
+  opacity $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing,
+  box-shadow $ui_defaultDuration $ui_defaultEasing;
+$ui_lineHeight= $ui_relativeLarge;
+$ui_alignItems= center;
+$ui_justifyContent= center;
+$ui_backgroundColor= $ui_white;
+$ui_background= $ui_backgroundColor;
+$ui_borderRadius= 0em;
+$ui_borderWidth= 1px;
+$ui_boxShadow= none;
+$ui_border= none;
+$ui_divider= $ui_borderWidth solid $ui_borderColor;
+
+/* Icon */
+$ui_iconDistance= 1rem;
+$ui_iconSize= 2.5em;
+$ui_iconAlign= middle;
+
+/* Title */
+$ui_titleFontFamily= $ui_headerFont;
+$ui_titleFontWeight= bold;
+$ui_titleFontSize= $ui_relativeLarge;
+$ui_titleColor= $ui_darkTextColor;
+
+/* Description */
+$ui_descriptionDistance= 0.25em;
+$ui_descriptionFontSize= $ui_relativeSmall;
+$ui_descriptionFontWeight= normal;
+$ui_descriptionColor= $ui_textColor;
+
+
+/* Arrow */
+$ui_arrowBackgroundColor= $ui_backgroundColor;
+$ui_arrowTopOffset= 50%;
+$ui_arrowRightOffset= 0%;
+$ui_arrowBorderWidth= 0px $ui_borderWidth $ui_borderWidth 0px;
+
+$ui_arrowDisplay= block;
+$ui_lastArrowDisplay= none;
+
+$ui_activeArrowDisplay= block;
+$ui_activeLastArrowDisplay= none;
+
+/* Mobile */
+$ui_mobileIconDistance= $ui_iconDistance;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Vertical */
+$ui_verticalDivider= $ui_divider;
+$ui_verticalArrowTopOffset= 50%;
+$ui_verticalArrowRightOffset= 0%;
+$ui_verticalArrowBorderWidth= 0px $ui_borderWidth $ui_borderWidth 0px;
+
+$ui_verticalArrowDisplay= none;
+$ui_verticalLastArrowDisplay= $ui_verticalArrowDisplay;
+
+$ui_verticalActiveArrowDisplay= block;
+$ui_verticalActiveLastArrowDisplay= block;
+
+/*-------------------
+      Variations
+--------------------*/
+
+$ui_attachedHorizontalOffset= (- $ui_borderWidth);
+$ui_attachedVerticalOffset= 0;
+$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+
+$ui_orderedFontFamily= inherit;
+$ui_orderedFontWeight= bold;
+
+/*-------------------
+       States
+--------------------*/
+
+/* Completed */
+$ui_completedColor= $ui_positiveColor;
+
+/* Hover */
+$ui_hoverBackground= $ui_offWhite;
+$ui_hoverColor= $ui_hoveredTextColor;
+
+/* Down */
+$ui_downBackground= $ui_darkWhite;
+$ui_downColor= $ui_pressedTextColor;
+
+/* Active */
+$ui_activeBackground= $ui_darkWhite;
+$ui_activeColor= $ui_linkColor;
+$ui_activeIconColor= $ui_darkTextColor;
+
+/* Active + Hover */
+$ui_activeHoverBackground= $ui_lightGrey;
+$ui_activeHoverColor= $ui_textColor;
+
+
+/* Disabled */
+$ui_disabledBackground= $ui_background;
+$ui_disabledColor= $ui_disabledTextColor;
+

@@ -1,0 +1,333 @@
+/*!
+ * # Semantic UI - Loader
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'element';
+$ui_element = 'loader';
+
+@import '../../theme.config';
+
+/*******************************
+            Loader
+*******************************/
+
+
+/* Standard Size */
+.ui.loader {
+  display: none;
+  position: absolute;
+  top: $ui_loaderTopOffset;
+  left: $ui_loaderLeftOffset;
+  margin: 0px;
+  text-align: center;
+  z-index: 1000;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Static Shape */
+.ui.loader:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+
+  border-radius: $ui_circularRadius;
+  border: $ui_loaderLineWidth solid $ui_loaderFillColor;
+}
+
+/* Active Shape */
+.ui.loader:after {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+
+  animation: loader $ui_loaderSpeed linear;
+  animation-iteration-count: infinite;
+
+  border-radius: $ui_circularRadius;
+
+  border-color: $ui_shapeBorderColor;
+  border-style: solid;
+  border-width: $ui_loaderLineWidth;
+
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+
+/* Active Animation */
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sizes */
+.ui.mini.loader:before,
+.ui.mini.loader:after {
+  width: $ui_mini;
+  height: $ui_mini;
+  margin: $ui_miniOffset;
+}
+.ui.tiny.loader:before,
+.ui.tiny.loader:after {
+  width: $ui_tiny;
+  height: $ui_tiny;
+  margin: $ui_tinyOffset;
+}
+.ui.small.loader:before,
+.ui.small.loader:after {
+  width: $ui_small;
+  height: $ui_small;
+  margin: $ui_smallOffset;
+}
+.ui.loader:before,
+.ui.loader:after {
+  width: $ui_medium;
+  height: $ui_medium;
+  margin: $ui_mediumOffset;
+}
+.ui.large.loader:before,
+.ui.large.loader:after {
+  width: $ui_large;
+  height: $ui_large;
+  margin: $ui_largeOffset;
+}
+.ui.big.loader:before,
+.ui.big.loader:after {
+  width: $ui_big;
+  height: $ui_big;
+  margin: $ui_bigOffset;
+}
+.ui.huge.loader:before,
+.ui.huge.loader:after {
+  width: $ui_huge;
+  height: $ui_huge;
+  margin: $ui_hugeOffset;
+}
+.ui.massive.loader:before,
+.ui.massive.loader:after {
+  width: $ui_massive;
+  height: $ui_massive;
+  margin: $ui_massiveOffset;
+}
+
+/*-------------------
+      Coupling
+--------------------*/
+
+/* Show inside active dimmer */
+.ui.dimmer .loader {
+  display: block;
+}
+
+/* Black Dimmer */
+.ui.dimmer .ui.loader {
+  color: $ui_invertedLoaderTextColor;
+}
+.ui.dimmer .ui.loader:before {
+  border-color: $ui_invertedLoaderFillColor;
+}
+.ui.dimmer .ui.loader:after {
+  border-color: $ui_invertedShapeBorderColor;
+}
+
+/* White Dimmer (Inverted) */
+.ui.inverted.dimmer .ui.loader {
+  color: $ui_loaderTextColor;
+}
+.ui.inverted.dimmer .ui.loader:before {
+  border-color: $ui_loaderFillColor;
+}
+.ui.inverted.dimmer .ui.loader:after {
+  border-color: $ui_shapeBorderColor;
+}
+
+/*******************************
+             Types
+*******************************/
+
+
+/*-------------------
+        Text
+--------------------*/
+
+.ui.text.loader {
+  width: auto !important;
+  height: auto !important;
+  text-align: center;
+  font-style: normal;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+.ui.indeterminate.loader:after {
+  animation-direction: $ui_indeterminateDirection;
+  animation-duration: $ui_indeterminateSpeed;
+}
+
+.ui.loader.active,
+.ui.loader.visible {
+  display: block;
+}
+.ui.loader.disabled,
+.ui.loader.hidden {
+  display: none;
+}
+
+/*******************************
+            Variations
+*******************************/
+
+
+/*-------------------
+        Sizes
+--------------------*/
+
+
+/* Loader */
+.ui.inverted.dimmer .ui.mini.loader,
+.ui.mini.loader {
+  width: $ui_mini;
+  height: $ui_mini;
+  font-size: $ui_miniFontSize;
+}
+.ui.inverted.dimmer .ui.tiny.loader,
+.ui.tiny.loader {
+  width: $ui_tiny;
+  height: $ui_tiny;
+  font-size: $ui_tinyFontSize;
+}
+.ui.inverted.dimmer .ui.small.loader,
+.ui.small.loader {
+  width: $ui_small;
+  height: $ui_small;
+  font-size: $ui_smallFontSize;
+}
+.ui.inverted.dimmer .ui.loader,
+.ui.loader {
+  width: $ui_medium;
+  height: $ui_medium;
+  font-size: $ui_mediumFontSize;
+}
+.ui.inverted.dimmer .ui.large.loader,
+.ui.large.loader {
+  width: $ui_large;
+  height: $ui_large;
+  font-size: $ui_largeFontSize;
+}
+.ui.inverted.dimmer .ui.big.loader,
+.ui.big.loader {
+  width: $ui_big;
+  height: $ui_big;
+  font-size: $ui_bigFontSize;
+}
+.ui.inverted.dimmer .ui.huge.loader,
+.ui.huge.loader {
+  width: $ui_huge;
+  height: $ui_huge;
+  font-size: $ui_hugeFontSize;
+}
+.ui.inverted.dimmer .ui.massive.loader,
+.ui.massive.loader {
+  width: $ui_massive;
+  height: $ui_massive;
+  font-size: $ui_massiveFontSize;
+}
+
+/* Text Loader */
+.ui.mini.text.loader {
+  min-width: $ui_mini;
+  padding-top: ($ui_mini + $ui_textDistance);
+}
+.ui.tiny.text.loader {
+  min-width: $ui_tiny;
+  padding-top: ($ui_tiny + $ui_textDistance);
+}
+.ui.small.text.loader {
+  min-width: $ui_small;
+  padding-top: ($ui_small + $ui_textDistance);
+}
+.ui.text.loader {
+  min-width: $ui_medium;
+  padding-top: ($ui_medium + $ui_textDistance);
+}
+.ui.large.text.loader {
+  min-width: $ui_large;
+  padding-top: ($ui_large + $ui_textDistance);
+}
+.ui.big.text.loader {
+  min-width: $ui_big;
+  padding-top: ($ui_big + $ui_textDistance);
+}
+.ui.huge.text.loader {
+  min-width: $ui_huge;
+  padding-top: ($ui_huge + $ui_textDistance);
+}
+.ui.massive.text.loader {
+  min-width: $ui_massive;
+  padding-top: ($ui_massive + $ui_textDistance);
+}
+
+
+/*-------------------
+       Inverted
+--------------------*/
+
+.ui.inverted.loader {
+  color: $ui_invertedLoaderTextColor
+}
+.ui.inverted.loader:before {
+  border-color: $ui_invertedLoaderFillColor;
+}
+.ui.inverted.loader:after {
+  border-top-color: $ui_invertedLoaderLineColor;
+}
+
+/*-------------------
+       Inline
+--------------------*/
+
+.ui.inline.loader {
+  position: relative;
+  vertical-align: $ui_inlineVerticalAlign;
+  margin: $ui_inlineMargin;
+  left: 0em;
+  top: 0em;
+  transform: none;
+}
+
+.ui.inline.loader.active,
+.ui.inline.loader.visible {
+  display: inline-block;
+}
+
+/* Centered Inline */
+.ui.centered.inline.loader.active,
+.ui.centered.inline.loader.visible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+loadUIOverrides();
+

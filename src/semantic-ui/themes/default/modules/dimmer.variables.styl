@@ -1,0 +1,59 @@
+/*******************************
+            Dimmer
+*******************************/
+
+$ui_dimmablePosition= relative;
+$ui_dimmerPosition= absolute;
+
+$ui_backgroundColor= rgba(0, 0, 0 , 0.85);
+$ui_lineHeight= 1;
+$ui_perspective= 2000px;
+
+$ui_duration= 0.5s;
+$ui_transition=background-color $ui_duration linear;
+$ui_zIndex= 1000;
+$ui_textAlign= center;
+$ui_verticalAlign= middle;
+$ui_textColor= $ui_white;
+$ui_overflow= hidden;
+
+$ui_blurredStartFilter= ~"blur(0px) grayscale(0)";
+$ui_blurredEndFilter= ~"blur(5px) grayscale(0.7)";
+$ui_blurredTransition= 800ms filter $ui_defaultEasing;
+
+$ui_blurredBackgroundColor= rgba(0, 0, 0, 0.6);
+$ui_blurredInvertedBackgroundColor= rgba(255, 255, 255, 0.6);
+
+/* Hidden (Default) */
+$ui_hiddenOpacity= 0;
+
+/* Content */
+$ui_contentDisplay= table;
+$ui_contentChildDisplay= table-cell;
+
+/* Visible */
+$ui_visibleOpacity= 1;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Page Dimmer*/
+$ui_transformStyle= '';
+$ui_pageDimmerPosition= fixed;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Inverted */
+$ui_invertedBackgroundColor= rgba(255, 255, 255, 0.85);
+$ui_invertedTextColor= $ui_textColor;
+
+/* Simple */
+$ui_simpleZIndex= 1;
+$ui_simpleStartBackgroundColor= rgba(0, 0, 0, 0);
+$ui_simpleEndBackgroundColor= $ui_backgroundColor;
+$ui_simpleInvertedStartBackgroundColor= rgba(255, 255, 255, 0);
+$ui_simpleInvertedEndBackgroundColor= $ui_invertedBackgroundColor;

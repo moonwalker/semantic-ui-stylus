@@ -1,0 +1,123 @@
+/*!
+ * # Semantic UI - Breadcrumb
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'collection';
+$ui_element = 'breadcrumb';
+
+@import '../../theme.config';
+
+
+/*******************************
+           Breadcrumb
+*******************************/
+
+.ui.breadcrumb {
+  line-height: 1;
+  display: $ui_display;
+  margin: $ui_verticalMargin 0em;
+  vertical-align: $ui_verticalAlign;
+}
+.ui.breadcrumb:first-child {
+  margin-top: 0em;
+}
+.ui.breadcrumb:last-child {
+  margin-bottom: 0em;
+}
+
+/*******************************
+          Content
+*******************************/
+
+/* Divider */
+.ui.breadcrumb .divider {
+  display: inline-block;
+  opacity: $ui_dividerOpacity;
+  margin: 0em $ui_dividerSpacing 0em;
+
+  font-size: $ui_dividerSize;
+  color: $ui_dividerColor;
+  vertical-align: $ui_dividerVerticalAlign;
+}
+
+/* Link */
+.ui.breadcrumb a {
+  color: $ui_linkColor;
+}
+.ui.breadcrumb a:hover {
+  color: $ui_linkHoverColor;
+}
+
+
+/* Icon Divider */
+.ui.breadcrumb .icon.divider {
+  font-size: $ui_iconDividerSize;
+  vertical-align: $ui_iconDividerVerticalAlign;
+}
+
+/* Section */
+.ui.breadcrumb a.section {
+  cursor: pointer;
+}
+.ui.breadcrumb .section {
+  display: inline-block;
+  margin: $ui_sectionMargin;
+  padding: $ui_sectionPadding;
+}
+
+/* Loose Coupling */
+.ui.breadcrumb.segment {
+  display: inline-block;
+  padding: $ui_segmentPadding;
+}
+
+/*******************************
+            States
+*******************************/
+
+.ui.breadcrumb .active.section {
+  font-weight: $ui_activeFontWeight;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+.ui.mini.breadcrumb {
+  font-size: $ui_mini;
+}
+.ui.tiny.breadcrumb {
+  font-size: $ui_tiny;
+}
+.ui.small.breadcrumb {
+  font-size: $ui_small;
+}
+.ui.breadcrumb {
+  font-size: $ui_medium;
+}
+.ui.large.breadcrumb {
+  font-size: $ui_large;
+}
+.ui.big.breadcrumb {
+  font-size: $ui_big;
+}
+.ui.huge.breadcrumb {
+  font-size: $ui_huge;
+}
+.ui.massive.breadcrumb {
+  font-size: $ui_massive;
+}
+
+loadUIOverrides();
+

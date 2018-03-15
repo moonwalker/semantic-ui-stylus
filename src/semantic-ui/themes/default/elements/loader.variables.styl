@@ -1,0 +1,73 @@
+/*******************************
+             Loader
+*******************************/
+
+/* Some global loader styles defined in site.variables */
+// $ui_loaderSpeed
+// $ui_loaderLineWidth
+// $ui_loaderFillColor
+// $ui_loaderLineColor
+// $ui_invertedLoaderFillColor
+// $ui_invertedLoaderLineColor
+
+/*-------------------
+      Standard
+--------------------*/
+
+$ui_loaderTopOffset= 50%;
+$ui_loaderLeftOffset= 50%;
+
+$ui_shapeBorderColor= $ui_loaderLineColor transparent transparent;
+$ui_invertedShapeBorderColor= $ui_invertedLoaderLineColor transparent transparent;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Text */
+$ui_textDistance= $ui_relativeMini;
+$ui_loaderTextColor= $ui_textColor;
+$ui_invertedLoaderTextColor= $ui_invertedTextColor;
+
+/*-------------------
+        States
+--------------------*/
+
+$ui_indeterminateDirection= reverse;
+$ui_indeterminateSpeed= (2 * $ui_loaderSpeed);
+
+/*-------------------
+      Variations
+--------------------*/
+
+$ui_inlineVerticalAlign= middle;
+$ui_inlineMargin= 0em;
+
+/* Exact Sizes (Avoids Rounding Errors) */
+$ui_mini    = $ui_14px;
+$ui_tiny    = $ui_16px;
+$ui_small   = $ui_24px;
+$ui_medium  = $ui_32px;
+$ui_large   = $ui_48px;
+$ui_big     = $ui_52px;
+$ui_huge    = $ui_58px;
+$ui_massive = $ui_64px;
+
+$ui_miniOffset= 0em 0em 0em -($ui_mini / 2);
+$ui_tinyOffset= 0em 0em 0em -($ui_tiny / 2);
+$ui_smallOffset= 0em 0em 0em -($ui_small / 2);
+$ui_mediumOffset= 0em 0em 0em -($ui_medium / 2);
+$ui_largeOffset= 0em 0em 0em -($ui_large / 2);
+$ui_bigOffset= 0em 0em 0em -($ui_big / 2);
+$ui_hugeOffset= 0em 0em 0em -($ui_huge / 2);
+$ui_massiveOffset= 0em 0em 0em -($ui_massive / 2);
+
+$ui_tinyFontSize= $ui_relativeTiny;
+$ui_miniFontSize= $ui_relativeMini;
+$ui_smallFontSize= $ui_relativeSmall;
+$ui_mediumFontSize= $ui_relativeMedium;
+$ui_largeFontSize= $ui_relativeLarge;
+$ui_bigFontSize= $ui_relativeBig;
+$ui_hugeFontSize= $ui_relativeHuge;
+$ui_massiveFontSize= $ui_relativeMassive;
+

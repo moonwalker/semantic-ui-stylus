@@ -1,0 +1,63 @@
+/*******************************
+        Import Directives
+*******************************/
+
+/*------------------
+       Theme
+-------------------*/
+
+$ui_theme= lookup("$" + $ui_element);
+
+/*--------------------
+   Site Variables
+---------------------*/
+
+/* Default site.variables */
+@require "" + $ui_themesFolder + "/default/globals/site.variables";
+
+/* Packaged site.variables */
+@require "" + $ui_themesFolder + "/" + $ui_site + "/globals/site.variables";
+
+/* Component's site.variables */
+@require "" + $ui_themesFolder + "/" + $ui_theme + "/globals/site.variables" if file-exists("" + $ui_themesFolder + "/" + $ui_theme + "/globals/site.variables");
+
+/* Site theme site.variables */
+@require "" + $ui_siteFolder + "/globals/site.variables" if file-exists("" + $ui_siteFolder + "/globals/site.variables");
+
+
+/*-------------------
+ Component Variables
+---------------------*/
+
+/* Default */
+@require "" + $ui_themesFolder + "/default/" + $ui_type + "s/" + $ui_element + ".variables";
+
+/* Packaged Theme */
+@require "" + $ui_themesFolder + "/" + $ui_theme + "/" + $ui_type + "s/" + $ui_element + ".variables" if file-exists("" + $ui_themesFolder + "/" + $ui_theme + "/" + $ui_type + "s/" + $ui_element + ".variables");
+
+/* Site Theme */
+@require "" + $ui_siteFolder + "/" + $ui_type + "s/" + $ui_element + ".variables" if file-exists("" + $ui_siteFolder + "/" + $ui_type + "s/" + $ui_element + ".variables");
+
+
+/*******************************
+             Mix-ins
+*******************************/
+
+/*------------------
+       Fonts
+-------------------*/
+
+loadFonts() {
+  if (!($ui_importGoogleFonts)) { return; }
+  @require url('' + $ui_googleProtocol + 'fonts.googleapis.com/css?family=' + $ui_googleFontRequest + '');
+}
+
+/*------------------
+     Overrides
+-------------------*/
+
+loadUIOverrides() {
+  @require "" + $ui_themesFolder + "/" + $ui_theme + "/" + $ui_type + "s/" + $ui_element + ".overrides" if file-exists("" + $ui_themesFolder + "/" + $ui_theme + "/" + $ui_type + "s/" + $ui_element + ".overrides");
+  @require "" + $ui_siteFolder + "/" + $ui_type + "s/" + $ui_element + ".overrides" if file-exists("" + $ui_siteFolder + "/" + $ui_type + "s/" + $ui_element + ".overrides");
+}
+

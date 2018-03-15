@@ -1,0 +1,184 @@
+/*******************************
+            Checkbox
+*******************************/
+
+$ui_checkboxSize= 17px;
+$ui_checkboxColor= $ui_textColor;
+$ui_checkboxLineHeight= $ui_checkboxSize;
+
+
+/* Label */
+$ui_labelDistance= 1.85714em; /* 26px @ 14/em */
+
+/* Checkbox */
+$ui_checkboxBackground= $ui_white;
+$ui_checkboxBorder= 1px solid $ui_solidBorderColor;
+$ui_checkboxBorderRadius= $ui_3px;
+$ui_checkboxTransition=border $ui_defaultDuration $ui_defaultEasing,
+  opacity $ui_defaultDuration $ui_defaultEasing,
+  transform $ui_defaultDuration $ui_defaultEasing,
+  box-shadow $ui_defaultDuration $ui_defaultEasing;
+
+/* Checkmark */
+$ui_checkboxCheckFontSize= 14px;
+$ui_checkboxCheckTop= 0px;
+$ui_checkboxCheckLeft= 0px;
+$ui_checkboxCheckSize= $ui_checkboxSize;
+
+/* Label */
+$ui_labelFontSize= $ui_relativeMedium;
+$ui_labelColor= $ui_textColor;
+$ui_labelTransition= color $ui_defaultDuration $ui_defaultEasing;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hover */
+$ui_checkboxHoverBackground= $ui_checkboxBackground;
+$ui_checkboxHoverBorderColor= $ui_selectedBorderColor;
+$ui_labelHoverColor= $ui_hoveredTextColor;
+
+/* Pressed */
+$ui_checkboxPressedBackground= $ui_offWhite;
+$ui_checkboxPressedBorderColor= $ui_selectedBorderColor;
+$ui_checkboxPressedColor= $ui_selectedTextColor;
+$ui_labelPressedColor= $ui_selectedTextColor;
+
+/* Focus */
+$ui_checkboxFocusBackground= $ui_white;
+$ui_checkboxFocusBorderColor= $ui_focusedFormMutedBorderColor;
+$ui_checkboxFocusCheckColor= $ui_selectedTextColor;
+$ui_labelFocusColor= $ui_selectedTextColor;
+
+/* Active */
+$ui_labelActiveColor= $ui_selectedTextColor;
+$ui_checkboxActiveBackground= $ui_white;
+$ui_checkboxActiveBorderColor= $ui_selectedBorderColor;
+$ui_checkboxActiveCheckColor= $ui_selectedTextColor;
+$ui_checkboxActiveCheckOpacity= 1;
+
+/* Active Focus */
+$ui_checkboxActiveFocusBackground= $ui_white;
+$ui_checkboxActiveFocusBorderColor= $ui_checkboxFocusBorderColor;
+$ui_checkboxActiveFocusCheckColor= $ui_selectedTextColor;
+
+/* Indeterminate */
+$ui_checkboxIndeterminateBackground= $ui_checkboxActiveBackground;
+$ui_checkboxIndeterminateBorderColor= $ui_checkboxActiveBorderColor;
+$ui_checkboxIndeterminateCheckOpacity= 1;
+$ui_checkboxIndeterminateCheckColor= $ui_checkboxActiveCheckColor;
+
+/* Disabled */
+$ui_disabledCheckboxOpacity= 0.5;
+$ui_disabledCheckboxLabelColor= rgba(0, 0, 0, 1);
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Radio */
+/* Uses px to avoid rounding issues with circles */
+
+$ui_radioSize= 15px;
+$ui_radioTop= 1px;
+$ui_radioLeft= 0px;
+$ui_radioLabelDistance= $ui_labelDistance;
+
+$ui_bulletTop= 1px;
+$ui_bulletLeft= 0px;
+$ui_bulletScale= (7 / 15); /* 7px as unitless value from radio size */
+$ui_bulletColor= $ui_textColor;
+$ui_bulletRadius= $ui_circularRadius;
+
+$ui_radioFocusBackground= $ui_checkboxFocusBackground;
+$ui_radioFocusBulletColor= $ui_checkboxFocusCheckColor;
+
+$ui_radioActiveBackground= $ui_checkboxActiveBackground;
+$ui_radioActiveBulletColor= $ui_checkboxActiveCheckColor;
+
+$ui_radioActiveFocusBackground= $ui_checkboxActiveFocusBackground;
+$ui_radioActiveFocusBulletColor= $ui_checkboxActiveFocusCheckColor;
+
+/* Slider & Toggle Handle */
+$ui_handleBackground= $ui_white $ui_subtleGradient;
+$ui_handleBoxShadow=$ui_subtleShadow,
+  0px 0px 0px 1px $ui_borderColor inset;
+
+/* Slider */
+$ui_sliderHandleSize= 1.5rem;
+$ui_sliderLineWidth= 3.5rem;
+$ui_sliderTransitionDuration= 0.3s;
+
+$ui_sliderHandleOffset= (1rem - $ui_sliderHandleSize) / 2;
+$ui_sliderHandleTransition= left $ui_sliderTransitionDuration $ui_defaultEasing;
+
+$ui_sliderWidth= $ui_sliderLineWidth;
+$ui_sliderHeight= ($ui_sliderHandleSize + $ui_sliderHandleOffset);
+
+$ui_sliderLineHeight= $ui_3px;
+$ui_sliderLineVerticalOffset= 0.4rem;
+$ui_sliderLineColor= $ui_transparentBlack;
+$ui_sliderLineRadius= $ui_circularRadius;
+$ui_sliderLineTransition= background $ui_sliderTransitionDuration $ui_defaultEasing;
+
+$ui_sliderTravelDistance= $ui_sliderLineWidth - $ui_sliderHandleSize;
+
+$ui_sliderLabelDistance= $ui_sliderLineWidth + 1rem;
+$ui_sliderOffLabelColor= $ui_unselectedTextColor;
+
+$ui_sliderLabelLineHeight= 1rem;
+
+/* Slider States */
+$ui_sliderHoverLaneBackground= $ui_veryStrongTransparentBlack;
+$ui_sliderHoverLabelColor= $ui_hoveredTextColor;
+
+$ui_sliderOnLineColor= $ui_lightBlack;
+$ui_sliderOnLabelColor= $ui_selectedTextColor;
+
+$ui_sliderOnFocusLineColor= $ui_lightBlackFocus;
+$ui_sliderOnFocusLabelColor= $ui_sliderOnLabelColor;
+
+
+
+/* Toggle */
+$ui_toggleLaneWidth= 3.5rem;
+$ui_toggleHandleSize= 1.5rem;
+$ui_toggleTransitionDuration= 0.2s;
+
+$ui_toggleWidth= $ui_toggleLaneWidth;
+$ui_toggleHeight= $ui_toggleHandleSize;
+
+$ui_toggleHandleRadius= $ui_circularRadius;
+$ui_toggleHandleOffset= 0rem;
+$ui_toggleHandleTransition=background $ui_sliderTransitionDuration $ui_defaultEasing,
+  left $ui_sliderTransitionDuration $ui_defaultEasing;
+
+$ui_toggleLaneBackground= $ui_transparentBlack;
+$ui_toggleLaneHeight= $ui_toggleHandleSize;
+$ui_toggleLaneVerticalOffset= 0rem;
+$ui_toggleOffOffset= -0.05rem;
+$ui_toggleOnOffset= ($ui_toggleLaneWidth - $ui_toggleHandleSize) + 0.15rem;
+
+$ui_toggleLabelDistance= $ui_toggleLaneWidth + 1rem;
+$ui_toggleLabelLineHeight= 1.5rem;
+$ui_toggleLabelOffset= 0.15em;
+
+
+$ui_toggleFocusColor= $ui_veryStrongTransparentBlack;
+$ui_toggleHoverColor= $ui_toggleFocusColor;
+
+$ui_toggleOffLabelColor= $ui_checkboxColor;
+
+$ui_toggleOnLabelColor= $ui_selectedTextColor;
+$ui_toggleOnLaneColor= $ui_primaryColor;
+
+$ui_toggleOnFocusLaneColor= $ui_primaryColorFocus;
+$ui_toggleOnFocusLabelColor= $ui_toggleOnLabelColor;
+
+
+
+/*-------------------
+      Variations
+--------------------*/
+

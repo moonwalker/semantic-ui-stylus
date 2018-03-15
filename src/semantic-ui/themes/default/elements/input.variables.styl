@@ -1,0 +1,100 @@
+/*******************************
+            Input
+*******************************/
+
+/*-------------------
+      Element
+--------------------*/
+
+$ui_inputFont= $ui_pageFont;
+$ui_verticalPadding= $ui_inputVerticalPadding;
+$ui_horizontalPadding= $ui_inputHorizontalPadding;
+
+$ui_lineHeight= $ui_inputLineHeight;
+$ui_lineHeightOffset= (($ui_lineHeight - 1em) / 2);
+
+$ui_padding= ($ui_verticalPadding - $ui_lineHeightOffset) $ui_horizontalPadding;
+
+$ui_textAlign= left;
+$ui_background= $ui_inputBackground;
+$ui_borderWidth= 1px;
+$ui_border= $ui_borderWidth solid $ui_borderColor;
+$ui_boxShadow= none;
+
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_transition=box-shadow $ui_defaultDuration $ui_defaultEasing,
+  border-color $ui_defaultDuration $ui_defaultEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Icon Input */
+$ui_iconWidth= ($ui_verticalPadding * 2) + $ui_glyphWidth;
+$ui_iconOpacity= 0.5;
+$ui_iconFocusOpacity= 1;
+$ui_iconOffset= -0.5em;
+
+$ui_iconDistance= 0em;
+$ui_iconMargin= $ui_iconWidth + $ui_iconDistance;
+$ui_iconTransition= opacity 0.3s $ui_defaultEasing;
+
+$ui_transparentIconWidth= $ui_glyphWidth;
+$ui_transparentIconMargin= 2em;
+
+/* Circular Icon Input */
+$ui_circularIconVerticalOffset= 0.35em;
+$ui_circularIconHorizontalOffset= 0.5em;
+
+/* Labeled Input */
+$ui_labelCornerTop= $ui_borderWidth;
+$ui_labelCornerRight= $ui_borderWidth;
+$ui_labelCornerSize= $ui_relative9px;
+$ui_labelSize= 1em;
+$ui_labelVerticalPadding= ($ui_verticalPadding - $ui_lineHeightOffset);
+
+$ui_labeledMargin= 2.5em;
+$ui_labeledIconInputMargin= 3.25em;
+$ui_labeledIconMargin= 1.25em;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Placeholder */
+$ui_placeholderColor= $ui_inputPlaceholderColor;
+$ui_placeholderFocusColor= $ui_inputPlaceholderFocusColor;
+
+/* Down */
+$ui_downBorderColor= rgba(0, 0, 0, 0.3);
+$ui_downBackground= #FAFAFA;
+$ui_downColor= $ui_textColor;
+$ui_downBoxShadow= none;
+
+/* Focus */
+$ui_focusBorderColor= $ui_focusedFormBorderColor;
+$ui_focusBackground= $ui_background;
+$ui_focusColor= $ui_hoveredTextColor;
+$ui_focusBoxShadow= none;
+
+/* Error */
+$ui_errorBackground= $ui_negativeBackgroundColor;
+$ui_errorColor= $ui_negativeTextColor;
+$ui_errorBorder= $ui_negativeBorderColor;
+$ui_errorBoxShadow= none;
+
+$ui_placeholderErrorColor= lighten($ui_errorColor, 40);
+$ui_placeholderErrorFocusColor= lighten($ui_errorColor, 30);
+
+/* Loader */
+$ui_invertedLoaderFillColor= rgba(0, 0, 0, 0.15);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Inverted */
+$ui_transparentInvertedPlaceholderColor= $ui_invertedUnselectedTextColor;
+$ui_transparentInvertedColor= $ui_white;
+
+

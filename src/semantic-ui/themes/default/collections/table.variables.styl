@@ -1,0 +1,243 @@
+/*******************************
+             Table
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+$ui_verticalMargin= 1em;
+$ui_horizontalMargin= 0em;
+$ui_margin= $ui_verticalMargin $ui_horizontalMargin;
+$ui_borderCollapse= separate;
+$ui_borderSpacing= 0px;
+$ui_borderRadius= $ui_defaultBorderRadius;
+$ui_transition=background $ui_defaultDuration $ui_defaultEasing,
+  color $ui_defaultDuration $ui_defaultEasing;
+$ui_background= $ui_white;
+$ui_color= $ui_textColor;
+$ui_borderWidth= 1px;
+$ui_border= $ui_borderWidth solid $ui_borderColor;
+$ui_boxShadow= none;
+$ui_textAlign= left;
+
+/*--------------
+     Parts
+---------------*/
+
+/* Table Row */
+$ui_rowBorder= 1px solid $ui_internalBorderColor;
+
+/* Table Cell */
+$ui_cellVerticalPadding= $ui_relativeMini;
+$ui_cellHorizontalPadding= $ui_relativeMini;
+$ui_cellVerticalAlign= inherit;
+$ui_cellTextAlign= inherit;
+$ui_cellBorder= 1px solid $ui_internalBorderColor;
+
+/* Table Header */
+$ui_headerBorder= 1px solid $ui_internalBorderColor;
+$ui_headerDivider= none;
+$ui_headerBackground= $ui_offWhite;
+$ui_headerAlign= inherit;
+$ui_headerVerticalAlign= inherit;
+$ui_headerColor= $ui_textColor;
+$ui_headerVerticalPadding= $ui_relativeSmall;
+$ui_headerHorizontalPadding= $ui_cellHorizontalPadding;
+$ui_headerFontStyle= none;
+$ui_headerFontWeight= bold;
+$ui_headerTextTransform= none;
+$ui_headerBoxShadow= none;
+
+/* Table Footer */
+$ui_footerBoxShadow= none;
+$ui_footerBorder= 1px solid $ui_borderColor;
+$ui_footerDivider= none;
+$ui_footerBackground= $ui_offWhite;
+$ui_footerAlign= inherit;
+$ui_footerVerticalAlign= middle;
+$ui_footerColor= $ui_textColor;
+$ui_footerVerticalPadding= $ui_cellVerticalPadding;
+$ui_footerHorizontalPadding= $ui_cellHorizontalPadding;
+$ui_footerFontStyle= normal;
+$ui_footerFontWeight= normal;
+$ui_footerTextTransform= none;
+
+/* Responsive Size */
+$ui_responsiveHeaderDisplay= block;
+$ui_responsiveFooterDisplay= block;
+$ui_responsiveRowVerticalPadding= 1em;
+$ui_responsiveRowBoxShadow= 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+$ui_responsiveCellVerticalPadding= 0.25em;
+$ui_responsiveCellHorizontalPadding= 0.75em;
+$ui_responsiveCellBoxShadow= none !important;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Definition */
+$ui_definitionPageBackground= $ui_white;
+
+$ui_definitionHeaderBackground= transparent;
+$ui_definitionHeaderColor= $ui_unselectedTextColor;
+$ui_definitionHeaderFontWeight= normal;
+
+$ui_definitionFooterBackground= $ui_definitionHeaderBackground;
+$ui_definitionFooterColor= $ui_definitionHeaderColor;
+$ui_definitionFooterFontWeight= $ui_definitionHeaderFontWeight;
+
+$ui_definitionColumnBackground= $ui_subtleTransparentBlack;
+$ui_definitionColumnFontWeight= bold;
+$ui_definitionColumnColor= $ui_selectedTextColor;
+$ui_definitionColumnFontSize= $ui_relativeMedium;
+$ui_definitionColumnTextTransform= '';
+$ui_definitionColumnBoxShadow= '';
+$ui_definitionColumnTextAlign= '';
+$ui_definitionColumnHorizontalPadding= '';
+
+
+/*--------------
+    Couplings
+---------------*/
+
+$ui_iconVerticalAlign= baseline;
+
+/*--------------
+     States
+---------------*/
+
+$ui_stateMarkerWidth= 0px;
+
+/* Positive */
+$ui_positiveColor= $ui_positiveTextColor;
+$ui_positiveBoxShadow= $ui_stateMarkerWidth 0px 0px $ui_positiveBorderColor inset;
+$ui_positiveBackgroundHover= darken($ui_positiveBackgroundColor, 3);
+$ui_positiveColorHover= darken($ui_positiveColor, 3);
+
+/* Negative */
+$ui_negativeColor= $ui_negativeTextColor;
+$ui_negativeBoxShadow= $ui_stateMarkerWidth 0px 0px $ui_negativeBorderColor inset;
+$ui_negativeBackgroundHover= darken($ui_negativeBackgroundColor, 3);
+$ui_negativeColorHover= darken($ui_negativeColor, 3);
+
+/* Error */
+$ui_errorColor= $ui_errorTextColor;
+$ui_errorBoxShadow= $ui_stateMarkerWidth 0px 0px $ui_errorBorderColor inset;
+$ui_errorBackgroundHover= darken($ui_errorBackgroundColor, 3);
+$ui_errorColorHover= darken($ui_errorColor, 3);
+
+/* Warning */
+$ui_warningColor= $ui_warningTextColor;
+$ui_warningBoxShadow= $ui_stateMarkerWidth 0px 0px $ui_warningBorderColor inset;
+$ui_warningBackgroundHover= darken($ui_warningBackgroundColor, 3);
+$ui_warningColorHover= darken($ui_warningColor, 3);
+
+/* Active */
+$ui_activeColor= $ui_textColor;
+$ui_activeBackgroundColor= #E0E0E0;
+$ui_activeBoxShadow= $ui_stateMarkerWidth 0px 0px $ui_activeColor inset;
+
+$ui_activeBackgroundHover= #EFEFEF;
+$ui_activeColorHover= $ui_selectedTextColor;
+
+/*--------------
+     Types
+---------------*/
+
+/* Attached */
+$ui_attachedTopOffset= 0px;
+$ui_attachedBottomOffset= 0px;
+$ui_attachedHorizontalOffset= (- $ui_borderWidth);
+$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+$ui_attachedBoxShadow= none;
+$ui_attachedBorder= $ui_borderWidth solid $ui_solidBorderColor;
+$ui_attachedBottomBoxShadow=$ui_boxShadow,
+  $ui_attachedBoxShadow;
+
+/* Striped */
+$ui_stripedBackground= rgba(0, 0, 50, 0.02);
+$ui_invertedStripedBackground= rgba(255, 255, 255, 0.05);
+
+/* Selectable */
+$ui_selectableBackground= $ui_transparentBlack;
+$ui_selectableTextColor= $ui_selectedTextColor;
+$ui_selectableInvertedBackground= $ui_transparentWhite;
+$ui_selectableInvertedTextColor= $ui_invertedSelectedTextColor;
+
+/* Sortable */
+$ui_sortableBackground= '';
+$ui_sortableColor= $ui_textColor;
+
+$ui_sortableBorder= 1px solid $ui_borderColor;
+$ui_sortableIconWidth= auto;
+$ui_sortableIconDistance= 0.5em;
+$ui_sortableIconOpacity= 0.8;
+$ui_sortableIconFont= 'Icons';
+$ui_sortableIconAscending= '\f0d8';
+$ui_sortableIconDescending= '\f0d7';
+$ui_sortableDisabledColor= $ui_disabledTextColor;
+
+$ui_sortableHoverBackground= $ui_transparentBlack;
+$ui_sortableHoverColor= $ui_hoveredTextColor;
+
+$ui_sortableActiveBackground= $ui_transparentBlack;
+$ui_sortableActiveColor= $ui_selectedTextColor;
+
+$ui_sortableActiveHoverBackground= $ui_transparentBlack;
+$ui_sortableActiveHoverColor= $ui_selectedTextColor;
+
+$ui_sortableInvertedBorderColor= transparent;
+$ui_sortableInvertedHoverBackground= $ui_transparentWhite $ui_subtleGradient;
+$ui_sortableInvertedHoverColor= $ui_invertedHoveredTextColor;
+$ui_sortableInvertedActiveBackground= $ui_strongTransparentWhite $ui_subtleGradient;
+$ui_sortableInvertedActiveColor= $ui_invertedSelectedTextColor;
+
+/* Colors */
+$ui_coloredBorderSize= 0.2em;
+$ui_coloredBorderRadius= 0em 0em $ui_borderRadius $ui_borderRadius;
+
+/* Inverted */
+$ui_invertedBackground= #333333;
+$ui_invertedBorder= none;
+$ui_invertedCellBorderColor= $ui_whiteBorderColor;
+$ui_invertedCellColor= $ui_invertedTextColor;
+
+$ui_invertedHeaderBackground= $ui_veryStrongTransparentBlack;
+$ui_invertedHeaderColor= $ui_invertedTextColor;
+$ui_invertedHeaderBorderColor= $ui_invertedCellBorderColor;
+
+$ui_invertedDefinitionColumnBackground= $ui_subtleTransparentWhite;
+$ui_invertedDefinitionColumnColor= $ui_invertedSelectedTextColor;
+$ui_invertedDefinitionColumnFontWeight= bold;
+
+/* Basic */
+$ui_basicTableBackground= transparent;
+$ui_basicTableBorder= $ui_borderWidth solid $ui_borderColor;
+$ui_basicBoxShadow= none;
+
+$ui_basicTableHeaderBackground= transparent;
+$ui_basicTableCellBackground= transparent;
+$ui_basicTableHeaderDivider= none;
+$ui_basicTableCellBorder= 1px solid rgba(0, 0, 0, 0.1);
+$ui_basicTableCellPadding= '';
+$ui_basicTableStripedBackground= $ui_transparentBlack;
+
+/* Padded */
+$ui_paddedVerticalPadding= 1em;
+$ui_paddedHorizontalPadding= 1em;
+$ui_veryPaddedVerticalPadding= 1.5em;
+$ui_veryPaddedHorizontalPadding= 1.5em;
+
+/* Compact */
+$ui_compactVerticalPadding= 0.5em;
+$ui_compactHorizontalPadding= 0.7em;
+$ui_veryCompactVerticalPadding= 0.4em;
+$ui_veryCompactHorizontalPadding= 0.6em;
+
+
+/* Sizes */
+$ui_small= 0.9em;
+$ui_medium= 1em;
+$ui_large= 1.1em;
+

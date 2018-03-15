@@ -1,0 +1,931 @@
+/*******************************
+         Site Settings
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+$ui_fontName          = 'Lato';
+$ui_fontSmoothing     = antialiased;
+
+$ui_headerFont        = $ui_fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$ui_pageFont          = $ui_fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+$ui_googleFontName    = $ui_fontName;
+$ui_importGoogleFonts = true;
+$ui_googleFontSizes   = '400,700,400italic,700italic';
+$ui_googleSubset      = 'latin';
+
+$ui_googleProtocol    = 'https://';
+$ui_googleFontRequest = '' + $ui_googleFontName + ':' + $ui_googleFontSizes + '&subset=' + $ui_googleSubset + '';
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+$ui_emSize   = 14px;
+
+/* The size of page text  */
+$ui_fontSize = 14px;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+/* See Power-user section below
+   for explanation of $ui_px variables
+*/
+$ui_relativeBorderRadius= $ui_relative4px;
+$ui_absoluteBorderRadius= $ui_4px;
+
+$ui_defaultBorderRadius= $ui_absoluteBorderRadius;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+$ui_primaryColor        = $ui_blue;
+$ui_secondaryColor      = $ui_black;
+
+$ui_lightPrimaryColor   = $ui_lightBlue;
+$ui_lightSecondaryColor = $ui_lightBlack;
+
+/*--------------
+  Page Heading
+---------------*/
+
+$ui_headerFontWeight = bold;
+$ui_headerLineHeight = 1.2857em;
+
+$ui_h1 = 2rem;
+$ui_h2 = 1.714rem;
+$ui_h3 = 1.28rem;
+$ui_h4 = 1.071rem;
+$ui_h5 = 1rem;
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+$ui_inputBackground        = $ui_white;
+$ui_inputVerticalPadding   = $ui_relative11px;
+$ui_inputHorizontalPadding = $ui_relative14px;
+$ui_inputPadding           = $ui_inputVerticalPadding $ui_inputHorizontalPadding;
+
+/* Input Text Color */
+$ui_inputColor= $ui_textColor;
+$ui_inputPlaceholderColor= lighten($ui_inputColor, 75);
+$ui_inputPlaceholderFocusColor= lighten($ui_inputColor, 45);
+
+/* Line Height Default For Inputs in Browser */
+$ui_inputLineHeight= 1.2142em;
+
+/*-------------------
+    Focused Input
+--------------------*/
+
+/* Used on inputs, textarea etc */
+$ui_focusedFormBorderColor= #85B7D9;
+
+/* Used on dropdowns, other larger blocks */
+$ui_focusedFormMutedBorderColor= #96C8DA;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+$ui_miniSize        = (11 / 14);
+$ui_tinySize        = (12 / 14);
+$ui_smallSize       = (13 / 14);
+$ui_mediumSize      = (14 / 14);
+$ui_largeSize       = (16 / 14);
+$ui_bigSize         = (18 / 14);
+$ui_hugeSize        = (20 / 14);
+$ui_massiveSize     = (24 / 14);
+
+
+/*-------------------
+        Page
+--------------------*/
+
+$ui_pageBackground      = #FFFFFF;
+$ui_pageOverflowX       = hidden;
+
+$ui_lineHeight          = 1.4285em;
+$ui_textColor           = rgba(0, 0, 0, 0.87);
+
+/*-------------------
+      Paragraph
+--------------------*/
+
+$ui_paragraphMargin     = 0em 0em 1em;
+$ui_paragraphLineHeight = $ui_lineHeight;
+
+/*-------------------
+       Links
+--------------------*/
+
+$ui_linkColor           = #4183C4;
+$ui_linkUnderline       = none;
+$ui_linkHoverColor      = darken(saturate($ui_linkColor, 20), 15, relative);
+$ui_linkHoverUnderline  = $ui_linkUnderline;
+
+/*-------------------
+  Highlighted Text
+--------------------*/
+
+$ui_highlightBackground      = #CCE2FF;
+$ui_highlightColor           = $ui_textColor;
+
+$ui_inputHighlightBackground = rgba(100, 100, 100, 0.4);
+$ui_inputHighlightColor      = $ui_textColor;
+
+
+/*-------------------
+       Loader
+--------------------*/
+
+$ui_loaderSize              = $ui_relativeBig;
+$ui_loaderSpeed             = 0.6s;
+$ui_loaderLineWidth         = 0.2em;
+$ui_loaderFillColor         = rgba(0, 0, 0, 0.1);
+$ui_loaderLineColor         = $ui_grey;
+
+$ui_invertedLoaderFillColor = rgba(255, 255, 255, 0.15);
+$ui_invertedLoaderLineColor = $ui_white;
+
+/*-------------------
+        Grid
+--------------------*/
+
+$ui_columnCount= 16;
+
+/*-------------------
+     Transitions
+--------------------*/
+
+$ui_defaultDuration = 0.1s;
+$ui_defaultEasing   = ease;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+$ui_mobileBreakpoint            = 320px;
+$ui_tabletBreakpoint            = 768px;
+$ui_computerBreakpoint          = 992px;
+$ui_largeMonitorBreakpoint      = 1200px;
+$ui_widescreenMonitorBreakpoint = 1920px;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+$ui_red              = #DB2828;
+$ui_orange           = #F2711C;
+$ui_yellow           = #FBBD08;
+$ui_olive            = #B5CC18;
+$ui_green            = #21BA45;
+$ui_teal             = #00B5AD;
+$ui_blue             = #2185D0;
+$ui_violet           = #6435C9;
+$ui_purple           = #A333C8;
+$ui_pink             = #E03997;
+$ui_brown            = #A5673F;
+$ui_grey             = #767676;
+$ui_black            = #1B1C1D;
+
+/*---  Light Colors  ---*/
+$ui_lightRed         = #FF695E;
+$ui_lightOrange      = #FF851B;
+$ui_lightYellow      = #FFE21F;
+$ui_lightOlive       = #D9E778;
+$ui_lightGreen       = #2ECC40;
+$ui_lightTeal        = #6DFFFF;
+$ui_lightBlue        = #54C8FF;
+$ui_lightViolet      = #A291FB;
+$ui_lightPurple      = #DC73FF;
+$ui_lightPink        = #FF8EDF;
+$ui_lightBrown       = #D67C1C;
+$ui_lightGrey        = #DCDDDE;
+$ui_lightBlack       = #545454;
+
+/*---   Neutrals  ---*/
+$ui_fullBlack        = #000000;
+$ui_offWhite         = #F9FAFB;
+$ui_darkWhite        = #F3F4F5;
+$ui_midWhite         = #DCDDDE;
+$ui_white            = #FFFFFF;
+
+/*--- Colored Backgrounds ---*/
+$ui_redBackground    = #FFE8E6;
+$ui_orangeBackground = #FFEDDE;
+$ui_yellowBackground = #FFF8DB;
+$ui_oliveBackground  = #FBFDEF;
+$ui_greenBackground  = #E5F9E7;
+$ui_tealBackground   = #E1F7F7;
+$ui_blueBackground   = #DFF0FF;
+$ui_violetBackground = #EAE7FF;
+$ui_purpleBackground = #F6E7FF;
+$ui_pinkBackground   = #FFE3FB;
+$ui_brownBackground  = #F1E2D3;
+
+/*--- Colored Headers ---*/
+$ui_redHeaderColor    = darken($ui_redTextColor, 5);
+$ui_oliveHeaderColor  = darken($ui_oliveTextColor, 5);
+$ui_greenHeaderColor  = darken($ui_greenTextColor, 5);
+$ui_yellowHeaderColor = darken($ui_yellowTextColor, 5);
+$ui_blueHeaderColor   = darken($ui_blueTextColor, 5);
+$ui_tealHeaderColor   = darken($ui_tealTextColor, 5);
+$ui_pinkHeaderColor   = darken($ui_pinkTextColor, 5);
+$ui_violetHeaderColor = darken($ui_violetTextColor, 5);
+$ui_purpleHeaderColor = darken($ui_purpleTextColor, 5);
+$ui_orangeHeaderColor = darken($ui_orangeTextColor, 5);
+$ui_brownHeaderColor  = darken($ui_brownTextColor, 5);
+
+/*--- Colored Text ---*/
+$ui_redTextColor    = $ui_red;
+$ui_orangeTextColor = $ui_orange;
+$ui_yellowTextColor = #B58105; // Yellow text is difficult to read
+$ui_oliveTextColor  = #8ABC1E; // Olive is difficult to read
+$ui_greenTextColor  = #1EBC30; // Green is difficult to read
+$ui_tealTextColor   = #10A3A3; // Teal text is difficult to read
+$ui_blueTextColor   = $ui_blue;
+$ui_violetTextColor = $ui_violet;
+$ui_purpleTextColor = $ui_purple;
+$ui_pinkTextColor   = $ui_pink;
+$ui_brownTextColor  = $ui_brown;
+
+/*--- Colored Border ---*/
+$ui_redBorderColor    = $ui_redTextColor;
+$ui_orangeBorderColor = $ui_orangeTextColor;
+$ui_yellowBorderColor = $ui_yellowTextColor;
+$ui_oliveBorderColor  = $ui_oliveTextColor;
+$ui_greenBorderColor  = $ui_greenTextColor;
+$ui_tealBorderColor   = $ui_tealTextColor;
+$ui_blueBorderColor   = $ui_blueTextColor;
+$ui_violetBorderColor = $ui_violetTextColor;
+$ui_purpleBorderColor = $ui_purpleTextColor;
+$ui_pinkBorderColor   = $ui_pinkTextColor;
+$ui_brownBorderColor  = $ui_brownTextColor;
+
+/*-------------------
+     Alpha Colors
+--------------------*/
+
+$ui_subtleTransparentBlack     = rgba(0, 0, 0, 0.03);
+$ui_transparentBlack           = rgba(0, 0, 0, 0.05);
+$ui_strongTransparentBlack     = rgba(0, 0, 0, 0.10);
+$ui_veryStrongTransparentBlack = rgba(0, 0, 0, 0.15);
+
+$ui_subtleTransparentWhite     = rgba(255, 255, 255, 0.02);
+$ui_transparentWhite           = rgba(255, 255, 255, 0.08);
+$ui_strongTransparentWhite     = rgba(255, 255, 255, 0.15);
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* Differentiating Neutrals */
+$ui_subtleGradient= linear-gradient(transparent, $ui_transparentBlack);
+
+/* Differentiating Layers */
+$ui_subtleShadow=0px 1px 2px 0 $ui_borderColor;
+$ui_floatingShadow=0px 2px 4px 0px rgba(34, 36, 38, 0.12),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+
+/*******************************
+           Power-User
+*******************************/
+
+
+/*-------------------
+    Emotive Colors
+--------------------*/
+
+/* Positive */
+$ui_positiveColor           = $ui_green;
+$ui_positiveBackgroundColor = #FCFFF5;
+$ui_positiveBorderColor     = #A3C293;
+$ui_positiveHeaderColor     = #1A531B;
+$ui_positiveTextColor       = #2C662D;
+
+/* Negative */
+$ui_negativeColor           = $ui_red;
+$ui_negativeBackgroundColor = #FFF6F6;
+$ui_negativeBorderColor     = #E0B4B4;
+$ui_negativeHeaderColor     = #912D2B;
+$ui_negativeTextColor       = #9F3A38;
+
+/* Info */
+$ui_infoColor              = #31CCEC;
+$ui_infoBackgroundColor    = #F8FFFF;
+$ui_infoBorderColor        = #A9D5DE;
+$ui_infoHeaderColor        = #0E566C;
+$ui_infoTextColor          = #276F86;
+
+/* Warning */
+$ui_warningColor           = #F2C037;
+$ui_warningBorderColor     = #C9BA9B;
+$ui_warningBackgroundColor = #FFFAF3;
+$ui_warningHeaderColor     = #794B02;
+$ui_warningTextColor       = #573A08;
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+$ui_imagePath = '../../themes/default/assets/images';
+$ui_fontPath  = '../../themes/default/assets/fonts';
+
+/*-------------------
+       Em Sizes
+--------------------*/
+
+/*
+  This rounds $ui_size values to the closest pixel then expresses that value in (r)em.
+  This ensures all size values round to exact pixels
+*/
+$ui_mini            = unit( round($ui_miniSize * $ui_emSize) / $ui_emSize, rem);
+$ui_tiny            = unit( round($ui_tinySize * $ui_emSize) / $ui_emSize, rem);
+$ui_small           = unit( round($ui_smallSize * $ui_emSize) / $ui_emSize, rem);
+$ui_medium          = unit( round($ui_mediumSize * $ui_emSize) / $ui_emSize, rem);
+$ui_large           = unit( round($ui_largeSize * $ui_emSize) / $ui_emSize, rem);
+$ui_big             = unit( round($ui_bigSize * $ui_emSize) / $ui_emSize, rem);
+$ui_huge            = unit( round($ui_hugeSize * $ui_emSize) / $ui_emSize, rem);
+$ui_massive         = unit( round($ui_massiveSize * $ui_emSize) / $ui_emSize, rem);
+
+/* em */
+$ui_relativeMini    = unit( round($ui_miniSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeTiny    = unit( round($ui_tinySize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeSmall   = unit( round($ui_smallSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeMedium  = unit( round($ui_mediumSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeLarge   = unit( round($ui_largeSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeBig     = unit( round($ui_bigSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeHuge    = unit( round($ui_hugeSize * $ui_emSize) / $ui_emSize, em);
+$ui_relativeMassive = unit( round($ui_massiveSize * $ui_emSize) / $ui_emSize, em);
+
+/* rem */
+$ui_absoluteMini    = unit( round($ui_miniSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteTiny    = unit( round($ui_tinySize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteSmall   = unit( round($ui_smallSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteMedium  = unit( round($ui_mediumSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteLarge   = unit( round($ui_largeSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteBig     = unit( round($ui_bigSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteHuge    = unit( round($ui_hugeSize * $ui_emSize) / $ui_emSize, rem);
+$ui_absoluteMassive = unit( round($ui_massiveSize * $ui_emSize) / $ui_emSize, rem);
+
+/*-------------------
+       Icons
+--------------------*/
+
+/* Maximum Glyph Width of Icon */
+$ui_iconWidth = 1.18em;
+
+/*-------------------
+     Neutral Text
+--------------------*/
+
+$ui_darkTextColor               = rgba(0, 0, 0, 0.85);
+$ui_mutedTextColor              = rgba(0, 0, 0, 0.6);
+$ui_lightTextColor              = rgba(0, 0, 0, 0.4);
+
+$ui_unselectedTextColor         = rgba(0, 0, 0, 0.4);
+$ui_hoveredTextColor            = rgba(0, 0, 0, 0.8);
+$ui_pressedTextColor            = rgba(0, 0, 0, 0.9);
+$ui_selectedTextColor           = rgba(0, 0, 0, 0.95);
+$ui_disabledTextColor           = rgba(0, 0, 0, 0.2);
+
+$ui_invertedTextColor           = rgba(255, 255, 255, 0.9);
+$ui_invertedMutedTextColor      = rgba(255, 255, 255, 0.8);
+$ui_invertedLightTextColor      = rgba(255, 255, 255, 0.7);
+$ui_invertedUnselectedTextColor = rgba(255, 255, 255, 0.5);
+$ui_invertedHoveredTextColor    = rgba(255, 255, 255, 1);
+$ui_invertedPressedTextColor    = rgba(255, 255, 255, 1);
+$ui_invertedSelectedTextColor   = rgba(255, 255, 255, 1);
+$ui_invertedDisabledTextColor   = rgba(255, 255, 255, 0.2);
+
+/*-------------------
+     Brand Colors
+--------------------*/
+
+$ui_facebookColor   = #3B5998;
+$ui_twitterColor    = #0084B4;
+$ui_googlePlusColor = #DC4A38;
+$ui_linkedInColor   = #1F88BE;
+$ui_youtubeColor    = #CC181E;
+$ui_instagramColor  = #49769C;
+$ui_pinterestColor  = #00ACED;
+$ui_vkColor         = #4D7198;
+
+/*-------------------
+      Borders
+--------------------*/
+
+$ui_circularRadius                = 500rem;
+
+$ui_borderColor               = rgba(34, 36, 38, 0.15);
+$ui_strongBorderColor         = rgba(34, 36, 38, 0.22);
+$ui_internalBorderColor       = rgba(34, 36, 38, 0.1);
+$ui_selectedBorderColor       = rgba(34, 36, 38, 0.35);
+$ui_strongSelectedBorderColor = rgba(34, 36, 38, 0.5);
+$ui_disabledBorderColor       = rgba(34, 36, 38, 0.5);
+
+$ui_solidInternalBorderColor  = #FAFAFA;
+$ui_solidBorderColor          = #D4D4D5;
+$ui_solidSelectedBorderColor  = #BCBDBD;
+
+$ui_whiteBorderColor              = rgba(255, 255, 255, 0.1);
+$ui_selectedWhiteBorderColor      = rgba(255, 255, 255, 0.8);
+
+$ui_solidWhiteBorderColor         = #555555;
+$ui_selectedSolidWhiteBorderColor = #999999;
+
+
+/*-------------------
+    Derived Values
+--------------------*/
+
+/* Loaders Position Offset */
+$ui_loaderOffset = -($ui_loaderSize / 2);
+$ui_loaderMargin = $ui_loaderOffset 0em 0em $ui_loaderOffset;
+
+/* Rendered Scrollbar Width */
+$ui_scrollbarWidth= 17px;
+
+/* Maximum Single Character Glyph Width, aka Capital "W" */
+$ui_glyphWidth= 1.1em;
+
+/* Used to match floats with text */
+$ui_lineHeightOffset       = (($ui_lineHeight - 1em) / 2);
+$ui_headerLineHeightOffset = ($ui_headerLineHeight - 1em) / 2;
+
+/* Header Spacing */
+$ui_headerTopMargin    = unquote("calc(2rem - " + $ui_headerLineHeightOffset + ")");
+$ui_headerBottomMargin = 1rem;
+$ui_headerMargin       = $ui_headerTopMargin 0em $ui_headerBottomMargin;
+
+/* Minimum Mobile Width */
+$ui_pageMinWidth       = 320px;
+
+/* Positive / Negative Dupes */
+$ui_successBackgroundColor = $ui_positiveBackgroundColor;
+$ui_successColor           = $ui_positiveColor;
+$ui_successBorderColor     = $ui_positiveBorderColor;
+$ui_successHeaderColor     = $ui_positiveHeaderColor;
+$ui_successTextColor       = $ui_positiveTextColor;
+
+$ui_errorBackgroundColor   = $ui_negativeBackgroundColor;
+$ui_errorColor             = $ui_negativeColor;
+$ui_errorBorderColor       = $ui_negativeBorderColor;
+$ui_errorHeaderColor       = $ui_negativeHeaderColor;
+$ui_errorTextColor         = $ui_negativeTextColor;
+
+
+/* Responsive */
+$ui_largestMobileScreen = ($ui_tabletBreakpoint - 1px);
+$ui_largestTabletScreen = ($ui_computerBreakpoint - 1px);
+$ui_largestSmallMonitor = ($ui_largeMonitorBreakpoint - 1px);
+$ui_largestLargeMonitor = ($ui_widescreenMonitorBreakpoint - 1px);
+
+
+/*-------------------
+  Exact Pixel Values
+--------------------*/
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+
+$ui_1px  = unit( (1 / $ui_emSize), rem);
+$ui_2px  = unit( (2 / $ui_emSize), rem);
+$ui_3px  = unit( (3 / $ui_emSize), rem);
+$ui_4px  = unit( (4 / $ui_emSize), rem);
+$ui_5px  = unit( (5 / $ui_emSize), rem);
+$ui_6px  = unit( (6 / $ui_emSize), rem);
+$ui_7px  = unit( (7 / $ui_emSize), rem);
+$ui_8px  = unit( (8 / $ui_emSize), rem);
+$ui_9px  = unit( (9 / $ui_emSize), rem);
+$ui_10px = unit( (10 / $ui_emSize), rem);
+$ui_11px = unit( (11 / $ui_emSize), rem);
+$ui_12px = unit( (12 / $ui_emSize), rem);
+$ui_13px = unit( (13 / $ui_emSize), rem);
+$ui_14px = unit( (14 / $ui_emSize), rem);
+$ui_15px = unit( (15 / $ui_emSize), rem);
+$ui_16px = unit( (16 / $ui_emSize), rem);
+$ui_17px = unit( (17 / $ui_emSize), rem);
+$ui_18px = unit( (18 / $ui_emSize), rem);
+$ui_19px = unit( (19 / $ui_emSize), rem);
+$ui_20px = unit( (20 / $ui_emSize), rem);
+$ui_21px = unit( (21 / $ui_emSize), rem);
+$ui_22px = unit( (22 / $ui_emSize), rem);
+$ui_23px = unit( (23 / $ui_emSize), rem);
+$ui_24px = unit( (24 / $ui_emSize), rem);
+$ui_25px = unit( (25 / $ui_emSize), rem);
+$ui_26px = unit( (26 / $ui_emSize), rem);
+$ui_27px = unit( (27 / $ui_emSize), rem);
+$ui_28px = unit( (28 / $ui_emSize), rem);
+$ui_29px = unit( (29 / $ui_emSize), rem);
+$ui_30px = unit( (30 / $ui_emSize), rem);
+$ui_31px = unit( (31 / $ui_emSize), rem);
+$ui_32px = unit( (32 / $ui_emSize), rem);
+$ui_33px = unit( (33 / $ui_emSize), rem);
+$ui_34px = unit( (34 / $ui_emSize), rem);
+$ui_35px = unit( (35 / $ui_emSize), rem);
+$ui_36px = unit( (36 / $ui_emSize), rem);
+$ui_37px = unit( (37 / $ui_emSize), rem);
+$ui_38px = unit( (38 / $ui_emSize), rem);
+$ui_39px = unit( (39 / $ui_emSize), rem);
+$ui_40px = unit( (40 / $ui_emSize), rem);
+$ui_41px = unit( (41 / $ui_emSize), rem);
+$ui_42px = unit( (42 / $ui_emSize), rem);
+$ui_43px = unit( (43 / $ui_emSize), rem);
+$ui_44px = unit( (44 / $ui_emSize), rem);
+$ui_45px = unit( (45 / $ui_emSize), rem);
+$ui_46px = unit( (46 / $ui_emSize), rem);
+$ui_47px = unit( (47 / $ui_emSize), rem);
+$ui_48px = unit( (48 / $ui_emSize), rem);
+$ui_49px = unit( (49 / $ui_emSize), rem);
+$ui_50px = unit( (50 / $ui_emSize), rem);
+$ui_51px = unit( (51 / $ui_emSize), rem);
+$ui_52px = unit( (52 / $ui_emSize), rem);
+$ui_53px = unit( (53 / $ui_emSize), rem);
+$ui_54px = unit( (54 / $ui_emSize), rem);
+$ui_55px = unit( (55 / $ui_emSize), rem);
+$ui_56px = unit( (56 / $ui_emSize), rem);
+$ui_57px = unit( (57 / $ui_emSize), rem);
+$ui_58px = unit( (58 / $ui_emSize), rem);
+$ui_59px = unit( (59 / $ui_emSize), rem);
+$ui_60px = unit( (60 / $ui_emSize), rem);
+$ui_61px = unit( (61 / $ui_emSize), rem);
+$ui_62px = unit( (62 / $ui_emSize), rem);
+$ui_63px = unit( (63 / $ui_emSize), rem);
+$ui_64px = unit( (64 / $ui_emSize), rem);
+
+$ui_relative1px  = unit( (1 / $ui_emSize), em);
+$ui_relative2px  = unit( (2 / $ui_emSize), em);
+$ui_relative3px  = unit( (3 / $ui_emSize), em);
+$ui_relative4px  = unit( (4 / $ui_emSize), em);
+$ui_relative5px  = unit( (5 / $ui_emSize), em);
+$ui_relative6px  = unit( (6 / $ui_emSize), em);
+$ui_relative7px  = unit( (7 / $ui_emSize), em);
+$ui_relative8px  = unit( (8 / $ui_emSize), em);
+$ui_relative9px  = unit( (9 / $ui_emSize), em);
+$ui_relative10px = unit( (10 / $ui_emSize), em);
+$ui_relative11px = unit( (11 / $ui_emSize), em);
+$ui_relative12px = unit( (12 / $ui_emSize), em);
+$ui_relative13px = unit( (13 / $ui_emSize), em);
+$ui_relative14px = unit( (14 / $ui_emSize), em);
+$ui_relative15px = unit( (15 / $ui_emSize), em);
+$ui_relative16px = unit( (16 / $ui_emSize), em);
+$ui_relative17px = unit( (17 / $ui_emSize), em);
+$ui_relative18px = unit( (18 / $ui_emSize), em);
+$ui_relative19px = unit( (19 / $ui_emSize), em);
+$ui_relative20px = unit( (20 / $ui_emSize), em);
+$ui_relative21px = unit( (21 / $ui_emSize), em);
+$ui_relative22px = unit( (22 / $ui_emSize), em);
+$ui_relative23px = unit( (23 / $ui_emSize), em);
+$ui_relative24px = unit( (24 / $ui_emSize), em);
+$ui_relative25px = unit( (25 / $ui_emSize), em);
+$ui_relative26px = unit( (26 / $ui_emSize), em);
+$ui_relative27px = unit( (27 / $ui_emSize), em);
+$ui_relative28px = unit( (28 / $ui_emSize), em);
+$ui_relative29px = unit( (29 / $ui_emSize), em);
+$ui_relative30px = unit( (30 / $ui_emSize), em);
+$ui_relative31px = unit( (31 / $ui_emSize), em);
+$ui_relative32px = unit( (32 / $ui_emSize), em);
+$ui_relative33px = unit( (33 / $ui_emSize), em);
+$ui_relative34px = unit( (34 / $ui_emSize), em);
+$ui_relative35px = unit( (35 / $ui_emSize), em);
+$ui_relative36px = unit( (36 / $ui_emSize), em);
+$ui_relative37px = unit( (37 / $ui_emSize), em);
+$ui_relative38px = unit( (38 / $ui_emSize), em);
+$ui_relative39px = unit( (39 / $ui_emSize), em);
+$ui_relative40px = unit( (40 / $ui_emSize), em);
+$ui_relative41px = unit( (41 / $ui_emSize), em);
+$ui_relative42px = unit( (42 / $ui_emSize), em);
+$ui_relative43px = unit( (43 / $ui_emSize), em);
+$ui_relative44px = unit( (44 / $ui_emSize), em);
+$ui_relative45px = unit( (45 / $ui_emSize), em);
+$ui_relative46px = unit( (46 / $ui_emSize), em);
+$ui_relative47px = unit( (47 / $ui_emSize), em);
+$ui_relative48px = unit( (48 / $ui_emSize), em);
+$ui_relative49px = unit( (49 / $ui_emSize), em);
+$ui_relative50px = unit( (50 / $ui_emSize), em);
+$ui_relative51px = unit( (51 / $ui_emSize), em);
+$ui_relative52px = unit( (52 / $ui_emSize), em);
+$ui_relative53px = unit( (53 / $ui_emSize), em);
+$ui_relative54px = unit( (54 / $ui_emSize), em);
+$ui_relative55px = unit( (55 / $ui_emSize), em);
+$ui_relative56px = unit( (56 / $ui_emSize), em);
+$ui_relative57px = unit( (57 / $ui_emSize), em);
+$ui_relative58px = unit( (58 / $ui_emSize), em);
+$ui_relative59px = unit( (59 / $ui_emSize), em);
+$ui_relative60px = unit( (60 / $ui_emSize), em);
+$ui_relative61px = unit( (61 / $ui_emSize), em);
+$ui_relative62px = unit( (62 / $ui_emSize), em);
+$ui_relative63px = unit( (63 / $ui_emSize), em);
+$ui_relative64px = unit( (64 / $ui_emSize), em);
+
+/* Columns */
+$ui_oneWide        = (1 / $ui_columnCount * 100%);
+$ui_twoWide        = (2 / $ui_columnCount * 100%);
+$ui_threeWide      = (3 / $ui_columnCount * 100%);
+$ui_fourWide       = (4 / $ui_columnCount * 100%);
+$ui_fiveWide       = (5 / $ui_columnCount * 100%);
+$ui_sixWide        = (6 / $ui_columnCount * 100%);
+$ui_sevenWide      = (7 / $ui_columnCount * 100%);
+$ui_eightWide      = (8 / $ui_columnCount * 100%);
+$ui_nineWide       = (9 / $ui_columnCount * 100%);
+$ui_tenWide        = (10 / $ui_columnCount * 100%);
+$ui_elevenWide     = (11 / $ui_columnCount * 100%);
+$ui_twelveWide     = (12 / $ui_columnCount * 100%);
+$ui_thirteenWide   = (13 / $ui_columnCount * 100%);
+$ui_fourteenWide   = (14 / $ui_columnCount * 100%);
+$ui_fifteenWide    = (15 / $ui_columnCount * 100%);
+$ui_sixteenWide    = (16 / $ui_columnCount * 100%);
+
+$ui_oneColumn      = (1 / 1 * 100%);
+$ui_twoColumn      = (1 / 2 * 100%);
+$ui_threeColumn    = (1 / 3 * 100%);
+$ui_fourColumn     = (1 / 4 * 100%);
+$ui_fiveColumn     = (1 / 5 * 100%);
+$ui_sixColumn      = (1 / 6 * 100%);
+$ui_sevenColumn    = (1 / 7 * 100%);
+$ui_eightColumn    = (1 / 8 * 100%);
+$ui_nineColumn     = (1 / 9 * 100%);
+$ui_tenColumn      = (1 / 10 * 100%);
+$ui_elevenColumn   = (1 / 11 * 100%);
+$ui_twelveColumn   = (1 / 12 * 100%);
+$ui_thirteenColumn = (1 / 13 * 100%);
+$ui_fourteenColumn = (1 / 14 * 100%);
+$ui_fifteenColumn  = (1 / 15 * 100%);
+$ui_sixteenColumn  = (1 / 16 * 100%);
+
+
+/*******************************
+             States
+*******************************/
+
+/*-------------------
+      Disabled
+--------------------*/
+
+$ui_disabledOpacity= 0.45;
+$ui_disabledTextColor= rgba(40, 40, 40, 0.3);
+$ui_invertedDisabledTextColor= rgba(225, 225, 225, 0.3);
+
+/*-------------------
+        Hover
+--------------------*/
+
+/*---  Shadows  ---*/
+$ui_floatingShadowHover=0px 2px 4px 0px rgba(34, 36, 38, 0.15),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.25);
+
+/*---  Colors  ---*/
+$ui_primaryColorHover    = saturate(darken($ui_primaryColor, 5), 10, relative);
+$ui_secondaryColorHover  = saturate(lighten($ui_secondaryColor, 5), 10, relative);
+
+$ui_redHover             = saturate(darken($ui_red, 5), 10, relative);
+$ui_orangeHover          = saturate(darken($ui_orange, 5), 10, relative);
+$ui_yellowHover          = saturate(darken($ui_yellow, 5), 10, relative);
+$ui_oliveHover           = saturate(darken($ui_olive, 5), 10, relative);
+$ui_greenHover           = saturate(darken($ui_green, 5), 10, relative);
+$ui_tealHover            = saturate(darken($ui_teal, 5), 10, relative);
+$ui_blueHover            = saturate(darken($ui_blue, 5), 10, relative);
+$ui_violetHover          = saturate(darken($ui_violet, 5), 10, relative);
+$ui_purpleHover          = saturate(darken($ui_purple, 5), 10, relative);
+$ui_pinkHover            = saturate(darken($ui_pink, 5), 10, relative);
+$ui_brownHover           = saturate(darken($ui_brown, 5), 10, relative);
+
+$ui_lightRedHover        = saturate(darken($ui_lightRed, 5), 10, relative);
+$ui_lightOrangeHover     = saturate(darken($ui_lightOrange, 5), 10, relative);
+$ui_lightYellowHover     = saturate(darken($ui_lightYellow, 5), 10, relative);
+$ui_lightOliveHover      = saturate(darken($ui_lightOlive, 5), 10, relative);
+$ui_lightGreenHover      = saturate(darken($ui_lightGreen, 5), 10, relative);
+$ui_lightTealHover       = saturate(darken($ui_lightTeal, 5), 10, relative);
+$ui_lightBlueHover       = saturate(darken($ui_lightBlue, 5), 10, relative);
+$ui_lightVioletHover     = saturate(darken($ui_lightViolet, 5), 10, relative);
+$ui_lightPurpleHover     = saturate(darken($ui_lightPurple, 5), 10, relative);
+$ui_lightPinkHover       = saturate(darken($ui_lightPink, 5), 10, relative);
+$ui_lightBrownHover      = saturate(darken($ui_lightBrown, 5), 10, relative);
+$ui_lightGreyHover       = saturate(darken($ui_lightGrey, 5), 10, relative);
+$ui_lightBlackHover      = saturate(darken($ui_fullBlack, 5), 10, relative);
+
+/*---  Emotive  ---*/
+$ui_positiveColorHover   = saturate(darken($ui_positiveColor, 5), 10, relative);
+$ui_negativeColorHover   = saturate(darken($ui_negativeColor, 5), 10, relative);
+
+/*---  Brand   ---*/
+$ui_facebookHoverColor   = saturate(darken($ui_facebookColor, 5), 10, relative);
+$ui_twitterHoverColor    = saturate(darken($ui_twitterColor, 5), 10, relative);
+$ui_googlePlusHoverColor = saturate(darken($ui_googlePlusColor, 5), 10, relative);
+$ui_linkedInHoverColor   = saturate(darken($ui_linkedInColor, 5), 10, relative);
+$ui_youtubeHoverColor    = saturate(darken($ui_youtubeColor, 5), 10, relative);
+$ui_instagramHoverColor  = saturate(darken($ui_instagramColor, 5), 10, relative);
+$ui_pinterestHoverColor  = saturate(darken($ui_pinterestColor, 5), 10, relative);
+$ui_vkHoverColor         = saturate(darken($ui_vkColor, 5), 10, relative);
+
+/*---  Dark Tones  ---*/
+$ui_fullBlackHover       = lighten($ui_fullBlack, 5);
+$ui_blackHover           = lighten($ui_black, 5);
+$ui_greyHover            = lighten($ui_grey, 5);
+
+/*---  Light Tones  ---*/
+$ui_whiteHover           = darken($ui_white, 5);
+$ui_offWhiteHover        = darken($ui_offWhite, 5);
+$ui_darkWhiteHover       = darken($ui_darkWhite, 5);
+
+/*-------------------
+        Focus
+--------------------*/
+
+/*---  Colors  ---*/
+$ui_primaryColorFocus    = saturate(darken($ui_primaryColor, 8), 20, relative);
+$ui_secondaryColorFocus  = saturate(lighten($ui_secondaryColor, 8), 20, relative);
+
+$ui_redFocus             = saturate(darken($ui_red, 8), 20, relative);
+$ui_orangeFocus          = saturate(darken($ui_orange, 8), 20, relative);
+$ui_yellowFocus          = saturate(darken($ui_yellow, 8), 20, relative);
+$ui_oliveFocus           = saturate(darken($ui_olive, 8), 20, relative);
+$ui_greenFocus           = saturate(darken($ui_green, 8), 20, relative);
+$ui_tealFocus            = saturate(darken($ui_teal, 8), 20, relative);
+$ui_blueFocus            = saturate(darken($ui_blue, 8), 20, relative);
+$ui_violetFocus          = saturate(darken($ui_violet, 8), 20, relative);
+$ui_purpleFocus          = saturate(darken($ui_purple, 8), 20, relative);
+$ui_pinkFocus            = saturate(darken($ui_pink, 8), 20, relative);
+$ui_brownFocus           = saturate(darken($ui_brown, 8), 20, relative);
+
+$ui_lightRedFocus        = saturate(darken($ui_lightRed, 8), 20, relative);
+$ui_lightOrangeFocus     = saturate(darken($ui_lightOrange, 8), 20, relative);
+$ui_lightYellowFocus     = saturate(darken($ui_lightYellow, 8), 20, relative);
+$ui_lightOliveFocus      = saturate(darken($ui_lightOlive, 8), 20, relative);
+$ui_lightGreenFocus      = saturate(darken($ui_lightGreen, 8), 20, relative);
+$ui_lightTealFocus       = saturate(darken($ui_lightTeal, 8), 20, relative);
+$ui_lightBlueFocus       = saturate(darken($ui_lightBlue, 8), 20, relative);
+$ui_lightVioletFocus     = saturate(darken($ui_lightViolet, 8), 20, relative);
+$ui_lightPurpleFocus     = saturate(darken($ui_lightPurple, 8), 20, relative);
+$ui_lightPinkFocus       = saturate(darken($ui_lightPink, 8), 20, relative);
+$ui_lightBrownFocus      = saturate(darken($ui_lightBrown, 8), 20, relative);
+$ui_lightGreyFocus       = saturate(darken($ui_lightGrey, 8), 20, relative);
+$ui_lightBlackFocus      = saturate(darken($ui_fullBlack, 8), 20, relative);
+
+/*---  Emotive  ---*/
+$ui_positiveColorFocus   = saturate(darken($ui_positiveColor, 8), 20, relative);
+$ui_negativeColorFocus   = saturate(darken($ui_negativeColor, 8), 20, relative);
+
+/*---  Brand   ---*/
+$ui_facebookFocusColor   = saturate(darken($ui_facebookColor, 8), 20, relative);
+$ui_twitterFocusColor    = saturate(darken($ui_twitterColor, 8), 20, relative);
+$ui_googlePlusFocusColor = saturate(darken($ui_googlePlusColor, 8), 20, relative);
+$ui_linkedInFocusColor   = saturate(darken($ui_linkedInColor, 8), 20, relative);
+$ui_youtubeFocusColor    = saturate(darken($ui_youtubeColor, 8), 20, relative);
+$ui_instagramFocusColor  = saturate(darken($ui_instagramColor, 8), 20, relative);
+$ui_pinterestFocusColor  = saturate(darken($ui_pinterestColor, 8), 20, relative);
+$ui_vkFocusColor         = saturate(darken($ui_vkColor, 8), 20, relative);
+
+/*---  Dark Tones  ---*/
+$ui_fullBlackFocus       = lighten($ui_fullBlack, 8);
+$ui_blackFocus           = lighten($ui_black, 8);
+$ui_greyFocus            = lighten($ui_grey, 8);
+
+/*---  Light Tones  ---*/
+$ui_whiteFocus           = darken($ui_white, 8);
+$ui_offWhiteFocus        = darken($ui_offWhite, 8);
+$ui_darkWhiteFocus       = darken($ui_darkWhite, 8);
+
+
+/*-------------------
+    Down (:active)
+--------------------*/
+
+/*---  Colors  ---*/
+$ui_primaryColorDown    = darken($ui_primaryColor, 10);
+$ui_secondaryColorDown  = lighten($ui_secondaryColor, 10);
+
+$ui_redDown             = darken($ui_red, 10);
+$ui_orangeDown          = darken($ui_orange, 10);
+$ui_yellowDown          = darken($ui_yellow, 10);
+$ui_oliveDown           = darken($ui_olive, 10);
+$ui_greenDown           = darken($ui_green, 10);
+$ui_tealDown            = darken($ui_teal, 10);
+$ui_blueDown            = darken($ui_blue, 10);
+$ui_violetDown          = darken($ui_violet, 10);
+$ui_purpleDown          = darken($ui_purple, 10);
+$ui_pinkDown            = darken($ui_pink, 10);
+$ui_brownDown           = darken($ui_brown, 10);
+
+$ui_lightRedDown        = darken($ui_lightRed, 10);
+$ui_lightOrangeDown     = darken($ui_lightOrange, 10);
+$ui_lightYellowDown     = darken($ui_lightYellow, 10);
+$ui_lightOliveDown      = darken($ui_lightOlive, 10);
+$ui_lightGreenDown      = darken($ui_lightGreen, 10);
+$ui_lightTealDown       = darken($ui_lightTeal, 10);
+$ui_lightBlueDown       = darken($ui_lightBlue, 10);
+$ui_lightVioletDown     = darken($ui_lightViolet, 10);
+$ui_lightPurpleDown     = darken($ui_lightPurple, 10);
+$ui_lightPinkDown       = darken($ui_lightPink, 10);
+$ui_lightBrownDown      = darken($ui_lightBrown, 10);
+$ui_lightGreyDown       = darken($ui_lightGrey, 10);
+$ui_lightBlackDown      = darken($ui_fullBlack, 10);
+
+/*---  Emotive  ---*/
+$ui_positiveColorDown   = darken($ui_positiveColor, 10);
+$ui_negativeColorDown   = darken($ui_negativeColor, 10);
+
+/*---  Brand   ---*/
+$ui_facebookDownColor   = darken($ui_facebookColor, 10);
+$ui_twitterDownColor    = darken($ui_twitterColor, 10);
+$ui_googlePlusDownColor = darken($ui_googlePlusColor, 10);
+$ui_linkedInDownColor   = darken($ui_linkedInColor, 10);
+$ui_youtubeDownColor    = darken($ui_youtubeColor, 10);
+$ui_instagramDownColor  = darken($ui_instagramColor, 10);
+$ui_pinterestDownColor  = darken($ui_pinterestColor, 10);
+$ui_vkDownColor         = darken($ui_vkColor, 10);
+
+/*---  Dark Tones  ---*/
+$ui_fullBlackDown       = lighten($ui_fullBlack, 10);
+$ui_blackDown           = lighten($ui_black, 10);
+$ui_greyDown            = lighten($ui_grey, 10);
+
+/*---  Light Tones  ---*/
+$ui_whiteDown           = darken($ui_white, 10);
+$ui_offWhiteDown        = darken($ui_offWhite, 10);
+$ui_darkWhiteDown       = darken($ui_darkWhite, 10);
+
+
+/*-------------------
+        Active
+--------------------*/
+
+/*---  Colors  ---*/
+$ui_primaryColorActive    = saturate(darken($ui_primaryColor, 5), 15, relative);
+$ui_secondaryColorActive  = saturate(lighten($ui_secondaryColor, 5), 15, relative);
+
+$ui_redActive             = saturate(darken($ui_red, 5), 15, relative);
+$ui_orangeActive          = saturate(darken($ui_orange, 5), 15, relative);
+$ui_yellowActive          = saturate(darken($ui_yellow, 5), 15, relative);
+$ui_oliveActive           = saturate(darken($ui_olive, 5), 15, relative);
+$ui_greenActive           = saturate(darken($ui_green, 5), 15, relative);
+$ui_tealActive            = saturate(darken($ui_teal, 5), 15, relative);
+$ui_blueActive            = saturate(darken($ui_blue, 5), 15, relative);
+$ui_violetActive          = saturate(darken($ui_violet, 5), 15, relative);
+$ui_purpleActive          = saturate(darken($ui_purple, 5), 15, relative);
+$ui_pinkActive            = saturate(darken($ui_pink, 5), 15, relative);
+$ui_brownActive           = saturate(darken($ui_brown, 5), 15, relative);
+
+$ui_lightRedActive        = saturate(darken($ui_lightRed, 5), 15, relative);
+$ui_lightOrangeActive     = saturate(darken($ui_lightOrange, 5), 15, relative);
+$ui_lightYellowActive     = saturate(darken($ui_lightYellow, 5), 15, relative);
+$ui_lightOliveActive      = saturate(darken($ui_lightOlive, 5), 15, relative);
+$ui_lightGreenActive      = saturate(darken($ui_lightGreen, 5), 15, relative);
+$ui_lightTealActive       = saturate(darken($ui_lightTeal, 5), 15, relative);
+$ui_lightBlueActive       = saturate(darken($ui_lightBlue, 5), 15, relative);
+$ui_lightVioletActive     = saturate(darken($ui_lightViolet, 5), 15, relative);
+$ui_lightPurpleActive     = saturate(darken($ui_lightPurple, 5), 15, relative);
+$ui_lightPinkActive       = saturate(darken($ui_lightPink, 5), 15, relative);
+$ui_lightBrownActive      = saturate(darken($ui_lightBrown, 5), 15, relative);
+$ui_lightGreyActive       = saturate(darken($ui_lightGrey, 5), 15, relative);
+$ui_lightBlackActive      = saturate(darken($ui_fullBlack, 5), 15, relative);
+
+/*---  Emotive  ---*/
+$ui_positiveColorActive   = saturate(darken($ui_positiveColor, 5), 15, relative);
+$ui_negativeColorActive   = saturate(darken($ui_negativeColor, 5), 15, relative);
+
+/*---  Brand   ---*/
+$ui_facebookActiveColor   = saturate(darken($ui_facebookColor, 5), 15, relative);
+$ui_twitterActiveColor    = saturate(darken($ui_twitterColor, 5), 15, relative);
+$ui_googlePlusActiveColor = saturate(darken($ui_googlePlusColor, 5), 15, relative);
+$ui_linkedInActiveColor   = saturate(darken($ui_linkedInColor, 5), 15, relative);
+$ui_youtubeActiveColor    = saturate(darken($ui_youtubeColor, 5), 15, relative);
+$ui_instagramActiveColor  = saturate(darken($ui_instagramColor, 5), 15, relative);
+$ui_pinterestActiveColor  = saturate(darken($ui_pinterestColor, 5), 15, relative);
+$ui_vkActiveColor         = saturate(darken($ui_vkColor, 5), 15, relative);
+
+/*---  Dark Tones  ---*/
+$ui_fullBlackActive       = darken($ui_fullBlack, 5);
+$ui_blackActive           = darken($ui_black, 5);
+$ui_greyActive            = darken($ui_grey, 5);
+
+/*---  Light Tones  ---*/
+$ui_whiteActive           = darken($ui_white, 5);
+$ui_offWhiteActive        = darken($ui_offWhite, 5);
+$ui_darkWhiteActive       = darken($ui_darkWhite, 5);
+

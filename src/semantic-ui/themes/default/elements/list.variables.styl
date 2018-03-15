@@ -1,0 +1,219 @@
+/*******************************
+             List
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* List */
+$ui_listStyleType= none;
+$ui_listStylePosition= outside;
+$ui_margin= 1em 0em;
+$ui_verticalPadding= 0em;
+$ui_horizontalPadding= 0em;
+
+/* List Item */
+$ui_itemVerticalPadding= $ui_relative3px;
+$ui_itemHorizontalPadding= 0em;
+$ui_itemPadding= $ui_itemVerticalPadding $ui_itemHorizontalPadding;
+$ui_itemLineHeight= $ui_relativeLarge;
+
+/* Sub List */
+$ui_childListPadding= 0.75em 0em 0.25em 0.5em;
+$ui_childListIndent= 1em;
+
+/* Sub List Item */
+$ui_childItemVerticalPadding= $ui_relative2px;
+$ui_childItemHorizontalPadding= 0em;
+$ui_childItemPadding= $ui_childItemVerticalPadding $ui_childItemHorizontalPadding;
+$ui_childItemLineHeight= inherit;
+
+/*-------------------
+      Elements
+--------------------*/
+
+/* Icon */
+$ui_iconDistance= $ui_relative4px;
+$ui_iconOffset= (($ui_itemLineHeight - 1rem) / 2);
+$ui_iconTransition= color $ui_defaultDuration $ui_defaultEasing;
+$ui_iconVerticalAlign= top;
+$ui_iconContentVerticalAlign= top;
+
+/* Image */
+$ui_imageDistance= 0.5em;
+$ui_imageAlign= top;
+
+/* Content */
+$ui_contentDistance= 0.5em;
+$ui_contentLineHeight= $ui_itemLineHeight;
+$ui_contentLineHeightOffset= ($ui_contentLineHeight - 1em) / 2;
+$ui_contentVerticalAlign= top;
+
+/* Header */
+$ui_itemHeaderFontFamily= $ui_headerFont;
+$ui_itemHeaderFontWeight= bold;
+$ui_itemHeaderColor= $ui_textColor;
+
+/* Description */
+$ui_itemDescriptionColor= rgba(0, 0, 0, 0.7);
+
+/* Link */
+$ui_itemLinkColor= $ui_linkColor;
+$ui_itemLinkHoverColor= $ui_linkHoverColor;
+
+/* Header Link */
+$ui_itemHeaderLinkColor= $ui_itemLinkColor;
+$ui_itemHeaderLinkHoverColor= $ui_itemLinkHoverColor;
+
+/* Linked Icon */
+$ui_itemLinkIconColor= $ui_lightTextColor;
+$ui_itemLinkIconHoverColor= $ui_textColor;
+$ui_invertedIconLinkColor= $ui_invertedLightTextColor;
+
+/*-------------------
+        States
+--------------------*/
+
+$ui_disabledColor= $ui_disabledTextColor;
+$ui_invertedDisabledColor= $ui_invertedDisabledTextColor;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Float */
+$ui_floatDistance= 1em;
+$ui_leftFloatMargin= 0em $ui_floatDistance 0em 0em;
+$ui_rightFloatMargin= 0em 0em 0em $ui_floatDistance;
+
+/* Horizontal */
+$ui_horizontalSpacing= 1em;
+$ui_horizontalIconDistance= 0.25em;
+$ui_horizontalVerticalAlign= middle;
+
+/* Inverted */
+$ui_invertedListIconColor= $ui_invertedLightTextColor;
+$ui_invertedHeaderColor= $ui_invertedTextColor;
+$ui_invertedDescriptionColor= $ui_invertedLightTextColor;
+$ui_invertedItemLinkColor= $ui_invertedTextColor;
+$ui_invertedItemLinkHoverColor= $ui_linkHoverColor;
+
+/* Link List */
+$ui_linkListItemColor= $ui_unselectedTextColor;
+$ui_linkListItemHoverColor= $ui_hoveredTextColor;
+$ui_linkListItemDownColor= $ui_pressedTextColor;
+$ui_linkListItemActiveColor= $ui_selectedTextColor;
+$ui_linkListTransition=$ui_defaultDuration color $ui_defaultEasing;
+
+/* Inverted Link List */
+$ui_invertedLinkListItemColor= $ui_invertedUnselectedTextColor;
+$ui_invertedLinkListItemHoverColor= $ui_invertedHoveredTextColor;
+$ui_invertedLinkListItemDownColor= $ui_invertedPressedTextColor;
+$ui_invertedLinkListItemActiveColor= $ui_invertedSelectedTextColor;
+
+/* Selection List */
+$ui_selectionListItemMargin= 0em;
+$ui_selectionListItemBorderRadius= 0.5em;
+$ui_selectionListItemVerticalPadding= 0.5em;
+$ui_selectionListItemHorizontalPadding= 0.5em;
+$ui_selectionListTransition=$ui_defaultDuration color $ui_defaultEasing,
+  $ui_defaultDuration padding-left $ui_defaultEasing,
+  $ui_defaultDuration background-color $ui_defaultEasing;
+
+/* Selection List States */
+$ui_selectionListBackground= transparent;
+$ui_selectionListColor= $ui_unselectedTextColor;
+$ui_selectionListHoverBackground= $ui_subtleTransparentBlack;
+$ui_selectionListHoverColor= $ui_hoveredTextColor;
+$ui_selectionListDownBackground= $ui_transparentBlack;
+$ui_selectionListDownColor= $ui_pressedTextColor;
+$ui_selectionListActiveBackground= $ui_transparentBlack;
+$ui_selectionListActiveColor= $ui_selectedTextColor;
+
+/* Inverted Selection List */
+$ui_invertedSelectionListBackground= transparent;
+$ui_invertedSelectionListColor= $ui_invertedUnselectedTextColor;
+$ui_invertedSelectionListHoverBackground= $ui_subtleTransparentWhite;
+$ui_invertedSelectionListHoverColor= $ui_invertedHoveredTextColor;
+$ui_invertedSelectionListDownBackground= $ui_transparentWhite;
+$ui_invertedSelectionListDownColor= $ui_invertedPressedTextColor;
+$ui_invertedSelectionListActiveBackground= $ui_transparentWhite;
+$ui_invertedSelectionListActiveColor= $ui_invertedSelectedTextColor;
+
+/* Animated List */
+$ui_animatedDuration= 0.25s;
+$ui_animatedDelay= 0.1s;
+$ui_animatedListTransition=$ui_animatedDuration color $ui_defaultEasing $ui_animatedDelay,
+  $ui_animatedDuration padding-left $ui_defaultEasing $ui_animatedDelay,
+  $ui_animatedDuration background-color $ui_defaultEasing $ui_animatedDelay;
+$ui_animatedListIndent= 1em;
+
+/* Bulleted */
+$ui_bulletDistance= 1.25rem;
+$ui_bulletOffset= (- $ui_bulletDistance);
+
+$ui_bulletOpacity= 1;
+$ui_bulletCharacter= '•';
+$ui_bulletColor= inherit;
+$ui_bulletLinkColor= $ui_textColor;
+$ui_bulletVerticalAlign= top;
+$ui_bulletChildDistance= $ui_bulletDistance;
+
+/* Horizontal Bullets */
+$ui_horizontalBulletColor= $ui_textColor;
+$ui_horizontalBulletSpacing= $ui_bulletDistance + 0.5em;
+
+/* Ordered List */
+$ui_orderedCountName= ordered;
+$ui_orderedCountContent= counters(ordered, ".") " ";
+$ui_orderedCountColor= $ui_textColor;
+$ui_orderedCountDistance= 1.25rem;
+$ui_orderedCountOpacity= 0.8;
+$ui_orderedCountTextAlign= right;
+$ui_orderedCountVerticalAlign= middle;
+
+$ui_orderedChildCountDistance= 1em;
+$ui_orderedChildCountOffset= -2em;
+
+$ui_orderedInvertedCountColor= $ui_invertedLightTextColor;
+
+/* Horizontal Ordered */
+$ui_horizontalOrderedCountDistance= 0.5em;
+
+/* Divided */
+$ui_dividedBorderWidth= 1px;
+$ui_dividedBorder= $ui_dividedBorderWidth solid $ui_borderColor;
+$ui_dividedInvertedBorderColor= $ui_whiteBorderColor;
+$ui_dividedChildListBorder= none;
+$ui_dividedChildItemBorder= none;
+
+/* Divided Horizontal */
+$ui_horizontalDividedSpacing= ($ui_horizontalSpacing / 2);
+$ui_horizontalDividedLineHeight= 0.6;
+
+/* Divided */
+$ui_celledBorderWidth= 1px;
+$ui_celledBorder= $ui_celledBorderWidth solid $ui_borderColor;
+$ui_celledInvertedBorder= $ui_dividedBorderWidth solid $ui_whiteBorderColor;
+$ui_celledHorizontalPadding= 0.5em;
+$ui_celledChildListBorder= none;
+$ui_celledChildItemBorder= none;
+
+/* Divided Horizontal */
+$ui_horizontalCelledSpacing= ($ui_horizontalSpacing / 2);
+$ui_horizontalCelledLineHeight= 0.6;
+
+/* Relaxed */
+$ui_relaxedItemVerticalPadding= $ui_relative6px;
+$ui_relaxedChildItemVerticalPadding= $ui_relative3px;
+$ui_relaxedHeaderMargin= 0.25rem;
+$ui_relaxedHorizontalPadding= 1rem;
+
+/* Very Relaxed */
+$ui_veryRelaxedItemVerticalPadding= $ui_relative12px;
+$ui_veryRelaxedChildItemVerticalPadding= $ui_relative4px;
+$ui_veryRelaxedHeaderMargin= 0.5rem;
+$ui_veryRelaxedHorizontalPadding= 1.5rem;
+
+

@@ -1,0 +1,95 @@
+/*!
+ * # Semantic UI - Tab
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+$ui_type    = 'module';
+$ui_element = 'tab';
+
+@import '../../theme.config';
+
+/*******************************
+           UI Tabs
+*******************************/
+
+.ui.tab {
+  display: none;
+}
+
+/*******************************
+             States
+*******************************/
+
+/*--------------------
+       Active
+---------------------*/
+
+.ui.tab.active,
+.ui.tab.open {
+  display: block;
+}
+
+/*--------------------
+       Loading
+---------------------*/
+
+.ui.tab.loading {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  min-height: $ui_loadingMinHeight;
+}
+.ui.tab.loading * {
+  position: $ui_loadingContentPosition !important;
+  left: $ui_loadingContentOffset !important;
+}
+
+.ui.tab.loading:before,
+.ui.tab.loading.segment:before {
+  position: absolute;
+  content: '';
+  top: $ui_loaderDistanceFromTop;
+  left: 50%;
+
+  margin: $ui_loaderMargin;
+  width: $ui_loaderSize;
+  height: $ui_loaderSize;
+
+  border-radius: $ui_circularRadius;
+  border: $ui_loaderLineWidth solid $ui_loaderFillColor;
+}
+.ui.tab.loading:after,
+.ui.tab.loading.segment:after {
+  position: absolute;
+  content: '';
+  top: $ui_loaderDistanceFromTop;
+  left: 50%;
+
+  margin: $ui_loaderMargin;
+  width: $ui_loaderSize;
+  height: $ui_loaderSize;
+
+  animation: button-spin $ui_loaderSpeed linear;
+  animation-iteration-count: infinite;
+
+  border-radius: $ui_circularRadius;
+
+  border-color: $ui_loaderLineColor transparent transparent;
+  border-style: solid;
+  border-width: $ui_loaderLineWidth;
+
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+
+loadUIOverrides();
+
