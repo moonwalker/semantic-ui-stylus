@@ -18,6 +18,9 @@ $ui_promptTransition=background-color $ui_defaultDuration $ui_defaultEasing,
   border-color $ui_defaultDuration $ui_defaultEasing;
 $ui_promptBoxShadow= 0em 0em 0em 0em transparent inset;
 
+/* Mobile */
+$ui_mobileMaxWidth= ~"calc(100vw - 2rem)";
+
 /* Result Box */
 $ui_resultsWidth= 18em;
 $ui_resultsBackground= #FFFFFF;
@@ -47,7 +50,7 @@ $ui_resultImageMargin= 0em 6em 0em 0em;
 /* Result Content */
 $ui_resultTitleFont= $ui_headerFont;
 $ui_resultTitleMargin= (- $ui_headerLineHeightOffset) 0em 0em;
-$ui_resultTitleFontWeight= bold;
+$ui_resultTitleFontWeight= $ui_bold;
 $ui_resultTitleFontSize= $ui_relativeMedium;
 $ui_resultTitleColor= $ui_darkTextColor;
 
@@ -64,7 +67,7 @@ $ui_resultPriceColor= $ui_green;
 $ui_messageVerticalPadding= 1em;
 $ui_messageHorizontalPadding= 1em;
 $ui_messageHeaderFontSize= $ui_medium;
-$ui_messageHeaderFontWeight= bold;
+$ui_messageHeaderFontWeight= $ui_bold;
 $ui_messageHeaderColor= $ui_textColor;
 $ui_messageDescriptionDistance= 0.25rem;
 $ui_messageDescriptionFontSize= 1em;
@@ -75,7 +78,7 @@ $ui_actionBorder= none;
 $ui_actionBackground= $ui_darkWhite;
 $ui_actionPadding= $ui_relativeSmall $ui_relativeMedium;
 $ui_actionColor= $ui_textColor;
-$ui_actionFontWeight= bold;
+$ui_actionFontWeight= $ui_bold;
 $ui_actionAlign= center;
 
 
@@ -146,8 +149,8 @@ $ui_categoryNameWidth= 100px;
 $ui_categoryNameBackground= transparent;
 $ui_categoryNameFont= $ui_pageFont;
 $ui_categoryNameFontSize= 1em;
-$ui_categoryNameFloat= left;
+$ui_categoryNameWhitespace= nowrap;
 $ui_categoryNamePadding= 0.4em 1em;
-$ui_categoryNameFontWeight= bold;
+$ui_categoryNameFontWeight= $ui_bold;
 $ui_categoryNameColor= $ui_lightTextColor;
 

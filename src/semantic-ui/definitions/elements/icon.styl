@@ -28,7 +28,7 @@ $ui_element = 'icon';
   src: $ui_fallbackSRC;
   src: $ui_src;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $ui_normal;
   font-variant: normal;
   text-decoration: inherit;
   text-transform: none;
@@ -45,7 +45,7 @@ i.icon {
 
   font-family: 'Icons';
   font-style: normal;
-  font-weight: normal;
+  font-weight: $ui_normal;
   text-decoration: inherit;
   text-align: center;
 
@@ -121,12 +121,12 @@ i.fitted.icon {
          Link
 --------------------*/
 
-i.link.icon {
+i.link.icon, i.link.icons {
   cursor: pointer;
   opacity: $ui_linkOpacity;
   transition: opacity $ui_defaultDuration $ui_defaultEasing;
 }
-i.link.icon:hover {
+i.link.icon:hover, i.link.icons:hover {
   opacity: 1 !important;
 }
 
@@ -468,6 +468,30 @@ i.icons .corner.icon {
   transform: none;
   font-size: $ui_cornerIconSize;
   text-shadow: $ui_cornerIconShadow;
+}
+i.icons .top.right.corner.icon {
+  top: 0;
+  left: auto;
+  right: 0;
+  bottom: auto;
+}
+i.icons .top.left.corner.icon {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+}
+i.icons .bottom.left.corner.icon {
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: 0;
+}
+i.icons .bottom.right.corner.icon {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
 }
 
 i.icons .inverted.corner.icon {

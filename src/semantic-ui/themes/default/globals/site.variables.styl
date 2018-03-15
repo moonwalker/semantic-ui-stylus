@@ -20,6 +20,10 @@ $ui_googleSubset      = 'latin';
 $ui_googleProtocol    = 'https://';
 $ui_googleFontRequest = '' + $ui_googleFontName + ':' + $ui_googleFontSizes + '&subset=' + $ui_googleSubset + '';
 
+
+$ui_bold              = bold;
+$ui_normal            = normal;
+
 /*-------------------
       Base Sizes
 --------------------*/
@@ -57,14 +61,14 @@ $ui_lightSecondaryColor = $ui_lightBlack;
   Page Heading
 ---------------*/
 
-$ui_headerFontWeight = bold;
-$ui_headerLineHeight = 1.2857em;
+$ui_headerFontWeight = $ui_bold;
+$ui_headerLineHeight = unit((18 / 14), em);
 
-$ui_h1 = 2rem;
-$ui_h2 = 1.714rem;
-$ui_h3 = 1.28rem;
-$ui_h4 = 1.071rem;
-$ui_h5 = 1rem;
+$ui_h1 = unit((28 / 14), rem);
+$ui_h2 = unit((24 / 14), rem);
+$ui_h3 = unit((18 / 14), rem);
+$ui_h4 = unit((15 / 14), rem);
+$ui_h5 = unit((14 / 14), rem);
 
 /*--------------
    Form Input
@@ -81,8 +85,8 @@ $ui_inputColor= $ui_textColor;
 $ui_inputPlaceholderColor= lighten($ui_inputColor, 75);
 $ui_inputPlaceholderFocusColor= lighten($ui_inputColor, 45);
 
-/* Line Height Default For Inputs in Browser */
-$ui_inputLineHeight= 1.2142em;
+/* Line Height Default For Inputs in Browser (Descendors are 17px at 14px base em) */
+$ui_inputLineHeight= unit((17 / 14), em);
 
 /*-------------------
     Focused Input
@@ -138,6 +142,31 @@ $ui_linkColor           = #4183C4;
 $ui_linkUnderline       = none;
 $ui_linkHoverColor      = darken(saturate($ui_linkColor, 20), 15, relative);
 $ui_linkHoverUnderline  = $ui_linkUnderline;
+
+/*-------------------
+    Scroll Bars
+--------------------*/
+
+$ui_useCustomScrollbars= true;
+
+$ui_customScrollbarWidth= 10px;
+$ui_customScrollbarHeight= 10px;
+
+$ui_trackBackground= rgba(0, 0, 0, 0.1);
+$ui_trackBorderRadius= 0px;
+
+$ui_thumbBorderRadius= 5px;
+$ui_thumbBackground= rgba(0, 0, 0, 0.25);
+$ui_thumbTransition= color 0.2s ease;
+
+$ui_thumbInactiveBackground= rgba(0, 0, 0, 0.15);
+$ui_thumbHoverBackground= rgba(128, 135, 139, 0.8);
+
+/* Inverted */
+$ui_trackInvertedBackground= rgba(255, 255, 255, 0.1);
+$ui_thumbInvertedBackground= rgba(255, 255, 255, 0.25);
+$ui_thumbInvertedInactiveBackground= rgba(255, 255, 255, 0.15);
+$ui_thumbInvertedHoverBackground= rgba(255, 255, 255, 0.35);
 
 /*-------------------
   Highlighted Text
@@ -421,13 +450,13 @@ $ui_invertedDisabledTextColor   = rgba(255, 255, 255, 0.2);
 --------------------*/
 
 $ui_facebookColor   = #3B5998;
-$ui_twitterColor    = #0084B4;
-$ui_googlePlusColor = #DC4A38;
+$ui_twitterColor    = #55ACEE;
+$ui_googlePlusColor = #DD4B39;
 $ui_linkedInColor   = #1F88BE;
-$ui_youtubeColor    = #CC181E;
-$ui_instagramColor  = #49769C;
-$ui_pinterestColor  = #00ACED;
+$ui_youtubeColor    = #FF0000;
+$ui_pinterestColor  = #BD081C;
 $ui_vkColor         = #4D7198;
+$ui_instagramColor  = #49769C;
 
 /*-------------------
       Borders

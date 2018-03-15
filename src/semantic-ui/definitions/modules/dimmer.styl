@@ -21,7 +21,7 @@ $ui_element = 'dimmer';
             Dimmer
 *******************************/
 
-.dimmable:not(.body) {
+.dimmable:not(body) {
   position: $ui_dimmablePosition;
 }
 
@@ -36,6 +36,7 @@ $ui_element = 'dimmer';
 
   text-align: $ui_textAlign;
   vertical-align: $ui_verticalAlign;
+  padding: $ui_padding;
 
   background-color: $ui_backgroundColor;
   opacity: $ui_hiddenOpacity;
@@ -45,6 +46,10 @@ $ui_element = 'dimmer';
   animation-duration: $ui_duration;
   transition: $ui_transition;
 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   user-select: none;
   will-change: opacity;
   z-index: $ui_zIndex;
@@ -52,14 +57,7 @@ $ui_element = 'dimmer';
 
 /* Dimmer Content */
 .ui.dimmer > .content {
-  width: 100%;
-  height: 100%;
-  display: $ui_contentDisplay;
   user-select: text;
-}
-.ui.dimmer > .content > * {
-  display: $ui_contentChildDisplay;
-  vertical-align: $ui_verticalAlign;
   color: $ui_textColor;
 }
 
@@ -69,30 +67,63 @@ $ui_element = 'dimmer';
   border-radius: inherit !important;
 }
 
+/* Scrollbars */
+addScrollbars() {
+  if (!($ui_useCustomScrollbars)) { return; }
+  .ui.dimmer:not(.inverted)::-webkit-scrollbar-track {
+    background: $ui_trackInvertedBackground;
+  }
+  .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb {
+    background: $ui_thumbInvertedBackground;
+  }
+  .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:window-inactive {
+    background: $ui_thumbInvertedInactiveBackground;
+  }
+  .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:hover {
+    background: $ui_thumbInvertedHoverBackground;
+  }
+}
+addScrollbars();
+
 /*******************************
             States
 *******************************/
 
+/* Animating */
 .animating.dimmable:not(body),
 .dimmed.dimmable:not(body) {
   overflow: $ui_overflow;
 }
 
+/* Animating / Active / Visible */
 .dimmed.dimmable > .ui.animating.dimmer,
 .dimmed.dimmable > .ui.visible.dimmer,
 .ui.active.dimmer {
-  display: block;
+  display: flex;
   opacity: $ui_visibleOpacity;
 }
 
+/* Disabled */
 .ui.disabled.dimmer {
   width: 0 !important;
   height: 0 !important;
 }
 
+
 /*******************************
            Variations
 *******************************/
+
+/*--------------
+    Alignment
+---------------*/
+
+.ui[class*="top aligned"].dimmer {
+  justify-content: flex-start;
+}
+.ui[class*="bottom aligned"].dimmer {
+  justify-content: flex-end;
+}
 
 /*--------------
       Page
@@ -153,7 +184,7 @@ body.dimmable > .dimmer {
   background-color: $ui_invertedBackgroundColor;
 }
 .ui.inverted.dimmer > .content > * {
-  color: $ui_textColor;
+  color: $ui_invertedTextColor;
 }
 
 /*--------------

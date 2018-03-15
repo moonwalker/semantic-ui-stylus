@@ -48,7 +48,7 @@ $ui_element = 'header';
 
 .ui.header .sub.header {
   display: block;
-  font-weight: normal;
+  font-weight: $ui_normal;
   padding: 0em;
   margin: $ui_subHeaderMargin;
   font-size: $ui_subHeaderFontSize;
@@ -79,7 +79,7 @@ $ui_element = 'header';
         Image
 --------------------*/
 
-.ui.header > .image,
+.ui.header > .image:not(.icon),
 .ui.header > img {
   display: inline-block;
   margin-top: $ui_imageOffset;
@@ -87,7 +87,7 @@ $ui_element = 'header';
   height: $ui_imageHeight;
   vertical-align: $ui_imageAlignment;
 }
-.ui.header > .image:only-child,
+.ui.header > .image:not(.icon):only-child,
 .ui.header > img:only-child {
   margin-right: $ui_imageMargin;
 }

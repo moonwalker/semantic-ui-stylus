@@ -46,8 +46,6 @@ body {
   font-smoothing: $ui_fontSmoothing;
 }
 
-
-
 /*******************************
              Headers
 *******************************/
@@ -128,6 +126,50 @@ a:hover {
 
 
 /*******************************
+         Scrollbars
+*******************************/
+
+addScrollbars() {
+  if (!($ui_useCustomScrollbars)) { return; }
+  /* Force Simple Scrollbars */
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: $ui_customScrollbarWidth;
+    height: $ui_customScrollbarHeight;
+  }
+  body ::-webkit-scrollbar-track {
+    background: $ui_trackBackground;
+    border-radius: $ui_trackBorderRadius;
+  }
+  body ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: $ui_thumbBorderRadius;
+    background: $ui_thumbBackground;
+    transition: $ui_thumbTransition;
+  }
+  body ::-webkit-scrollbar-thumb:window-inactive {
+    background: $ui_thumbInactiveBackground;
+  }
+  body ::-webkit-scrollbar-thumb:hover {
+    background: $ui_thumbHoverBackground;
+  }
+
+  /* Inverted UI */
+  body .ui.inverted::-webkit-scrollbar-track {
+    background: $ui_trackInvertedBackground;
+  }
+  body .ui.inverted::-webkit-scrollbar-thumb {
+    background: $ui_thumbInvertedBackground;
+  }
+  body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
+    background: $ui_thumbInvertedInactiveBackground;
+  }
+  body .ui.inverted::-webkit-scrollbar-thumb:hover {
+    background: $ui_thumbInvertedHoverBackground;
+  }
+}
+
+/*******************************
           Highlighting
 *******************************/
 
@@ -162,6 +204,6 @@ input::selection {
   color: $ui_inputHighlightColor;
 }
 
-
+addScrollbars();
 loadUIOverrides();
 

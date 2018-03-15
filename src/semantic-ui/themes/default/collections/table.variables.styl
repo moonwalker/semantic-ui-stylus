@@ -45,7 +45,7 @@ $ui_headerColor= $ui_textColor;
 $ui_headerVerticalPadding= $ui_relativeSmall;
 $ui_headerHorizontalPadding= $ui_cellHorizontalPadding;
 $ui_headerFontStyle= none;
-$ui_headerFontWeight= bold;
+$ui_headerFontWeight= $ui_bold;
 $ui_headerTextTransform= none;
 $ui_headerBoxShadow= none;
 
@@ -59,8 +59,8 @@ $ui_footerVerticalAlign= middle;
 $ui_footerColor= $ui_textColor;
 $ui_footerVerticalPadding= $ui_cellVerticalPadding;
 $ui_footerHorizontalPadding= $ui_cellHorizontalPadding;
-$ui_footerFontStyle= normal;
-$ui_footerFontWeight= normal;
+$ui_footerFontStyle= $ui_normal;
+$ui_footerFontWeight= $ui_normal;
 $ui_footerTextTransform= none;
 
 /* Responsive Size */
@@ -71,6 +71,7 @@ $ui_responsiveRowBoxShadow= 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important
 $ui_responsiveCellVerticalPadding= 0.25em;
 $ui_responsiveCellHorizontalPadding= 0.75em;
 $ui_responsiveCellBoxShadow= none !important;
+$ui_responsiveCellHeaderFontWeight= $ui_bold;
 
 /*-------------------
        Types
@@ -81,14 +82,14 @@ $ui_definitionPageBackground= $ui_white;
 
 $ui_definitionHeaderBackground= transparent;
 $ui_definitionHeaderColor= $ui_unselectedTextColor;
-$ui_definitionHeaderFontWeight= normal;
+$ui_definitionHeaderFontWeight= $ui_normal;
 
 $ui_definitionFooterBackground= $ui_definitionHeaderBackground;
 $ui_definitionFooterColor= $ui_definitionHeaderColor;
 $ui_definitionFooterFontWeight= $ui_definitionHeaderFontWeight;
 
 $ui_definitionColumnBackground= $ui_subtleTransparentBlack;
-$ui_definitionColumnFontWeight= bold;
+$ui_definitionColumnFontWeight= $ui_bold;
 $ui_definitionColumnColor= $ui_selectedTextColor;
 $ui_definitionColumnFontSize= $ui_relativeMedium;
 $ui_definitionColumnTextTransform= '';
@@ -209,7 +210,7 @@ $ui_invertedHeaderBorderColor= $ui_invertedCellBorderColor;
 
 $ui_invertedDefinitionColumnBackground= $ui_subtleTransparentWhite;
 $ui_invertedDefinitionColumnColor= $ui_invertedSelectedTextColor;
-$ui_invertedDefinitionColumnFontWeight= bold;
+$ui_invertedDefinitionColumnFontWeight= $ui_bold;
 
 /* Basic */
 $ui_basicTableBackground= transparent;

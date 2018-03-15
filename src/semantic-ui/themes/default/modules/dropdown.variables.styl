@@ -54,7 +54,7 @@ $ui_itemColor= $ui_textColor;
 $ui_itemVerticalPadding= $ui_mini;
 $ui_itemHorizontalPadding= $ui_large;
 $ui_itemPadding= $ui_itemVerticalPadding $ui_itemHorizontalPadding;
-$ui_itemFontWeight= normal;
+$ui_itemFontWeight= $ui_normal;
 $ui_itemLineHeight= 1em;
 $ui_itemLineHeightOffset= ($ui_itemLineHeight - 1em);
 $ui_itemTextTransform= none;
@@ -72,7 +72,7 @@ $ui_subMenuZIndex= 21;
 /* Menu Header */
 $ui_menuHeaderColor= $ui_darkTextColor;
 $ui_menuHeaderFontSize= $ui_relative11px;
-$ui_menuHeaderFontWeight= bold;
+$ui_menuHeaderFontWeight= $ui_bold;
 $ui_menuHeaderTextTransform= uppercase;
 $ui_menuHeaderMargin= 1rem 0rem 0.75rem;
 $ui_menuHeaderPadding= 0em $ui_itemHorizontalPadding;
@@ -92,6 +92,7 @@ $ui_menuInputPadding= $ui_menuInputVerticalPadding $ui_menuInputHorizontalPaddin
 
 /* Menu Image */
 $ui_menuImageMaxHeight= 2em;
+$ui_menuImageVerticalMargin= -($ui_menuImageMaxHeight - 1em) / 2;
 
 /* Item Sub-Element */
 $ui_itemElementFloat= none;
@@ -109,7 +110,7 @@ $ui_itemDescriptionColor= $ui_lightTextColor;
 
 /* Message */
 $ui_messagePadding= $ui_selectionItemPadding;
-$ui_messageFontWeight= normal;
+$ui_messageFontWeight= $ui_normal;
 $ui_messageColor= $ui_unselectedTextColor;
 
 /* Floated Content */
@@ -157,7 +158,7 @@ $ui_selectionIconOpacity= 0.8;
 $ui_selectionIconZIndex= 3;
 $ui_selectionIconHitbox= $ui_selectionVerticalPadding;
 $ui_selectionIconMargin= (- $ui_selectionIconHitbox);
-$ui_selectionIconPadding= $ui_selectionIconHitbox;
+$ui_selectionIconPadding= $ui_selectionIconHitbox / $ui_dropdownIconSize;
 $ui_selectionIconTransition= opacity $ui_defaultDuration $ui_defaultEasing;
 
 $ui_selectionMenuBorderRadius= 0em 0em $ui_borderRadius $ui_borderRadius;
@@ -195,7 +196,7 @@ $ui_selectionFocusBoxShadow= none;
 $ui_selectionFocusMenuBoxShadow= $ui_raisedShadow;
 
 /* Visible */
-$ui_selectionVisibleTextFontWeight= normal;
+$ui_selectionVisibleTextFontWeight= $ui_normal;
 $ui_selectionVisibleTextColor= $ui_hoveredTextColor;
 
 $ui_selectionVisibleBorderColor= $ui_focusedFormMutedBorderColor;
@@ -231,7 +232,7 @@ $ui_searchWidescreenMaxMenuHeight= $ui_selectionWidescreenMaxMenuHeight;
 /* Inline */
 $ui_inlineIconMargin= 0em $ui_relative7px 0em $ui_relative3px;
 $ui_inlineTextColor= inherit;
-$ui_inlineTextFontWeight= bold;
+$ui_inlineTextFontWeight= $ui_bold;
 $ui_inlineMenuDistance= $ui_relative3px;
 $ui_inlineMenuBorderRadius= $ui_borderRadius;
 
@@ -291,7 +292,7 @@ $ui_loadingZIndex= -1;
 $ui_activeItemZIndex= $ui_menuZIndex + 1;
 $ui_activeItemBackground= transparent;
 $ui_activeItemBoxShadow= none;
-$ui_activeItemFontWeight= bold;
+$ui_activeItemFontWeight= $ui_bold;
 $ui_activeItemColor= $ui_selectedTextColor;
 
 /* Selected */
@@ -339,10 +340,11 @@ $ui_upwardSelectionActiveHoverMenuBoxShadow= 0px -2px 3px 0px rgba(0, 0, 0, 0.08
 
 /* Flyout Direction */
 $ui_leftMenuDropdownIconFloat= left;
-$ui_leftMenuDropdownIconMargin= $ui_itemLineHeightOffset $ui_itemElementDistance 0em 0em;
+$ui_leftMenuDropdownIconMargin= $ui_itemLineHeightOffset 0em 0em 0em;
 
 /* Left */
 $ui_leftSubMenuBorderRadius= $ui_borderRadius;
+$ui_leftSubMenuMargin= 0em $ui_subMenuDistanceAway 0em 0em;
 
 /* Simple */
 $ui_simpleTransitionDuration= $ui_defaultDuration;
@@ -359,14 +361,14 @@ $ui_pointingArrowDistanceFromEdge= 1em;
 
 $ui_pointingArrowBackground= $ui_white;
 $ui_pointingArrowZIndex= 2;
-$ui_pointingArrowBoxShadow= - $ui_menuBorderWidth - $ui_menuBorderWidth 0px $ui_menuBorderWidth $ui_menuBorderColor;
+$ui_pointingArrowBoxShadow= - $ui_menuBorderWidth - $ui_menuBorderWidth 0px 0px $ui_menuBorderColor;
 $ui_pointingArrowSize= $ui_relative7px;
 
 $ui_pointingMenuDistance= $ui_mini;
 $ui_pointingMenuBorderRadius= $ui_borderRadius;
-$ui_pointingArrowBoxShadow= - $ui_menuBorderWidth - $ui_menuBorderWidth 0px $ui_menuBorderWidth $ui_menuBorderColor;
+$ui_pointingArrowBoxShadow= - $ui_menuBorderWidth - $ui_menuBorderWidth 0px 0px $ui_menuBorderColor;
 
 /* Pointing Upward */
 $ui_pointingUpwardMenuBorderRadius= $ui_borderRadius;
-$ui_pointingUpwardArrowBoxShadow= $ui_menuBorderWidth $ui_menuBorderWidth 0px $ui_menuBorderWidth $ui_menuBorderColor;
+$ui_pointingUpwardArrowBoxShadow= $ui_menuBorderWidth $ui_menuBorderWidth 0px 0px $ui_menuBorderColor;
 
