@@ -353,26 +353,25 @@ $ui_element = 'item';
 
 /* Mobile Only */
 @media only screen and (max-width: $ui_largestMobileScreen) {
-  .ui.items > .item {
+  .ui.items:not(.unstackable) > .item {
     flex-direction: column;
     margin: $ui_mobileItemSpacing 0em;
   }
-  .ui.items > .item > .image {
+  .ui.items:not(.unstackable) > .item > .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .ui.items > .item > .image,
-  .ui.items > .item > .image > img {
+  .ui.items:not(.unstackable) > .item > .image,
+  .ui.items:not(.unstackable) > .item > .image > img {
     max-width: 100% !important;
     width: $ui_mobileImageWidth !important;
     max-height: $ui_mobileImageMaxHeight !important;
   }
-  .ui.items > .item > .image + .content {
+  .ui.items:not(.unstackable) > .item > .image + .content {
     display: block;
     padding: $ui_mobileContentImageDistance 0em 0em;
   }
-
 }
 
 
@@ -458,7 +457,18 @@ $ui_element = 'item';
 ---------------*/
 
 .ui.items > .item {
-  font-size: $ui_medium;
+  font-size: $ui_relativeMedium;
+}
+
+/*---------------
+   Unstackable
+----------------*/
+
+@media only screen and (max-width: $ui_largestMobileScreen) {
+  .ui.unstackable.items > .item > .image,
+  .ui.unstackable.items > .item > .image > img {
+    width: $ui_unstackableMobileImageWidth !important;
+  }
 }
 
 loadUIOverrides();

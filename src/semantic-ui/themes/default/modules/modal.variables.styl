@@ -31,7 +31,7 @@ $ui_headerBackground= $ui_white;
 $ui_headerColor= $ui_darkTextColor;
 $ui_headerFontSize= $ui_huge;
 $ui_headerBoxShadow= none;
-$ui_headerFontWeight= bold;
+$ui_headerFontWeight= $ui_bold;
 $ui_headerFontFamily= $ui_headerFont;
 $ui_headerBorder= 1px solid $ui_borderColor;
 
@@ -82,18 +82,24 @@ $ui_computerWidth= 850px;
 $ui_largeMonitorWidth= 900px;
 $ui_widescreenMonitorWidth= 950px;
 
-$ui_mobileMargin= 0em 0em 0em -($ui_mobileWidth / 2);
-$ui_tabletMargin= 0em 0em 0em -($ui_tabletWidth / 2);
-$ui_computerMargin= 0em 0em 0em -($ui_computerWidth / 2);
-$ui_largeMonitorMargin= 0em 0em 0em -($ui_largeMonitorWidth / 2);
-$ui_widescreenMonitorMargin= 0em 0em 0em -($ui_widescreenMonitorWidth / 2);
+$ui_mobileMargin= 0em 0em 0em 0em;
+$ui_tabletMargin= 0em 0em 0em 0em;
+$ui_computerMargin= 0em 0em 0em 0em;
+$ui_largeMonitorMargin= 0em 0em 0em 0em;
+$ui_widescreenMonitorMargin= 0em 0em 0em 0em;
 
 $ui_fullScreenWidth= 95%;
-$ui_fullScreenOffset= (100% - $ui_fullScreenWidth) / 2;
+$ui_fullScreenOffset= 0em;
 $ui_fullScreenMargin= 1em auto;
 
 /* Coupling */
 $ui_invertedBoxShadow= 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+
+/*-------------------
+       States
+--------------------*/
+
+$ui_loadingZIndex= -1;
 
 /*-------------------
         Types
@@ -109,19 +115,54 @@ $ui_basicInnerCloseColor= $ui_white;
 $ui_basicInvertedModalColor= $ui_textColor;
 $ui_basicInvertedModalHeaderColor= $ui_darkTextColor;
 
+/* Top Aligned */
+$ui_topAlignedMargin= 5vh;
+$ui_mobileTopAlignedMargin= 1rem;
+
 /* Scrolling Margin */
-$ui_scrollingMargin= 3.5rem;
-$ui_mobileScrollingMargin= 1rem;
+$ui_scrollingMargin= 1rem;
+$ui_mobileScrollingMargin= $ui_mobileTopAlignedMargin;
+
+/* Scrolling Content */
+$ui_scrollingContentMaxHeight= calc(80vh - 10em);
 
 /*-------------------
       Variations
 --------------------*/
 
 /* Size Widths */
+$ui_miniRatio= 0.4;
+$ui_tinyRatio= 0.6;
 $ui_smallRatio= 0.8;
 $ui_largeRatio= 1.2;
 
 /* Derived Responsive Sizes */
+$ui_miniHeaderSize= 1.3em;
+$ui_miniMobileWidth= $ui_mobileWidth;
+$ui_miniTabletWidth= ($ui_tabletWidth * $ui_miniRatio);
+$ui_miniComputerWidth= ($ui_computerWidth * $ui_miniRatio);
+$ui_miniLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_miniRatio);
+$ui_miniWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_miniRatio);
+
+$ui_miniMobileMargin= 0em 0em 0em 0em;
+$ui_miniTabletMargin= 0em 0em 0em 0em;
+$ui_miniComputerMargin= 0em 0em 0em 0em;
+$ui_miniLargeMonitorMargin= 0em 0em 0em 0em;
+$ui_miniWidescreenMonitorMargin= 0em 0em 0em 0em;
+
+$ui_tinyHeaderSize= 1.3em;
+$ui_tinyMobileWidth= $ui_mobileWidth;
+$ui_tinyTabletWidth= ($ui_tabletWidth * $ui_tinyRatio);
+$ui_tinyComputerWidth= ($ui_computerWidth * $ui_tinyRatio);
+$ui_tinyLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_tinyRatio);
+$ui_tinyWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_tinyRatio);
+
+$ui_tinyMobileMargin= 0em 0em 0em 0em;
+$ui_tinyTabletMargin= 0em 0em 0em 0em;
+$ui_tinyComputerMargin= 0em 0em 0em 0em;
+$ui_tinyLargeMonitorMargin= 0em 0em 0em 0em;
+$ui_tinyWidescreenMonitorMargin= 0em 0em 0em 0em;
+
 $ui_smallHeaderSize= 1.3em;
 $ui_smallMobileWidth= $ui_mobileWidth;
 $ui_smallTabletWidth= ($ui_tabletWidth * $ui_smallRatio);
@@ -129,11 +170,11 @@ $ui_smallComputerWidth= ($ui_computerWidth * $ui_smallRatio);
 $ui_smallLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_smallRatio);
 $ui_smallWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_smallRatio);
 
-$ui_smallMobileMargin= 0em 0em 0em -($ui_smallMobileWidth / 2);
-$ui_smallTabletMargin= 0em 0em 0em -($ui_smallTabletWidth / 2);
-$ui_smallComputerMargin= 0em 0em 0em -($ui_smallComputerWidth / 2);
-$ui_smallLargeMonitorMargin= 0em 0em 0em -($ui_smallLargeMonitorWidth / 2);
-$ui_smallWidescreenMonitorMargin= 0em 0em 0em -($ui_smallWidescreenMonitorWidth / 2);
+$ui_smallMobileMargin= 0em 0em 0em 0em;
+$ui_smallTabletMargin= 0em 0em 0em 0em;
+$ui_smallComputerMargin= 0em 0em 0em 0em;
+$ui_smallLargeMonitorMargin= 0em 0em 0em 0em;
+$ui_smallWidescreenMonitorMargin= 0em 0em 0em 0em;
 
 $ui_largeHeaderSize= 1.6em;
 $ui_largeMobileWidth= $ui_mobileWidth;
@@ -142,8 +183,9 @@ $ui_largeComputerWidth= ($ui_computerWidth * $ui_largeRatio);
 $ui_largeLargeMonitorWidth= ($ui_largeMonitorWidth * $ui_largeRatio);
 $ui_largeWidescreenMonitorWidth= ($ui_widescreenMonitorWidth * $ui_largeRatio);
 
-$ui_largeMobileMargin= 0em 0em 0em -($ui_largeMobileWidth / 2);
-$ui_largeTabletMargin= 0em 0em 0em -($ui_largeTabletWidth / 2);
-$ui_largeComputerMargin= 0em 0em 0em -($ui_largeComputerWidth / 2);
-$ui_largeLargeMonitorMargin= 0em 0em 0em -($ui_largeLargeMonitorWidth / 2);
-$ui_largeWidescreenMonitorMargin= 0em 0em 0em -($ui_largeWidescreenMonitorWidth / 2);
+$ui_largeMobileMargin= 0em 0em 0em 0em;
+$ui_largeTabletMargin= 0em 0em 0em 0em;
+$ui_largeComputerMargin= 0em 0em 0em 0em;
+$ui_largeLargeMonitorMargin= 0em 0em 0em 0em;
+$ui_largeWidescreenMonitorMargin= 0em 0em 0em 0em;
+

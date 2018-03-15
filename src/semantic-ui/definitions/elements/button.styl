@@ -591,10 +591,10 @@ $ui_element = 'button';
   color: $ui_iconColor;
 }
 
-.ui.button:not(.icon) > .icon:not(.button) {
+.ui.button:not(.icon) > .icon:not(.button):not(.dropdown) {
   margin: $ui_iconMargin;
 }
-.ui.button:not(.icon) > .right.icon:not(.button) {
+.ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
   margin: $ui_rightIconMargin;
 }
 
@@ -693,7 +693,7 @@ $ui_element = 'button';
 .ui.icon.buttons .button > .icon,
 .ui.icon.button > .icon {
   opacity: $ui_iconButtonOpacity;
-  margin: 0em;
+  margin: 0em !important;
   vertical-align: top;
 }
 
@@ -743,8 +743,7 @@ $ui_element = 'button';
 .ui.basic.active.button {
   background: $ui_basicActiveBackground !important;
   box-shadow: $ui_basicActiveBoxShadow !important;
-  color: $ui_basicActiveTextColor;
-  box-shadow: $ui_selectedBorderColor;
+  color: $ui_basicActiveTextColor !important;
 }
 .ui.basic.buttons .active.button:hover,
 .ui.basic.active.button:hover {
@@ -759,7 +758,7 @@ $ui_element = 'button';
   box-shadow: $ui_basicDownBoxShadow inset;
 }
 .ui.basic.buttons .active.button {
-  box-shadow: $ui_selectedBorderColor inset;
+  box-shadow: $ui_basicActiveBoxShadow !important;
 }
 
 /* Standard Basic Inverted */
@@ -3408,24 +3407,19 @@ $ui_element = 'button';
   width: 100%;
   margin: $ui_verticalGroupOffset;
   box-shadow: $ui_verticalBoxShadow;
+  border-radius: 0em;
 }
-.ui.vertical.buttons .button:first-child,
-.ui.vertical.buttons .mini.button:first-child,
-.ui.vertical.buttons .tiny.button:first-child,
-.ui.vertical.buttons .small.button:first-child,
-.ui.vertical.buttons .massive.button:first-child,
-.ui.vertical.buttons .huge.button:first-child {
-  border-radius: $ui_borderRadius $ui_borderRadius 0px 0px;
+.ui.vertical.buttons .button:first-child {
+  border-top-left-radius: $ui_borderRadius;
+  border-top-right-radius: $ui_borderRadius;
 }
-.ui.vertical.buttons .button:last-child,
-.ui.vertical.buttons .mini.button:last-child,
-.ui.vertical.buttons .tiny.button:last-child,
-.ui.vertical.buttons .small.button:last-child,
-.ui.vertical.buttons .massive.button:last-child,
-.ui.vertical.buttons .huge.button:last-child,
-.ui.vertical.buttons .gigantic.button:last-child {
+.ui.vertical.buttons .button:last-child {
   margin-bottom: 0px;
-  border-radius: 0px 0px $ui_borderRadius $ui_borderRadius;
+  border-bottom-left-radius: $ui_borderRadius;
+  border-bottom-right-radius: $ui_borderRadius;
+}
+.ui.vertical.buttons .button:only-child {
+  border-radius: $ui_borderRadius;
 }
 
 loadUIOverrides();

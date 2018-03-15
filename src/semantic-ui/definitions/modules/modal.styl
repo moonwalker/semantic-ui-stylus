@@ -24,17 +24,15 @@ $ui_element = 'modal';
 
 .ui.modal {
   display: none;
-  position: fixed;
   z-index: $ui_zIndex;
-
-  top: 50%;
-  left: 50%;
   text-align: left;
 
   background: $ui_background;
   border: $ui_border;
   box-shadow: $ui_boxShadow;
   transform-origin: $ui_transformOrigin;
+
+  flex: 0 0 auto;
 
   border-radius: $ui_borderRadius;
   user-select: text;
@@ -323,6 +321,12 @@ $ui_element = 'modal';
              States
 *******************************/
 
+.ui.loading.modal {
+  display: block;
+  visibility: hidden;
+  z-index: $ui_loadingZIndex;
+}
+
 .ui.active.modal {
   display: block;
 }
@@ -332,12 +336,24 @@ $ui_element = 'modal';
 *******************************/
 
 /*--------------
+   Top Aligned
+---------------*/
+
+/* Top Aligned Modal */
+.modals.dimmer[class*="top aligned"] .modal {
+  margin: $ui_topAlignedMargin auto;
+}
+
+/*--------------
     Scrolling
 ---------------*/
 
-/* A modal that cannot fit on the page */
+/* Scrolling Dimmer */
 .scrolling.dimmable.dimmed {
   overflow: hidden;
+}
+.scrolling.dimmable > .dimmer {
+  justify-content: flex-start;
 }
 .scrolling.dimmable.dimmed > .dimmer {
   overflow: auto;
@@ -347,11 +363,10 @@ $ui_element = 'modal';
   position: fixed;
 }
 .modals.dimmer .ui.scrolling.modal {
-  position: static !important;
   margin: $ui_scrollingMargin auto !important;
 }
 
-/* undetached scrolling */
+/* Undetached Scrolling */
 .scrolling.undetached.dimmable.dimmed {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -365,18 +380,11 @@ $ui_element = 'modal';
   margin-top: $ui_scrollingMargin !important;
 }
 
-/* Coupling with Sidebar */
-.undetached.dimmable.dimmed > .pusher {
-  z-index: auto;
+/* Scrolling Content */
+.ui.modal .scrolling.content {
+  max-height: $ui_scrollingContentMaxHeight;
+  overflow: auto;
 }
-
-@media only screen and (max-width : $ui_largestTabletScreen) {
-  .modals.dimmer .ui.scrolling.modal {
-    margin-top: $ui_mobileScrollingMargin !important;
-    margin-bottom: $ui_mobileScrollingMargin !important;
-  }
-}
-
 
 /*--------------
    Full Screen
@@ -406,6 +414,80 @@ $ui_element = 'modal';
 
 .ui.modal {
   font-size: $ui_medium;
+}
+
+/* Mini */
+.ui.mini.modal > .header:not(.ui) {
+  font-size: $ui_miniHeaderSize;
+}
+
+/* Mini Modal Width */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.mini.modal {
+    width: $ui_miniMobileWidth;
+    margin: $ui_miniMobileMargin;
+  }
+}
+@media only screen and (min-width : $ui_tabletBreakpoint) {
+  .ui.mini.modal {
+    width: $ui_miniTabletWidth;
+    margin: $ui_miniTabletMargin;
+  }
+}
+@media only screen and (min-width : $ui_computerBreakpoint) {
+  .ui.mini.modal {
+    width: $ui_miniComputerWidth;
+    margin: $ui_miniComputerMargin;
+  }
+}
+@media only screen and (min-width : $ui_largeMonitorBreakpoint) {
+  .ui.mini.modal {
+    width: $ui_miniLargeMonitorWidth;
+    margin: $ui_miniLargeMonitorMargin;
+  }
+}
+@media only screen and (min-width : $ui_widescreenMonitorBreakpoint) {
+  .ui.mini.modal {
+    width: $ui_miniWidescreenMonitorWidth;
+    margin: $ui_miniWidescreenMonitorMargin;
+  }
+}
+
+/* mini */
+.ui.small.modal > .header:not(.ui) {
+  font-size: $ui_miniHeaderSize;
+}
+
+/* Tiny Modal Width */
+@media only screen and (max-width : $ui_largestMobileScreen) {
+  .ui.tiny.modal {
+    width: $ui_tinyMobileWidth;
+    margin: $ui_tinyMobileMargin;
+  }
+}
+@media only screen and (min-width : $ui_tabletBreakpoint) {
+  .ui.tiny.modal {
+    width: $ui_tinyTabletWidth;
+    margin: $ui_tinyTabletMargin;
+  }
+}
+@media only screen and (min-width : $ui_computerBreakpoint) {
+  .ui.tiny.modal {
+    width: $ui_tinyComputerWidth;
+    margin: $ui_tinyComputerMargin;
+  }
+}
+@media only screen and (min-width : $ui_largeMonitorBreakpoint) {
+  .ui.tiny.modal {
+    width: $ui_tinyLargeMonitorWidth;
+    margin: $ui_tinyLargeMonitorMargin;
+  }
+}
+@media only screen and (min-width : $ui_widescreenMonitorBreakpoint) {
+  .ui.tiny.modal {
+    width: $ui_tinyWidescreenMonitorWidth;
+    margin: $ui_tinyWidescreenMonitorMargin;
+  }
 }
 
 /* Small */

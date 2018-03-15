@@ -34,7 +34,7 @@ $ui_element = 'search';
 
   text-shadow: none;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $ui_normal;
 
   line-height: $ui_promptLineHeight;
   padding: $ui_promptPadding;
@@ -315,11 +315,16 @@ $ui_element = 'search';
   width: $ui_categoryResultsWidth;
 }
 
+.ui.category.search .results.animating,
+.ui.category.search .results.visible {
+  display: table;
+}
+
 /* Category */
 .ui.category.search > .results .category {
+  display: table-row;
   background: $ui_categoryBackground;
   box-shadow: $ui_categoryBoxShadow;
-  border-bottom: $ui_categoryDivider;
   transition: $ui_categoryTransition;
 }
 
@@ -336,30 +341,32 @@ $ui_element = 'search';
   border-radius: 0em 0em $ui_resultsBorderRadius 0em;
 }
 
-/* Category Result */
-.ui.category.search > .results .category .result {
-  background: $ui_categoryResultBackground;
-  margin-left: $ui_categoryNameWidth;
-  border-left: $ui_categoryResultLeftBorder;
-  border-bottom: $ui_categoryResultDivider;
-  transition: $ui_categoryResultTransition;
-  padding: $ui_categoryResultPadding;
-}
-.ui.category.search > .results .category:last-child .result:last-child {
-  border-bottom: $ui_categoryResultLastDivider;
-}
-
 /* Category Result Name */
 .ui.category.search > .results .category > .name {
+  display: table-cell;
+  text-overflow: ellipsis;
   width: $ui_categoryNameWidth;
+  white-space: $ui_categoryNameWhitespace;
   background: $ui_categoryNameBackground;
   font-family: $ui_categoryNameFont;
   font-size: $ui_categoryNameFontSize;
-  float: $ui_categoryNameFontSize;
-  float: $ui_categoryNameFloat;
   padding: $ui_categoryNamePadding;
   font-weight: $ui_categoryNameFontWeight;
   color: $ui_categoryNameColor;
+  border-bottom: $ui_categoryDivider;
+}
+
+/* Category Result */
+.ui.category.search > .results .category .results {
+  display: table-cell;
+  background: $ui_categoryResultBackground;
+  border-left: $ui_categoryResultLeftBorder;
+  border-bottom: $ui_categoryDivider;
+}
+.ui.category.search > .results .category .result {
+  border-bottom: $ui_categoryResultDivider;
+  transition: $ui_categoryResultTransition;
+  padding: $ui_categoryResultPadding;
 }
 
 /*******************************
@@ -412,6 +419,16 @@ $ui_element = 'search';
 }
 .ui.massive.search {
   font-size: $ui_relativeMassive;
+}
+
+/*--------------
+      Mobile
+---------------*/
+
+@media only screen and (max-width: $ui_largestMobileScreen) {
+  .ui.search .results {
+    max-width: $ui_mobileMaxWidth;
+  }
 }
 
 loadUIOverrides();

@@ -13,7 +13,7 @@ $ui_margin= $ui_verticalMargin $ui_horizontalMargin;
 $ui_background= #FFFFFF;
 $ui_fontFamily= $ui_pageFont;
 $ui_itemBackground= none;
-$ui_fontWeight= normal;
+$ui_fontWeight= $ui_normal;
 $ui_borderWidth= 1px;
 $ui_border= $ui_borderWidth solid $ui_borderColor;
 $ui_boxShadow= $ui_subtleShadow;
@@ -27,7 +27,7 @@ $ui_itemTextTransform= none;
 $ui_itemTransition=background $ui_defaultDuration $ui_defaultEasing,
   box-shadow $ui_defaultDuration $ui_defaultEasing,
   color $ui_defaultDuration $ui_defaultEasing;
-$ui_itemFontWeight= normal;
+$ui_itemFontWeight= $ui_normal;
 $ui_itemTextColor= $ui_textColor;
 
 /* Divider */
@@ -62,8 +62,8 @@ $ui_dropdownIconDistance= 1em;
 
 /* Header */
 $ui_headerBackground= '';
-$ui_headerWeight= bold;
-$ui_headerTextTransform= normal;
+$ui_headerWeight= $ui_bold;
+$ui_headerTextTransform= $ui_normal;
 
 /* Vertical Icon */
 $ui_verticalIconFloat= right;
@@ -72,7 +72,7 @@ $ui_verticalIconMargin= 0em 0em 0em 0.5em;
 /* Vertical Header */
 $ui_verticalHeaderMargin= 0em 0em 0.5em;
 $ui_verticalHeaderFontSize= $ui_relativeMedium;
-$ui_verticalHeaderFontWeight= bold;
+$ui_verticalHeaderFontWeight= $ui_bold;
 
 /* Pointing Arrow */
 $ui_arrowSize= $ui_relative8px;
@@ -134,7 +134,7 @@ $ui_dropdownItemPadding= $ui_relativeMini $ui_relativeLarge;
 $ui_dropdownItemBackground= transparent;
 $ui_dropdownItemColor= $ui_textColor;
 $ui_dropdownItemTextTransform= none;
-$ui_dropdownItemFontWeight= normal;
+$ui_dropdownItemFontWeight= $ui_normal;
 $ui_dropdownItemBoxShadow= none;
 $ui_dropdownItemTransition= none;
 
@@ -167,7 +167,7 @@ $ui_pressedItemTextColor= $ui_hoverItemTextColor;
 /* Active Item */
 $ui_activeItemBackground= $ui_transparentBlack;
 $ui_activeItemTextColor= $ui_selectedTextColor;
-$ui_activeItemFontWeight= normal;
+$ui_activeItemFontWeight= $ui_normal;
 $ui_activeIconOpacity= 1;
 $ui_activeItemBoxShadow= none;
 
@@ -182,12 +182,12 @@ $ui_dropdownSelectedItemColor= $ui_selectedTextColor;
 /* Active Dropdown */
 $ui_dropdownActiveItemBackground= $ui_subtleTransparentBlack;
 $ui_dropdownActiveItemColor= $ui_selectedTextColor;
-$ui_dropdownActiveItemFontWeight= bold;
+$ui_dropdownActiveItemFontWeight= $ui_bold;
 
 /* Active Sub Menu */
 $ui_subMenuActiveBackground= transparent;
 $ui_subMenuActiveTextColor= $ui_activeItemTextColor;
-$ui_subMenuActiveFontWeight= bold;
+$ui_subMenuActiveFontWeight= $ui_bold;
 
 
 /*--------------
@@ -250,7 +250,7 @@ $ui_secondaryPointingHoverTextColor= $ui_textColor;
 
 $ui_secondaryPointingActiveBorderColor= $ui_black;
 $ui_secondaryPointingActiveTextColor= $ui_selectedTextColor;
-$ui_secondaryPointingActiveFontWeight= bold;
+$ui_secondaryPointingActiveFontWeight= $ui_bold;
 
 $ui_secondaryPointingActiveDropdownBorderColor= transparent;
 
@@ -283,8 +283,8 @@ $ui_secondaryPointingInvertedActiveColor= $ui_invertedSelectedTextColor;
 $ui_tieredActiveItemBackground= #FCFCFC;
 $ui_tieredActiveMenuBackground= #FCFCFC;
 
-$ui_tieredSubMenuTextTransform= normal;
-$ui_tieredSubMenuFontWeight= normal;
+$ui_tieredSubMenuTextTransform= $ui_normal;
+$ui_tieredSubMenuFontWeight= $ui_normal;
 
 $ui_tieredSubMenuColor= $ui_lightTextColor;
 
@@ -324,7 +324,7 @@ $ui_tabularFluidWidth= unquote("calc(100% + (" + $ui_tabularFluidOffset + " * 2)
 $ui_tabularActiveBackground= none $ui_white;
 $ui_tabularActiveColor= $ui_selectedTextColor;
 $ui_tabularActiveBoxShadow= none;
-$ui_tabularActiveWeight= bold;
+$ui_tabularActiveWeight= $ui_bold;
 
 
 
@@ -344,7 +344,7 @@ $ui_labeledIconTextMargin= 0.5rem;
 $ui_textMenuItemSpacing= $ui_relative7px;
 $ui_textMenuMargin= $ui_relativeMedium -($ui_textMenuItemSpacing);
 $ui_textMenuItemColor= $ui_mutedTextColor;
-$ui_textMenuItemFontWeight= normal;
+$ui_textMenuItemFontWeight= $ui_normal;
 $ui_textMenuItemMargin= 0em 0em;
 $ui_textMenuItemPadding= $ui_relative5px $ui_textMenuItemSpacing;
 $ui_textMenuItemTransition= opacity $ui_defaultDuration $ui_defaultEasing;
@@ -353,12 +353,12 @@ $ui_textMenuSubMenuMargin= 0em;
 $ui_textMenuSubMenuItemMargin= 0em;
 $ui_textMenuSubMenuItemPadding= $ui_relative7px 0em;
 
-$ui_textMenuActiveItemFontWeight= normal;
+$ui_textMenuActiveItemFontWeight= $ui_normal;
 $ui_textMenuActiveItemColor= $ui_selectedTextColor;
 
 $ui_textMenuHeaderSize= $ui_relativeSmall;
 $ui_textMenuHeaderColor= $ui_darkTextColor;
-$ui_textMenuHeaderFontWeight= bold;
+$ui_textMenuHeaderFontWeight= $ui_bold;
 $ui_textMenuHeaderTextTransform= uppercase;
 
 $ui_textVerticalMenuMargin= $ui_relativeMedium 0em;
@@ -439,8 +439,8 @@ $ui_mini= $ui_11px;
 $ui_tiny= $ui_12px;
 $ui_small= $ui_13px;
 $ui_large= $ui_15px;
-$ui_huge= $ui_16px;
-$ui_big= $ui_17px;
+$ui_big= $ui_16px;
+$ui_huge= $ui_17px;
 $ui_massive= $ui_18px;
 
 /* Sizes */
@@ -449,7 +449,7 @@ $ui_tinyWidth= 11rem;
 $ui_smallWidth= 13rem;
 $ui_mediumWidth= 15rem;
 $ui_largeWidth= 18rem;
-$ui_hugeWidth= 20rem;
-$ui_bigWidth= 22rem;
+$ui_bigWidth= 20rem;
+$ui_hugeWidth= 22rem;
 $ui_massiveWidth= 25rem;
 

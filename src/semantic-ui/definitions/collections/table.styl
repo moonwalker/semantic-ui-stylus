@@ -122,6 +122,11 @@ $ui_element = 'table';
   border-top: none;
 }
 
+/* Repeated tbody */
+.ui.table tbody + tbody tr:first-child td {
+  border-top: $ui_rowBorder;
+}
+
 /* Table Cells */
 .ui.table td {
   padding: $ui_cellVerticalPadding $ui_cellHorizontalPadding;
@@ -186,7 +191,7 @@ $ui_element = 'table';
   }
   .ui.table:not(.unstackable) th:first-child,
   .ui.table:not(.unstackable) td:first-child {
-    font-weight: bold;
+    font-weight: $ui_responsiveCellHeaderFontWeight;
   }
 
   /* Definition Table */
@@ -888,7 +893,7 @@ $ui_element = 'table';
 .ui.sortable.table thead th:after {
   display: none;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $ui_normal;
   text-decoration: inherit;
   content: '';
   height: 1em;
@@ -957,7 +962,7 @@ $ui_element = 'table';
 .ui.inverted.table th {
   background-color: $ui_invertedHeaderBackground;
   border-color: $ui_invertedHeaderBorderColor !important;
-  color: $ui_invertedHeaderColor;
+  color: $ui_invertedHeaderColor !important;
 }
 .ui.inverted.table tr td {
   border-color: $ui_invertedCellBorderColor !important;
