@@ -25,10 +25,6 @@ for file in `find -E . -type f -regex ".*\.(less|variables|overrides)"`; do
   $LESS2STYLUS $file --variable-name-prefix ui_ > "$(dirname $file)/$(basename "$file" .less).styl"
 done
 
-# for file in `find . -name '*.styl'`; do
-#   echo "Let's do some codemon"
-# done
-
 echo "Copy files"
 for file in `find -E . -type f -regex ".*\.(styl|svg|png|jpg|eot|ttf|woff)"`; do
   rsync -R $file $DEST_PATH

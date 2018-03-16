@@ -69,7 +69,7 @@ $ui_element = 'dimmer';
 
 /* Scrollbars */
 addScrollbars() {
-  if (!($ui_useCustomScrollbars)) { return; }
+  return unless $ui_useCustomScrollbars;
   .ui.dimmer:not(.inverted)::-webkit-scrollbar-track {
     background: $ui_trackInvertedBackground;
   }

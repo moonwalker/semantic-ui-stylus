@@ -48,8 +48,8 @@ $ui_theme= lookup("$ui_" + $ui_element);
 -------------------*/
 
 loadFonts() {
-  if (!($ui_importGoogleFonts)) { return; }
-  @require url('' + $ui_googleProtocol + 'fonts.googleapis.com/css?family=' + $ui_googleFontRequest + '');
+  return unless $ui_importGoogleFonts;
+  @import url('' + $ui_googleProtocol + 'fonts.googleapis.com/css?family=' + $ui_googleFontRequest + '');
 }
 
 /*------------------

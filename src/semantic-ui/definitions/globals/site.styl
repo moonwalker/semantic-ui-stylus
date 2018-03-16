@@ -130,7 +130,7 @@ a:hover {
 *******************************/
 
 addScrollbars() {
-  if (!($ui_useCustomScrollbars)) { return; }
+  return unless $ui_useCustomScrollbars;
   /* Force Simple Scrollbars */
   body ::-webkit-scrollbar {
     -webkit-appearance: none;

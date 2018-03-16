@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@moonwalker/less-to-stylus@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@moonwalker/less-to-stylus/-/less-to-stylus-0.1.0.tgz#0759f6228372ed8aa3c42cbbfb7481a2dd46e452"
+"@moonwalker/less-to-stylus@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@moonwalker/less-to-stylus/-/less-to-stylus-0.1.2.tgz#397ff11c7037b87f109871624489d48bacde0477"
   dependencies:
     lodash.flow "^3.5.0"
     stylus "^0.54.5"
