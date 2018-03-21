@@ -23,8 +23,8 @@ $ui_veryCloseDistance= 1em;
 $ui_splitCloseDistance= ($ui_closeDistance / 2);
 $ui_splitVeryCloseDistance= ($ui_veryCloseDistance / 2);
 
-$ui_closeWidth= unquote("calc(" + $ui_width + "~" + "" + $ui_splitCloseDistance + ")");
-$ui_veryCloseWidth= unquote("calc(" + $ui_width + "~" + "" + $ui_splitVeryCloseDistance + ")");
+$ui_closeWidth= unquote("calc(") $ui_width unquote(" + ") $ui_splitCloseDistance unquote(")") ;
+$ui_veryCloseWidth= unquote("calc(") $ui_width unquote(" + ") $ui_splitVeryCloseDistance unquote(")") ;
 
 /* Dividing */
 $ui_dividingBorder= 1px solid $ui_borderColor;

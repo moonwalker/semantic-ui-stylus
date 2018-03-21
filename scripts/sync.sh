@@ -9,7 +9,7 @@ LESS2STYLUS="$(pwd)/node_modules/.bin/less2stylus"
 mkdir -p $TMP_DIR
 
 # echo "Cloning ${UPSTREAM_REPO}..."
-git clone --depth 1 $UPSTREAM_REPO $TMP_DIR;
+git clone --depth 1 $UPSTREAM_REPO $TMP_DIR -b 2.3.0;
 
 
 echo "Process .less files..."

@@ -36,7 +36,7 @@ $ui_menuBorder= $ui_menuBorderWidth solid $ui_menuBorderColor;
 $ui_menuBoxShadow= $ui_raisedShadow;
 $ui_menuBorderRadius= $ui_borderRadius;
 $ui_menuTransition= opacity $ui_defaultDuration $ui_defaultEasing;
-$ui_menuMinWidth= unquote("calc(100% + (" + $ui_menuBorderWidth + " * 2))");
+$ui_menuMinWidth= unquote("calc(100% + ") ($ui_menuBorderWidth * 2) unquote(")") ;
 $ui_menuZIndex= 11;
 
 /* Text */
@@ -314,7 +314,7 @@ $ui_errorItemActiveBackground= #FDCFCF;
 /* Scrolling */
 $ui_scrollingMenuWidth= 100%;
 $ui_scrollingMenuItemBorder= none;
-$ui_scrollingMenuRightItemPadding= unquote("calc((" + $ui_itemHorizontalPadding + ")~" + "(" + $ui_scrollbarWidth + "))");
+$ui_scrollingMenuRightItemPadding= unquote("calc(") ($ui_itemHorizontalPadding) unquote(" + ") ($ui_scrollbarWidth) unquote(")") ;
 
 $ui_scrollingMobileMaxItems= 4;
 $ui_scrollingTabletMaxItems= 6;

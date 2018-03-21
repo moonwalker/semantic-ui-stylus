@@ -501,7 +501,7 @@ $ui_lineHeightOffset       = (($ui_lineHeight - 1em) / 2);
 $ui_headerLineHeightOffset = ($ui_headerLineHeight - 1em) / 2;
 
 /* Header Spacing */
-$ui_headerTopMargin    = unquote("calc(2rem - " + $ui_headerLineHeightOffset + ")");
+$ui_headerTopMargin    = unquote("calc(2rem - ") $ui_headerLineHeightOffset unquote(")") ;
 $ui_headerBottomMargin = 1rem;
 $ui_headerMargin       = $ui_headerTopMargin 0em $ui_headerBottomMargin;
 

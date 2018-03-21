@@ -139,7 +139,7 @@ $ui_element = 'grid';
   margin: ($ui_rowSpacing / 2) ($ui_gutterWidth / 2);
 }
 .ui.grid .column + .ui.vertical.divider {
-  height: unquote("calc(50% - (" + $ui_rowSpacing + "/2))");
+  height: unquote("calc(50% - ") ($ui_rowSpacing/2) unquote(")") ;
 }
 
 /* Remove Border on Last Horizontal Segment */
@@ -1077,7 +1077,7 @@ $ui_element = 'grid';
   top: 0em;
   left: 0px;
 
-  width: unquote("calc(100% - " + $ui_gutterWidth + ")");
+  width: unquote("calc(100% - ") $ui_gutterWidth unquote(")") ;
   height: 1px;
 
   margin: 0% ($ui_gutterWidth / 2);
@@ -1112,12 +1112,12 @@ $ui_element = 'grid';
 .ui.relaxed[class*="vertically divided"].grid > .row:before {
   margin-left: ($ui_relaxedGutterWidth / 2);
   margin-right: ($ui_relaxedGutterWidth / 2);
-  width: unquote("calc(100% - " + $ui_relaxedGutterWidth + ")");
+  width: unquote("calc(100% - ") $ui_relaxedGutterWidth unquote(")") ;
 }
 .ui[class*="very relaxed"][class*="vertically divided"].grid > .row:before {
   margin-left: $ui_veryRelaxedGutterWidth;
   margin-right: $ui_veryRelaxedGutterWidth;
-  width: unquote("calc(100% - " + $ui_veryRelaxedGutterWidth + ")");
+  width: unquote("calc(100% - ") $ui_veryRelaxedGutterWidth unquote(")") ;
 }
 
 /*----------------------

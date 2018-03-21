@@ -211,7 +211,7 @@ $ui_element = 'menu';
 
 /* Menu */
 .ui.menu .dropdown.item .menu {
-  min-width: ~"calc(100% - 1px)";
+  min-width: unquote("calc(100% - 1px)") ;
   border-radius: 0em 0em $ui_dropdownMenuBorderRadius $ui_dropdownMenuBorderRadius;
   background: $ui_dropdownBackground;
   margin: $ui_dropdownMenuDistance 0px 0px;

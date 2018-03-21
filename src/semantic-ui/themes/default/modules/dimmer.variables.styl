@@ -18,8 +18,8 @@ $ui_verticalAlign= middle;
 $ui_textColor= $ui_white;
 $ui_overflow= hidden;
 
-$ui_blurredStartFilter= ~"blur(0px) grayscale(0)";
-$ui_blurredEndFilter= ~"blur(5px) grayscale(0.7)";
+$ui_blurredStartFilter= unquote("blur(0px) grayscale(0)") ;
+$ui_blurredEndFilter= unquote("blur(5px) grayscale(0.7)") ;
 $ui_blurredTransition= 800ms filter $ui_defaultEasing;
 
 $ui_blurredBackgroundColor= rgba(0, 0, 0, 0.6);

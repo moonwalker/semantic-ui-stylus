@@ -137,7 +137,7 @@ $ui_extraLinkHoverColor= $ui_linkHoverColor;
 
 /* Buttons */
 $ui_buttonMargin= 0px (- $ui_borderWidth);
-$ui_buttonWidth= unquote("calc(100% + (" + $ui_borderWidth + " * 2))");
+$ui_buttonWidth= unquote("calc(100% + ") ($ui_borderWidth * 2) unquote(")") ;
 
 /*-------------------
       Variations
@@ -179,29 +179,29 @@ $ui_tenCardSpacing= $ui_smallCardSpacing;
 
 $ui_oneCard= $ui_oneColumn;
 $ui_oneCardOffset= 0em;
-$ui_twoCard= unquote("calc(" + $ui_twoColumn + "~" - "(" + $ui_twoCardSpacing + " * 2))");
+$ui_twoCard= unquote("calc(") $ui_twoColumn unquote(" - ") ($ui_twoCardSpacing * 2) unquote(")") ;
 $ui_twoCardOffset= (- $ui_twoCardSpacing);
-$ui_threeCard= unquote("calc(" + $ui_threeColumn + "~" - "(" + $ui_threeCardSpacing + " * 2))");
+$ui_threeCard= unquote("calc(") $ui_threeColumn unquote(" - ") ($ui_threeCardSpacing * 2) unquote(")") ;
 $ui_threeCardOffset= (- $ui_threeCardSpacing);
-$ui_fourCard= unquote("calc(" + $ui_fourColumn + "~" - "(" + $ui_fourCardSpacing + " * 2))");
+$ui_fourCard= unquote("calc(") $ui_fourColumn unquote(" - ") ($ui_fourCardSpacing * 2) unquote(")") ;
 $ui_fourCardOffset= (- $ui_fourCardSpacing);
-$ui_fiveCard= unquote("calc(" + $ui_fiveColumn + "~" - "(" + $ui_fiveCardSpacing + " * 2))");
+$ui_fiveCard= unquote("calc(") $ui_fiveColumn unquote(" - ") ($ui_fiveCardSpacing * 2) unquote(")") ;
 $ui_fiveCardOffset= (- $ui_fiveCardSpacing);
-$ui_sixCard= unquote("calc(" + $ui_sixColumn + "~" - "(" + $ui_sixCardSpacing + " * 2))");
+$ui_sixCard= unquote("calc(") $ui_sixColumn unquote(" - ") ($ui_sixCardSpacing * 2) unquote(")") ;
 $ui_sixCardOffset= (- $ui_sixCardSpacing);
-$ui_sevenCard= unquote("calc(" + $ui_sevenColumn + "~" - "(" + $ui_sevenCardSpacing + " * 2))");
+$ui_sevenCard= unquote("calc(") $ui_sevenColumn unquote(" - ") ($ui_sevenCardSpacing * 2) unquote(")") ;
 $ui_sevenCardOffset= (- $ui_sevenCardSpacing);
-$ui_eightCard= unquote("calc(" + $ui_eightColumn + "~" - "(" + $ui_sevenCardSpacing + " * 2))");
+$ui_eightCard= unquote("calc(") $ui_eightColumn unquote(" - ") ($ui_sevenCardSpacing * 2) unquote(")") ;
 $ui_eightCardOffset= (- $ui_sevenCardSpacing);
-$ui_nineCard= unquote("calc(" + $ui_nineColumn + "~" - "(" + $ui_nineCardSpacing + " * 2))");
+$ui_nineCard= unquote("calc(") $ui_nineColumn unquote(" - ") ($ui_nineCardSpacing * 2) unquote(")") ;
 $ui_nineCardOffset= (- $ui_nineCardSpacing);
-$ui_tenCard= unquote("calc(" + $ui_tenColumn + "~" - "(" + $ui_tenCardSpacing + " * 2))");
+$ui_tenCard= unquote("calc(") $ui_tenColumn unquote(" - ") ($ui_tenCardSpacing * 2) unquote(")") ;
 $ui_tenCardOffset= (- $ui_tenCardSpacing);
 
 /* Stackable */
 $ui_stackableRowSpacing= 1em;
 $ui_stackableCardSpacing= 1em;
-$ui_stackableMargin= unquote("calc(" + $ui_oneColumn + "~" - "(" + $ui_stackableCardSpacing + " * 2))");
+$ui_stackableMargin= unquote("calc(") $ui_oneColumn unquote(" - ") ($ui_stackableCardSpacing * 2) unquote(")") ;
 
 /* Sizes */
 $ui_medium= 1em;

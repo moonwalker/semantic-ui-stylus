@@ -319,7 +319,7 @@ $ui_tabularHoveredTextColor= $ui_hoveredTextColor;
 $ui_tabularVerticalBackground= none $ui_tabularBackgroundColor;
 
 $ui_tabularFluidOffset= 1px;
-$ui_tabularFluidWidth= unquote("calc(100% + (" + $ui_tabularFluidOffset + " * 2))");
+$ui_tabularFluidWidth= unquote("calc(100% + ") ($ui_tabularFluidOffset * 2) unquote(")") ;
 
 $ui_tabularActiveBackground= none $ui_white;
 $ui_tabularActiveColor= $ui_selectedTextColor;
@@ -428,7 +428,7 @@ $ui_floatedDistance= 0.5rem;
 $ui_attachedTopOffset= 0px;
 $ui_attachedBottomOffset= 0px;
 $ui_attachedHorizontalOffset= (- $ui_borderWidth);
-$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+$ui_attachedWidth= unquote("calc(100% + ") - $ui_attachedHorizontalOffset * 2 unquote(")") ;
 $ui_attachedBoxShadow= none;
 $ui_attachedBorder= $ui_borderWidth solid $ui_solidBorderColor;
 $ui_attachedBottomBoxShadow=$ui_boxShadow,

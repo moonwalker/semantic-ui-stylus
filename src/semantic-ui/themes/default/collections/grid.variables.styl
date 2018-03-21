@@ -19,7 +19,7 @@ $ui_minWidth= 320px;
 $ui_gutterWidth= 2rem;
 $ui_rowSpacing= 2rem;
 
-$ui_tableWidth= unquote("calc(100% + " + $ui_gutterWidth + ")");
+$ui_tableWidth= unquote("calc(100% + ") $ui_gutterWidth unquote(")") ;
 $ui_columnMaxImageWidth= 100%;
 
 $ui_consecutiveGridDistance= ($ui_rowSpacing / 2);

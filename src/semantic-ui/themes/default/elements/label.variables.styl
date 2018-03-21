@@ -130,18 +130,18 @@ $ui_ribbonTriangleSize= 1.2em;
 $ui_ribbonShadowColor= rgba(0, 0, 0, 0.15);
 
 $ui_ribbonMargin= 1rem;
-$ui_ribbonOffset= unquote("calc(- " + $ui_ribbonMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
-$ui_ribbonDistance= unquote("calc(" + $ui_ribbonMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
-$ui_rightRibbonOffset=  unquote("calc(100% + " + $ui_ribbonMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+$ui_ribbonOffset= unquote("calc(") - $ui_ribbonMargin unquote(" - ") $ui_ribbonTriangleSize unquote(")") ;
+$ui_ribbonDistance= unquote("calc(") $ui_ribbonMargin unquote(" + ") $ui_ribbonTriangleSize unquote(")") ;
+$ui_rightRibbonOffset= unquote("calc(100% + ") $ui_ribbonMargin unquote(" + ") $ui_ribbonTriangleSize unquote(")") ;
 
 $ui_ribbonImageTopDistance= 1rem;
 $ui_ribbonImageMargin= -0.05rem; /* Rounding Offset on Triangle */
-$ui_ribbonImageOffset= unquote("calc(- " + $ui_ribbonImageMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
-$ui_rightRibbonImageOffset=  unquote("calc(100% + " + $ui_ribbonImageMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+$ui_ribbonImageOffset= unquote("calc(") - $ui_ribbonImageMargin unquote(" - ") $ui_ribbonTriangleSize unquote(")") ;
+$ui_rightRibbonImageOffset= unquote("calc(100% + ") $ui_ribbonImageMargin unquote(" + ") $ui_ribbonTriangleSize unquote(")") ;
 
 $ui_ribbonTableMargin= $ui_relativeMini; /* Rounding Offset on Triangle */
-$ui_ribbonTableOffset= unquote("calc(- " + $ui_ribbonTableMargin + "~" - "" + $ui_ribbonTriangleSize + ")");
-$ui_rightRibbonTableOffset=  unquote("calc(100% + " + $ui_ribbonTableMargin + "~" + "" + $ui_ribbonTriangleSize + ")");
+$ui_ribbonTableOffset= unquote("calc(") - $ui_ribbonTableMargin unquote(" - ") $ui_ribbonTriangleSize unquote(")") ;
+$ui_rightRibbonTableOffset= unquote("calc(100% + ") $ui_ribbonTableMargin unquote(" + ") $ui_ribbonTriangleSize unquote(")") ;
 
 
 /* Colors */

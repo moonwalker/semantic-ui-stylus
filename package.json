@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/moonwalker/semantic-ui-stylus#readme",
   "dependencies": {
-    "@moonwalker/less-to-stylus": "^0.1.2",
+    "@moonwalker/less-to-stylus": "^0.1.4",
     "stylus": "^0.54.5"
   }
 }

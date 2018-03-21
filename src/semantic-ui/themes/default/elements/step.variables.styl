@@ -93,7 +93,7 @@ $ui_verticalActiveLastArrowDisplay= block;
 
 $ui_attachedHorizontalOffset= (- $ui_borderWidth);
 $ui_attachedVerticalOffset= 0;
-$ui_attachedWidth= unquote("calc(100% + - " + $ui_attachedHorizontalOffset + " * 2)");
+$ui_attachedWidth= unquote("calc(100% + ") - $ui_attachedHorizontalOffset * 2 unquote(")") ;
 
 $ui_orderedFontFamily= inherit;
 $ui_orderedFontWeight= $ui_bold;
