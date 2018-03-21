@@ -1,6 +1,6 @@
 {
   "name": "@moonwalker/semantic-ui-stylus",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "Stylus fork of Semantic-UI",
   "private": false,
   "main": "src/index.js",
